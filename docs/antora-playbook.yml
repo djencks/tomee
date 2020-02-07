@@ -1,0 +1,15 @@
+site:
+  title: Tomee Documentation
+  url: https://tomee.apache.org
+  start_page: tomee::docs.adoc
+content:
+  sources:
+  - url: ./../
+    start_path: docs/tomee
+    branches: HEAD
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+output: 
+  clean: true 

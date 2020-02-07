@@ -1,6 +1,6 @@
 name: Tomee 
 title: Tomee Documentation
 version: '8.0' 
-#start_page: ROOT:index.adoc 
-#nav: 
-#- modules/ROOT/nav.adoc
+start_page: ROOT:docs.adoc 
+nav: 
+- modules/ROOT/nav.adoc
