@@ -1,0 +1,6 @@
+name: examples 
+title: Tomee Examples
+version: '8.0' 
+start_page: ROOT:index.adoc 
+nav: 
+- modules/ROOT/nav.adoc
