@@ -7,7 +7,8 @@ content:
   - url: ./../
     start_path: docs/tomee
     branches: HEAD
-  - url: ./../../tomee-site-generator
+#  - url: ./../../tomee-site-generator
+  - url: https://github.com/djencks/tomee-site-generator.git
     start_path: oldcontent
     branches: antora
 ui:
