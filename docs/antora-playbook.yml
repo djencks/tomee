@@ -16,6 +16,14 @@ content:
     start_path: docs/examples-en
     branches: HEAD
 
+  - url: ./../
+    start_path: docs/examples-es
+    branches: HEAD
+
+  - url: ./../
+    start_path: docs/examples-pt
+    branches: HEAD
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

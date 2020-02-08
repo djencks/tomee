@@ -1,0 +1,62 @@
+#!/bin/bash
+
+mkdir -p examples-pt/modules/ROOT/pages
+
+cp ../examples/README.adoc examples-pt/modules/ROOT/pages/index.adoc
+
+
+cp ../examples/access-timeout-meta/README_pt.adoc examples-pt/modules/ROOT/pages/access-timeout-meta_pt.adoc
+cp ../examples/access-timeout/README_pt.adoc examples-pt/modules/ROOT/pages/access-timeout_pt.adoc
+cp ../examples/alternate-descriptors/README_pt.adoc examples-pt/modules/ROOT/pages/alternate-descriptors_pt.adoc
+cp ../examples/application-composer/README_pt.adoc examples-pt/modules/ROOT/pages/application-composer_pt.adoc
+cp ../examples/applicationcomposer-jaxws-cdi/README_pt.adoc examples-pt/modules/ROOT/pages/applicationcomposer-jaxws-cdi_pt.adoc
+cp ../examples/applicationexception/README_pt.adoc examples-pt/modules/ROOT/pages/applicationexception_pt.adoc
+cp ../examples/arquillian-jpa/README_pt.adoc examples-pt/modules/ROOT/pages/arquillian-jpa_pt.adoc
+cp ../examples/async-methods/README_pt.adoc examples-pt/modules/ROOT/pages/async-methods_pt.adoc
+cp ../examples/async-postconstruct/README_pt.adoc examples-pt/modules/ROOT/pages/async-postconstruct_pt.adoc
+cp ../examples/async-servlet/README_pt.adoc examples-pt/modules/ROOT/pages/async-servlet_pt.adoc
+cp ../examples/bean-validation-design-by-contract/README_pt.adoc examples-pt/modules/ROOT/pages/bean-validation-design-by-contract_pt.adoc
+cp ../examples/cdi-alternative-and-stereotypes/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-alternative-and-stereotypes_pt.adoc
+cp ../examples/cdi-application-scope/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-application-scope_pt.adoc
+cp ../examples/cdi-basic/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-basic_pt.adoc
+cp ../examples/cdi-dynamic-inject/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-dynamic-inject_pt.adoc
+cp ../examples/cdi-events/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-events_pt.adoc
+cp ../examples/cdi-interceptors/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-interceptors_pt.adoc
+cp ../examples/cdi-produces-disposes/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-produces-disposes_pt.adoc
+cp ../examples/cdi-produces-field/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-produces-field_pt.adoc
+cp ../examples/cdi-qualifier/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-qualifier_pt.adoc
+cp ../examples/cdi-realm/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-realm_pt.adoc
+cp ../examples/cdi-request-scope/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-request-scope_pt.adoc
+cp ../examples/cdi-session-scope/README_pt.adoc examples-pt/modules/ROOT/pages/cdi-session-scope_pt.adoc
+cp ../examples/change-jaxws-url/README_pt.adoc examples-pt/modules/ROOT/pages/change-jaxws-url_pt.adoc
+cp ../examples/cloud-tomee-azure/README_pt.adoc examples-pt/modules/ROOT/pages/cloud-tomee-azure_pt.adoc
+cp ../examples/concurrency-utils/README_pt.adoc examples-pt/modules/ROOT/pages/concurrency-utils_pt.adoc
+cp ../examples/cucumber-jvm/README_pt.adoc examples-pt/modules/ROOT/pages/cucumber-jvm_pt.adoc
+cp ../examples/datasource-ciphered-password/README_pt.adoc examples-pt/modules/ROOT/pages/datasource-ciphered-password_pt.adoc
+cp ../examples/datasource-versioning/README_pt.adoc examples-pt/modules/ROOT/pages/datasource-versioning_pt.adoc
+cp ../examples/deltaspike-fullstack/README_pt.adoc examples-pt/modules/ROOT/pages/deltaspike-fullstack_pt.adoc
+cp ../examples/deltaspike-i18n/README_pt.adoc examples-pt/modules/ROOT/pages/deltaspike-i18n_pt.adoc
+cp ../examples/dynamic-dao-implementation/README_pt.adoc examples-pt/modules/ROOT/pages/dynamic-dao-implementation_pt.adoc
+cp ../examples/dynamic-datasource-routing/README_pt.adoc examples-pt/modules/ROOT/pages/dynamic-datasource-routing_pt.adoc
+cp ../examples/javamail/README_pt.adoc examples-pt/modules/ROOT/pages/javamail_pt.adoc
+cp ../examples/jpa-eclipselink/README_pt.adoc examples-pt/modules/ROOT/pages/jpa-eclipselink_pt.adoc
+cp ../examples/jpa-enumerated/README_pt.adoc examples-pt/modules/ROOT/pages/jpa-enumerated_pt.adoc
+cp ../examples/jpa-hibernate/README_pt.adoc examples-pt/modules/ROOT/pages/jpa-hibernate_pt.adoc
+cp ../examples/jsf-cdi-and-ejb/README_pt.adoc examples-pt/modules/ROOT/pages/jsf-cdi-and-ejb_pt.adoc
+cp ../examples/mp-config-example/README_pt.adoc examples-pt/modules/ROOT/pages/mp-config-example_pt.adoc
+cp ../examples/mp-custom-healthcheck/README_pt.adoc examples-pt/modules/ROOT/pages/mp-custom-healthcheck_pt.adoc
+cp ../examples/mp-faulttolerance-fallback/README_pt.adoc examples-pt/modules/ROOT/pages/mp-faulttolerance-fallback_pt.adoc
+cp ../examples/mp-faulttolerance-retry/README_pt.adoc examples-pt/modules/ROOT/pages/mp-faulttolerance-retry_pt.adoc
+cp ../examples/mp-faulttolerance-timeout/README_pt.adoc examples-pt/modules/ROOT/pages/mp-faulttolerance-timeout_pt.adoc
+cp ../examples/mvc-cxf-hibernate/README_pt.adoc examples-pt/modules/ROOT/pages/mvc-cxf-hibernate_pt.adoc
+cp ../examples/simple-cdi-interceptor/README_pt.adoc examples-pt/modules/ROOT/pages/simple-cdi-interceptor_pt.adoc
+cp ../examples/simple-remote-tomcatusers/README_pt.adoc examples-pt/modules/ROOT/pages/simple-remote-tomcatusers_pt.adoc
+cp ../examples/simple-rest/README_pt.adoc examples-pt/modules/ROOT/pages/simple-rest_pt.adoc
+cp ../examples/spring-data-proxy-meta/README_pt.adoc examples-pt/modules/ROOT/pages/spring-data-proxy-meta_pt.adoc
+cp ../examples/spring-data-proxy/README_pt.adoc examples-pt/modules/ROOT/pages/spring-data-proxy_pt.adoc
+cp ../examples/testing-security/README_pt.adoc examples-pt/modules/ROOT/pages/testing-security_pt.adoc
+cp ../examples/tomee-jms-portability/README_pt.adoc examples-pt/modules/ROOT/pages/tomee-jms-portability_pt.adoc
+cp ../examples/vaadin-lts-v08-simple/README_pt.adoc examples-pt/modules/ROOT/pages/vaadin-lts-v08-simple_pt.adoc
+cp ../examples/vaadin-lts-v10-simple/README_pt.adoc examples-pt/modules/ROOT/pages/vaadin-lts-v10-simple_pt.adoc
+cp ../examples/webservice-ssl-client-cert/README_pt.adoc examples-pt/modules/ROOT/pages/webservice-ssl-client-cert_pt.adoc
+cp ../examples/websocket-tls-basic-auth/README_pt.adoc examples-pt/modules/ROOT/pages/websocket-tls-basic-auth_pt.adoc

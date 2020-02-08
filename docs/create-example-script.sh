@@ -3,40 +3,52 @@
 # This meta-script generates a script to copy the example README.adoc files in each language to an Antora component/version structure.
 # The generated script can be modified by hand and checked in to track changes.
 
-EXAMPLES=../examples
+echo "Run this script only from the docs/ directory!"
+
+examples=../examples
 
 #English to start with...
 
-SCRIPT=copy-examples-en.sh
+for language in en es pt
+do
 
-TARGET_DIR=examples-en/modules/ROOT
-mkdir -p $TARGET_DIR/
+if [[ $language != "en" ]]
+then
+    suffix="_$language"
+fi
+
+script=copy-examples-$language.sh
+
+targetDir=examples-$language/modules/ROOT
+mkdir -p $targetDir/
 
 echo "#!/bin/bash
 
-mkdir -p $TARGET_DIR/pages
+mkdir -p $targetDir/pages
 
-cp $EXAMPLES/README.adoc $TARGET_DIR/pages/index.adoc
+cp $examples/README.adoc $targetDir/pages/index.adoc
 
-" >$SCRIPT
+" >$script
 
-navFile=$TARGET_DIR/nav.adoc
+navFile=$targetDir/nav.adoc
 echo "// generated examples file" > $navFile
 
-for readme in `find $EXAMPLES -mindepth 2 -name "README.adoc" | sort`
+for readme in `find $examples -mindepth 2 -name "README$suffix.adoc" | sort`
 do
 #    echo $readme
-    stem=`echo  $readme |sed -E "s/\.\.\/examples\/(.*)\/README.adoc/\1/"`
+    stem=`echo  $readme |sed -E "s/\.\.\/examples\/(.*)\/README$suffix.adoc/\1/"`
 #    echo $stem
-    targetFile=${stem}.adoc
+    targetFile=${stem}${suffix}.adoc
 #    echo $targetFile
-    targetLoc=$TARGET_DIR/pages/$targetFile
+    targetLoc=$targetDir/pages/$targetFile
 #    echo $targetLoc
 #    echo "cp $readme $targetLoc"
-    echo "cp $readme $targetLoc" >> $SCRIPT
+    echo "cp $readme $targetLoc" >> $script
     echo "* xref:$targetFile[$stem]" >> $navFile
 done
 
-chmod u+x $SCRIPT
+chmod u+x $script
 
 #echo "navFile $navFile"
+
+done

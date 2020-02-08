@@ -1,6 +1,7 @@
 name: examples 
 title: TomEE Examples
-version: '8.0' 
+version: '8.0_pt'
+display_version: 8.0  (Portugese)
 start_page: ROOT:index.adoc 
 nav: 
 - modules/ROOT/nav.adoc
