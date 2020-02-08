@@ -2,7 +2,6 @@ add-my-offering.html        http://tomee.apache.org/add-my-offering.html
 apache-openejb-3.1.3.html        http://tomee.apache.org/download/apache-openejb-3.1.3.html
 apache-openejb-3.1.4.html        http://tomee.apache.org/download/apache-openejb-3.1.4.html
 blogs.html        http://tomee.apache.org/blogs.html
-buildbot.html        http://tomee.apache.org/examples/buildbot.html
 contact.html        http://tomee.apache.org/misc/contact.html
 ejb-+-jpa-+-jsf-+-jax-rs.html        http://tomee.apache.org/ejb-+-jpa-+-jsf-+-jax-rs.html
 ejb-2.1-compatibility-example.html        http://tomee.apache.org/ejb-2.1-compatibility-example.html
@@ -126,8 +125,6 @@ singleton-example.html        http://tomee.apache.org/singleton-example.html
 testcase-with-testbean-inner-class.html        http://tomee.apache.org/testcase-with-testbean-inner-class.html
 testing-security-example.html        http://tomee.apache.org/testing-security-example.html
 testing-transactions-example.html        http://tomee.apache.org/testing-transactions-example.html
-time-saved.html        http://tomee.apache.org/time-saved.html
-tips-and-suggestions.html        http://tomee.apache.org/dev/tips-and-suggestions.html
 tomee-1.5.3-snapshot.html        http://tomee.apache.org/download/tomee-1.5.3-snapshot.html
 tomee-1.6.0-snapshot.html        http://tomee.apache.org/download/tomee-1.6.0-snapshot.html
 tomee-1.7.x-snapshot.html        http://tomee.apache.org/download/tomee-1.7.x-snapshot.html
