@@ -11,6 +11,11 @@ content:
   - url: https://github.com/djencks/tomee-site-generator.git
     start_path: oldcontent
     branches: antora
+
+  - url: ./../
+    start_path: docs/examples-en
+    branches: HEAD
+
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

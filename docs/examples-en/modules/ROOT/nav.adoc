@@ -1,4 +1,4 @@
-* xref:../examples/README.adoc.adoc[../examples/README.adoc]
+// generated examples file
 * xref:access-timeout-meta.adoc[access-timeout-meta]
 * xref:access-timeout.adoc[access-timeout]
 * xref:alternate-descriptors.adoc[alternate-descriptors]

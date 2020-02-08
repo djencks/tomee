@@ -7,7 +7,7 @@ EXAMPLES=../examples
 
 #English to start with...
 
-SCRIPT=move-examples-en.sh
+SCRIPT=copy-examples-en.sh
 
 TARGET_DIR=examples-en/modules/ROOT
 mkdir -p $TARGET_DIR/
@@ -16,20 +16,21 @@ echo "#!/bin/bash
 
 mkdir -p $TARGET_DIR/pages
 
+cp $EXAMPLES/README.adoc $TARGET_DIR/pages/index.adoc
+
 " >$SCRIPT
 
 navFile=$TARGET_DIR/nav.adoc
-rm $navFile
-touch $navFile
+echo "// generated examples file" > $navFile
 
-for readme in `find $EXAMPLES -name "README.adoc" | sort`
+for readme in `find $EXAMPLES -mindepth 2 -name "README.adoc" | sort`
 do
 #    echo $readme
     stem=`echo  $readme |sed -E "s/\.\.\/examples\/(.*)\/README.adoc/\1/"`
 #    echo $stem
     targetFile=${stem}.adoc
 #    echo $targetFile
-    targetLoc=$TARGET_DIR/$targetFile
+    targetLoc=$TARGET_DIR/pages/$targetFile
 #    echo $targetLoc
 #    echo "cp $readme $targetLoc"
     echo "cp $readme $targetLoc" >> $SCRIPT
