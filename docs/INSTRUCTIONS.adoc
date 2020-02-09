@@ -1,0 +1,18 @@
+= Building docs with Antora
+
+Follow the instructios on the Antora site for installing Antora or using the docker container.
+
+Run `./update-examples.sh` in this directory.
+You must run it in this directory!!!
+This copies and renames all the README[_lang].adoc files from the examples into an Antora structure.
+Unless you change one of these, you don't need to run the script again.
+
+Run `antora antora-playbook.yml`
+
+== Author mode
+
+The `antora-playbook.yml` playbook is set up so all but this `antora` branch are retrieved from remote git.
+This lets you work on "HEAD" documentation and build the site immediately and see your changes.
+You can also check out the content in `tomee-site-generator` locally and work on it.
+In this case you will want to alter the playbook to point to the local filesystem checkout.
+There's a commented-out suggestion in the playbook that fits my filesystem layout.
