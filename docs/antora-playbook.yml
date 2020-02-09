@@ -4,16 +4,20 @@ site:
   start_page: 8.0@tomee:ROOT:docs.adoc
 content:
   sources:
+# I have been working against a branch off of master branch. Would branching off develop be more appropriate?
   - url: ./../
     start_path: docs/tomee
     branches: HEAD
 
-  - url: ./../
+# This is set up to use the local copy. I think you need to explicity set up local branches for these, tracking the remotes.
+#- url: ./../
+# This uses the remote git.
+  - url:  https://github.com/djencks/tomee.git
     start_path: docs/tomee
     branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
 
-  - url: ./../../tomee-site-generator
-#  - url: https://github.com/djencks/tomee-site-generator.git
+#  - url: ./../../tomee-site-generator
+  - url: https://github.com/djencks/tomee-site-generator.git
     start_path: oldcontent
     branches: antora
 
