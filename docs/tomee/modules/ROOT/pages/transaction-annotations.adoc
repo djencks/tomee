@@ -185,7 +185,7 @@ public static class MyBean implements MyBusinessInterface {
 * _codeBlue_ will be invoked with the attribute of _SUPPORTS_
 * _codeGreen_ will be invoked with the attribute of _REQUIRED_
 
-= Illegal Usage
+== Illegal Usage
 
 Generally, transaction annotationss cannot be made on AroundInvoke
 methods and most callbacks.
