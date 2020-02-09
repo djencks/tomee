@@ -48,21 +48,21 @@ redundant definitions if you do not want them.
 
 Everything you can configure via an openejb.xml (minus the element) can
 be configured/overridden via properties. See
-link:configuring-containers-in-tests.html[Configuring Containers in
-Tests] and link:configuring-datasources-in-tests.html[Configuring
+xref:configuring-containers-in-tests.adoc[Configuring Containers in
+Tests] and xref:configuring-datasources-in-tests.adoc[Configuring
 DataSources in Tests].
 
 Everything in your logging.properties can be configured/overridden via
-properties. See link:configuring-logging-in-tests.html[Configuring
+properties. See xref:configuring-logging-in-tests.adoc[Configuring
 Logging in Tests].
 
 The properties of persistence units declared in a persistence.xml can be
 configured/overridden via properties. See
-link:configuring-persistenceunits-in-tests.html[Configuring
+xref:configuring-persistenceunits-in-tests.adoc[Configuring
 PersistenceUnits in Tests].
 
 OpenEJB has many flags that can also be set as properties. See
-link:properties-listing.html[OpenEJB Properties] for details on those.
+xref:properties-listing.adoc[OpenEJB Properties] for details on those.
 
 = Example of using InitialContext properties
 

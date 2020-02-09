@@ -15,7 +15,7 @@ or even a specific test.
 Note that this approach was added as a catch-all for when one of the
 simpler overriding techniques will not work. For the common case of
 needing to tweak your persistence.xml, see the
-link:configuring-persistenceunits-in-tests.html[Configuring
+xref:configuring-persistenceunits-in-tests.adoc[Configuring
 PersistenceUnits in Tests] page for a simpler approach.
 
 For many reasons it is very inconvenient to have to maintain two sets of

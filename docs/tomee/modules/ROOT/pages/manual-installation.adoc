@@ -8,7 +8,7 @@
 == Overview
 
 The manual installation process is significantly harder then the
-link:tomcat.html[automatic installation] which we normally recommend. In
+xref:tomcat.adoc[automatic installation] which we normally recommend. In
 this installation process you will do the following:
 
 [arabic]
@@ -25,7 +25,7 @@ script
 
 == Install openejb.war
 
-Once Tomcat has been link:tomcat-installation.html[installed] , the
+Once Tomcat has been xref:tomcat-installation.adoc[installed] , the
 OpenEJB plugin for Tomcat can be installed. The war can be obtained from
 the http://tomee.apache.org/downloads.html[download page]
 

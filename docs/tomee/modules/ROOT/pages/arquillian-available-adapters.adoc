@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-Check out the link:arquillian-getting-started.html[Getting started] page
+Check out the xref:arquillian-getting-started.adoc[Getting started] page
 if you are not at all familiar with Arquillian.
 
 All the Arquillian Adapters for TomEE support the following

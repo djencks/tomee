@@ -8,7 +8,7 @@
 == Add The TomEE Maven Plugin To An Existing Project
 
 If you already have a maven project set up then just add the plugin as
-described link:maven/index.html[here]
+described xref:maven/index.adoc[here]
 
 You will likely need the full Java EE API added to your pom file:
 
@@ -30,7 +30,7 @@ template as a reference.
 
 TomEE provides a maven-archetype for generating a template project. This
 template project is preconfigured with `javaee-api` (scope provided) and
-with the link:maven/index.html[`tomee-maven-plugin`] for starting the
+with the xref:maven/index.adoc[`tomee-maven-plugin`] for starting the
 application with TomEE.
 
 For example, if current version of the archetype is '1.7.1', then the

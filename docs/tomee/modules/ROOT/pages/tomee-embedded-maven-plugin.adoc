@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-link:tomee-maven-plugin.html[TomEE Maven Plugin] provides a nice way to
+xref:tomee-maven-plugin.adoc[TomEE Maven Plugin] provides a nice way to
 run "as in production" a server fully configured keeping the
 configuration in the project (easiness of sharing between team members).
 However for modern web development the fact to run the "exploded war"

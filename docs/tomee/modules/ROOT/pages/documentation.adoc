@@ -5,99 +5,99 @@
 :jbake-status: published
 
 
-See also the link:examples-trunk/index.html[examples page] for
+See also the xref:examples-trunk/index.adoc[examples page] for
 downloadable, executable and code-focused view of Java EE and TomEE. You
 can also find us on IRC freenode.org #openejb and #tomee
 
 \{row
 
-\{span-one-third ###IDE link:tomee-and-intellij.html[Get started with
-Intellij], link:contrib/debug/debug-intellij.html[Debugging in
+\{span-one-third ###IDE xref:tomee-and-intellij.adoc[Get started with
+Intellij], xref:contrib/debug/debug-intellij.adoc[Debugging in
 Intellij] +
-link:tomee-and-eclipse.html[Get started with Eclipse (WTP)] +
-link:getting-started-with-eclipse-and-webby.html[Get started with
+xref:tomee-and-eclipse.adoc[Get started with Eclipse (WTP)] +
+xref:getting-started-with-eclipse-and-webby.adoc[Get started with
 Eclipse (m2e-Webby)] +
-link:tomee-and-netbeans.html[Get started with Netbeans]
+xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
-== General Informations link:comparison.html[Comparison: OpenEJB, TomEE,
+== General Informations xref:comparison.adoc[Comparison: OpenEJB, TomEE,
 TomEE+] +
-link:tomee-directory-structure.html[TomEE Directory structure] +
-link:deploying-in-tomee.html[Deploying in TomEE] +
-link:tomee-webapp.html[The 'tomee' webapp] +
-link:refcard/refcard.html[TomEE Reference Card] +
-link:application-composer/index.html[ApplicationComposer] +
-} \{span-one-third ###Configuration link:system-properties.html[System
+xref:tomee-directory-structure.adoc[TomEE Directory structure] +
+xref:deploying-in-tomee.adoc[Deploying in TomEE] +
+xref:tomee-webapp.adoc[The 'tomee' webapp] +
+xref:refcard/refcard.adoc[TomEE Reference Card] +
+xref:application-composer/index.adoc[ApplicationComposer] +
+} \{span-one-third ###Configuration xref:system-properties.adoc[System
 Properties] +
-link:deployments.html[Deployments] +
-link:Configuring-in-tomee.html[Configuring Resources] +
-link:configuring-datasources.html[Configuring DataSources] +
-link:containers-and-resources.html[Containers and Resources] +
-link:jms-resources-and-mdb-container.html[JMS Resources and MDB
+xref:deployments.adoc[Deployments] +
+xref:Configuring-in-tomee.adoc[Configuring Resources] +
+xref:configuring-datasources.adoc[Configuring DataSources] +
+xref:containers-and-resources.adoc[Containers and Resources] +
+xref:jms-resources-and-mdb-container.adoc[JMS Resources and MDB
 Container] +
-link:configuring-javamail.html[Configuring JavaMail] +
-link:tomee-and-security.html[TomEE Security] +
-link:security.html[Security How To] +
-link:clients.html[EJB Clients] +
-link:ejb-over-ssl.html[EJB over SSL] +
-link:jndi-names.html[JNDI Names] +
-link:changing-jms-implementations.html[Changing JMS implementations] +
-link:tomee-and-hibernate.html[Changing JPA to Hibernate] +
+xref:configuring-javamail.adoc[Configuring JavaMail] +
+xref:tomee-and-security.adoc[TomEE Security] +
+xref:security.adoc[Security How To] +
+xref:clients.adoc[EJB Clients] +
+xref:ejb-over-ssl.adoc[EJB over SSL] +
+xref:jndi-names.adoc[JNDI Names] +
+xref:changing-jms-implementations.adoc[Changing JMS implementations] +
+xref:tomee-and-hibernate.adoc[Changing JPA to Hibernate] +
 } \{span-one-third ###Testing Techniques
-link:application-discovery-via-the-classpath.html[Application discovery
+xref:application-discovery-via-the-classpath.adoc[Application discovery
 via the classpath] +
-link:embedded-configuration.html[Embedded Configuration] +
-link:configuring-datasources-in-tests.html[Configuring DataSources in
+xref:embedded-configuration.adoc[Embedded Configuration] +
+xref:configuring-datasources-in-tests.adoc[Configuring DataSources in
 Tests] +
-link:configuring-persistenceunits-in-tests.html[Configuring
+xref:configuring-persistenceunits-in-tests.adoc[Configuring
 PersistenceUnits in Tests] +
-link:configuring-containers-in-tests.html[Configuring Containers in
+xref:configuring-containers-in-tests.adoc[Configuring Containers in
 Tests] +
-link:configuring-logging-in-tests.html[Configuring Logging in Tests] +
-link:alternate-descriptors.html[Alternate Descriptors] +
-link:unit-testing-transactions.html[Unit Testing Transactions] +
-link:testcase-with-testbean-inner-class.html[TestCase with TestBean
+xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests] +
+xref:alternate-descriptors.adoc[Alternate Descriptors] +
+xref:unit-testing-transactions.adoc[Unit Testing Transactions] +
+xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean
 inner-class] +
 [TestCase Injection (`@LocalClient`)](local-client-injection.html) +
 } } \{row
 
 \{span-one-third ###Discovery and Failover
-link:ejb-failover.html[Overview] +
-link:multicast-discovery.html[Multicast Discovery (UDP)] +
-link:multipulse-discovery.html[Multipulse Discovery (UDP)] +
-link:multipoint-discovery.html[Multipoint Discovery (TCP)] +
-link:multipoint-considerations.html[Multipoint Considerations] +
-link:multipoint-recommendations.html[Multipoint Recommendations] +
-link:failover-logging.html[Logging Events] +
+xref:ejb-failover.adoc[Overview] +
+xref:multicast-discovery.adoc[Multicast Discovery (UDP)] +
+xref:multipulse-discovery.adoc[Multipulse Discovery (UDP)] +
+xref:multipoint-discovery.adoc[Multipoint Discovery (TCP)] +
+xref:multipoint-considerations.adoc[Multipoint Considerations] +
+xref:multipoint-recommendations.adoc[Multipoint Recommendations] +
+xref:failover-logging.adoc[Logging Events] +
 } \{span-one-third
 
 == OpenEJB Standalone Server
-link:understanding-the-directory-layout.html[Understanding the Directory
+xref:understanding-the-directory-layout.adoc[Understanding the Directory
 Layout] +
 link:startup.html[Startup] +
-link:deploy-tool.html[Deploy Tool] +
-link:properties-tool.html[Properties Tool] +
-} \{span-one-third ###Spring link:spring-and-openejb-3.0.html[Spring and
+xref:deploy-tool.adoc[Deploy Tool] +
+xref:properties-tool.adoc[Properties Tool] +
+} \{span-one-third ###Spring xref:spring-and-openejb-3.0.adoc[Spring and
 OpenEJB 3.0] +
-link:spring.html[Spring and OpenEJB 3.1 and later] +
-link:spring-ejb-and-jpa.html[Spring, EJB and JPA example] +
+xref:spring.adoc[Spring and OpenEJB 3.1 and later] +
+xref:spring-ejb-and-jpa.adoc[Spring, EJB and JPA example] +
 } } \{row
 
 \{span-one-third ###Arquillian
-link:arquillian-getting-started.html[Arquillian Primer - What you need
+xref:arquillian-getting-started.adoc[Arquillian Primer - What you need
 to know] +
-link:arquillian-available-adapters.html[Using the TomEE Arquillian
+xref:arquillian-available-adapters.adoc[Using the TomEE Arquillian
 adapters] +
 } \{span-one-third ###TomEE Maven Plugin
-link:tomee-mp-getting-started.html[Getting started] +
-link:maven/index.html[tomee-maven-plugin reference documentation] +
-link:tomee-embedded-maven-plugin.html[tomee-embedded-maven-plugin
+xref:tomee-mp-getting-started.adoc[Getting started] +
+xref:maven/index.adoc[tomee-maven-plugin reference documentation] +
+xref:tomee-embedded-maven-plugin.adoc[tomee-embedded-maven-plugin
 reference documentation] +
-link:tomee-mp-getting-started.html[TomEE simple webapp archetype
+xref:tomee-mp-getting-started.adoc[TomEE simple webapp archetype
 documentation] +
 } \{span-one-third ###Tips and Tricks
-link:installation-drop-in-war.html[Install TomEE using the drop-in
+xref:installation-drop-in-war.adoc[Install TomEE using the drop-in
 WAR] +
-link:tip-concurrency.html[Global Concurrency Management] +
-link:tip-weblogic.html[WebLogic Lookup] +
-link:tip-jersey-client.html[Jersey Client] +
+xref:tip-concurrency.adoc[Global Concurrency Management] +
+xref:tip-weblogic.adoc[WebLogic Lookup] +
+xref:tip-jersey-client.adoc[Jersey Client] +
 } }

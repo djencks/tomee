@@ -44,5 +44,5 @@ with a simple shade a JAXRS/JAXWS/JMS service!
 
 If you want to go further you can browse:
 
-* link:getting-started.html[Getting Started]
-* link:advanced.html[Advanced]
+* xref:getting-started.adoc[Getting Started]
+* xref:advanced.adoc[Advanced]

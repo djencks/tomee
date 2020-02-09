@@ -194,6 +194,6 @@ maintained behind the scenes using server discovery logic that can
 function on either UDP or TCP. See these docs for more details on
 Failover and Discovery:
 
-* link:multicast-discovery.html[Multicast Discovery (UDP)]
-* link:multipulse-discovery.html[Multipulse Discovery (TCP)]
-* link:multipoint-discovery.html[Multipoint Discovery (TCP)]
+* xref:multicast-discovery.adoc[Multicast Discovery (UDP)]
+* xref:multipulse-discovery.adoc[Multipulse Discovery (TCP)]
+* xref:multipoint-discovery.adoc[Multipoint Discovery (TCP)]

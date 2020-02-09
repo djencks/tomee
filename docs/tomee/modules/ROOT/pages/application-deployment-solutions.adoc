@@ -42,7 +42,7 @@ The Deployer is the base of all other solutions
 
 ==== Maven plugin
 
-link:maven/index.html[org.apache.openejb:tomee-maven-plugin] can be used
+xref:maven/index.adoc[org.apache.openejb:tomee-maven-plugin] can be used
 to deploy/undeploy your application. Once this plugin is added to your
 pom you have access to the following configuration:
 

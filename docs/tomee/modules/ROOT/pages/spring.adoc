@@ -108,13 +108,13 @@ _deploymentId_, _interface_
 
 = Examples
 
-See the link:spring-ejb-and-jpa.html[Spring EJB and JPA] page for
+See the xref:spring-ejb-and-jpa.adoc[Spring EJB and JPA] page for
 example code and a working Spring xml file.
 
 = \{anchor:problems} Problems?
 
 If you are having problems with the installation, please send a message
-to the OpenEJB users link:mailing-lists.html[mailing list] containing
+to the OpenEJB users xref:mailing-lists.adoc[mailing list] containing
 any error message(s) and the following information:
 
 * OpenEJB Version

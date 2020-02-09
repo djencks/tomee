@@ -7,7 +7,7 @@
 
 TomEE provides several maven plugins:
 
-- one for a link:maven/tomee.html[standalone TomEE]
-- one for link:maven/embedded.html[TomEE embedded]
-- one for link:maven/applicationcomposer.html[application composer] based applications
+- one for a xref:maven/tomee.adoc[standalone TomEE]
+- one for xref:maven/embedded.adoc[TomEE embedded]
+- one for xref:maven/applicationcomposer.adoc[application composer] based applications
 - Note: there is one for `EJBContainer` but this one is easily replaced by one of the previous in general

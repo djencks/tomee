@@ -24,7 +24,7 @@ Tomcat.
 
 You could deploy your application in Eclipse just like how you would
 deploy with Tomcat. For an example,
-link:tomee-and-eclipse.html[tomee-and-eclipse] shows how to use TomEE
+xref:tomee-and-eclipse.adoc[tomee-and-eclipse] shows how to use TomEE
 with Eclipse.
 
 Or you can simply package your application as a standard *WAR* file and
