@@ -9,7 +9,7 @@ content:
     start_path: docs/tomee
     branches: HEAD
 
-# This is set up to use the local copy. I think you need to explicity set up local branches for these, tracking the remotes.
+# This uses the local copy. I think you need to explicity set up local branches for these, tracking the remotes.
 #- url: ./../
 # This uses the remote git.
   - url:  https://github.com/djencks/tomee.git
@@ -23,11 +23,13 @@ content:
     branches: antora
 
 # currently producing version 0.0
-  - url: ./../../tomee-site
-#  - url: https://github.com/djencks/tomee-site.git
+#  - url: ./../../tomee-site
+  - url: https://github.com/djencks/tomee-site.git
     start_path: tomee
     branches: antora
 
+# The .adoc files for the examples are not checked in; they are copied and renamed from ../examples.
+# You need to run update-examples.sh to generate the copy scripts and nav files and show you if there are new or removed pages.
   - url: ./../
     start_path: docs/examples-en
     branches: HEAD
@@ -40,6 +42,8 @@ content:
     start_path: docs/examples-pt
     branches: HEAD
 
+# This is the Antora default UI.
+# We need to modify it with supplemental files or replace it.
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
