@@ -20,7 +20,7 @@ to do various optimizations or other special features.
 * The _non-jta-data-source_ should always have it's OpenEJB-specific
 '_JtaManaged_' property set to '_false_'.
 
-See link:containers-and-resources.html[Containers and Resources] for how
+See xref:containers-and-resources.adoc[Containers and Resources] for how
 to configure 'JtaManaged' and a full list of properties for DataSources.
 
 == Be detach aware
@@ -31,7 +31,7 @@ remove or update an object they fetched previously and get an exception
 like "You cannot perform operation delete on detached object".
 
 All ejb methods start a transaction unless a) you
-link:transaction-annotations.html[configure them otherwise] , or b) the
+xref:transaction-annotations.adoc[configure them otherwise] , or b) the
 caller already has a transaction in progress when it calls the bean. If
 you're in a test case or a servlet, it's most likely B that is biting
 you. You're asking an ejb for some persistent objects, it uses the
@@ -45,4 +45,4 @@ reattach your object. 1. Use PersistenceContextType.EXTENDED as in
 PersistenceContextType.EXTENDED)' for EntityManager refs instead of the
 default of PersistenceContextType.TRANSACTION. 1. If testing, use a
 technique to execute transactions in your test code. That's described
-here in link:unit-testing-transactions.html[Unit testing transactions]
+here in xref:unit-testing-transactions.adoc[Unit testing transactions]

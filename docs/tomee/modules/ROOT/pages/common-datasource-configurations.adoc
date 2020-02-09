@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-See the link:datasource-config.html[DataSource Configuration] for
+See the xref:datasource-config.adoc[DataSource Configuration] for
 details on all configuration options for DataSources.
 
 == HSQLDB

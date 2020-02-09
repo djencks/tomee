@@ -17,7 +17,7 @@ pointed by the property is searched for resources before openejb.home.
 * _openejb.loader_ - OpenEJB loader that's responsible for loading EJBs.
 There are 3 different loader types: +
 ** _tomcat-webapp_ - set it when inside of Tomcat scoped at just the
-webapp, aka. link:collapsed-ear.html[Collapsed EAR] ** _tomcat_ - set it
+webapp, aka. xref:collapsed-ear.adoc[Collapsed EAR] ** _tomcat_ - set it
 when inside of Tomcat scoped for all webapps to share ** _system_ (also:
 bootstrap) ** _embedded_ (also: noload)
 * _openejb.configurator_ (default:

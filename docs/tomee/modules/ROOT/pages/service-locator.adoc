@@ -5,7 +5,7 @@
 :jbake-status: published
 
 The functionality of the
-link:jndi-names.html[openejb.jndiname.format] allows for writing some
+xref:jndi-names.adoc[openejb.jndiname.format] allows for writing some
 really fun service locator code. Creating the exact layout you want
 using the exact data you want means you can create robust libraries for
 pulling things out of JNDI.

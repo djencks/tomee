@@ -7,7 +7,7 @@
 All containers will be created automatically - which means you don't need to define them
 if you don't need to tune their configuration - when a bean of their type if found.
 
-To avoid that use `openejb.offline` property and set it to `true`. See link:server.html[Server Configuration] for more detail.
+To avoid that use `openejb.offline` property and set it to `true`. See xref:server.adoc[Server Configuration] for more detail.
 
 == @Stateless
 

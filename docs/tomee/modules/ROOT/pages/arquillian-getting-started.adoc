@@ -10,7 +10,7 @@ prefer). It makes it easier to do integration tests in a managed
 environment (JEE environment here after).
 
 We provide an embedded and remote adapter, see
-link:arquillian-available-adapters.html[the available adapters] for more
+xref:arquillian-available-adapters.adoc[the available adapters] for more
 details.
 
 In a managed environment it is usually quite difficult to perform unit

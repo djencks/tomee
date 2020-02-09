@@ -4,4 +4,4 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
-Click link:../docs.html[here] to find advanced documentation.
+Click xref:../docs.adoc[here] to find advanced documentation.

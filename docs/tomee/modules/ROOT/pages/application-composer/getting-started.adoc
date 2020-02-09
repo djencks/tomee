@@ -231,4 +231,4 @@ public class MyTest {
 == Going further
 
 If you want to learn more about ApplicationComposer see
-link:advanced.html[Advanced] page.
+xref:advanced.adoc[Advanced] page.

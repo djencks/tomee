@@ -15,8 +15,8 @@ Additionally, the plugin also provides the capability to read a
 ejb-jar.xml (and optionally a openejb-jar.xml) file and automatically
 add the corresponding EJB 3 annotations to your code automatically.
 
-link:installation.html[Installation]
-link:building-from-source.html[Building from source]
-link:generating-ejb-3-annotations.html[Generating EJB 3 annotations]
-link:running-a-standalone-openejb-server.html[Running a standalone
+xref:installation.adoc[Installation]
+xref:building-from-source.adoc[Building from source]
+xref:generating-ejb-3-annotations.adoc[Generating EJB 3 annotations]
+xref:running-a-standalone-openejb-server.adoc[Running a standalone
 OpenEJB server]

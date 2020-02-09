@@ -10,7 +10,7 @@ openejb start - OpenEJB Remote Server
 
 = SYNOPSIS
 
-openejb start link:#options.html[#options]
+openejb start xref:#options.adoc[#options]
 
 = NOTE
 

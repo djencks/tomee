@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-You can find a list of properties link:properties-listing.html[here].
+You can find a list of properties xref:properties-listing.adoc[here].
 But read on to understand how these can be used.
 
 == Overriding openejb.xml
