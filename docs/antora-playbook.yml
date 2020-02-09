@@ -1,12 +1,17 @@
 site:
   title: Tomee Documentation
   url: https://tomee.apache.org
-  start_page: 8.0@Tomee:ROOT:docs.adoc
+  start_page: 8.0@tomee:ROOT:docs.adoc
 content:
   sources:
   - url: ./../
     start_path: docs/tomee
     branches: HEAD
+
+  - url: ./../
+    start_path: docs/tomee
+    branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
+
 #  - url: ./../../tomee-site-generator
   - url: https://github.com/djencks/tomee-site-generator.git
     start_path: oldcontent

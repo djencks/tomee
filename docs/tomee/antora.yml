@@ -1,5 +1,5 @@
-name: Tomee 
-title: Tomee Documentation
+name: tomee 
+title: TomEE Documentation
 version: '8.0' 
 start_page: ROOT:docs.adoc 
 nav: 
