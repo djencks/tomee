@@ -16,9 +16,16 @@ content:
     start_path: docs/tomee
     branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
 
+# currently producing version 0.1
 #  - url: ./../../tomee-site-generator
   - url: https://github.com/djencks/tomee-site-generator.git
     start_path: oldcontent
+    branches: antora
+
+# currently producing version 0.0
+  - url: ./../../tomee-site
+#  - url: https://github.com/djencks/tomee-site.git
+    start_path: tomee
     branches: antora
 
   - url: ./../
