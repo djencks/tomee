@@ -19,6 +19,6 @@ License.
 
 = Links to guide you through OpenEJB-Standalone-Server
 
-* link:startup.html[Startup]
-* link:deploy-tool.html[Deploy Tool]
-* link:properties-tool.html[Properties Tool]
+* xref:startup.adoc[Startup]
+* xref:deploy-tool.adoc[Deploy Tool]
+* xref:properties-tool.adoc[Properties Tool]

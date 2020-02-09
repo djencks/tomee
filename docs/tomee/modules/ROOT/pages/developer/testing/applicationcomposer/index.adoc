@@ -332,4 +332,4 @@ and just expose them or wrap them in your tests thanks to the `@Application` fie
 
 
 == Going further
-If you want to learn more about ApplicationComposer see link:../../../advanced/applicationcomposer/index.html[ApplicationComposer Advanced] page.
+If you want to learn more about ApplicationComposer see xref:../../../advanced/applicationcomposer/index.adoc[ApplicationComposer Advanced] page.

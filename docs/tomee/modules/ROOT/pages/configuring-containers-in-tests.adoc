@@ -26,5 +26,5 @@ Note, this only works when using the LocalInitialContextFactory to embed
 OpenEJB into the vm. Once embedded, further configuration properties are
 ignored.
 
-See link:containers-and-resources.html[Containers and Resources] for a
+See xref:containers-and-resources.adoc[Containers and Resources] for a
 full list of supported Resource types and their properties.

@@ -3,7 +3,7 @@
 :jbake-status: published
 :index-group: Testing
 
-link:getting-started.html[Getting Started] page gives you already a lot
+xref:getting-started.adoc[Getting Started] page gives you already a lot
 of inputs but you caneven go further.
 
 == @Descriptors

@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-NOTE: OpenEJB 3.1 and later users should refer to the link:spring.html[Spring]
+NOTE: OpenEJB 3.1 and later users should refer to the xref:spring.adoc[Spring]
 page.
 
 # Bootstrapping OpenEJB in Spring

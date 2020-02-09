@@ -10,7 +10,7 @@ it can be anything but you will probably meet more Datasources than other type o
 
 Most resources will be created automatically if there is no matching resources - by name and type -
 when an injection will be found. To avoid that use `openejb.offline` property and set it to `true`.
-See link:server.html[Server Configuration] for more detail.
+See xref:server.adoc[Server Configuration] for more detail.
 
 == Definition a resource: how does it work?
 

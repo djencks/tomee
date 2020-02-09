@@ -8,8 +8,8 @@ This section is under construction, please check back later.
 
 == Related Documents
 
-link:security.html[Security] - login module configuration
-link:security-annotations.html[Security Annotations] - EJB3 related
+xref:security.adoc[Security] - login module configuration
+xref:security-annotations.adoc[Security Annotations] - EJB3 related
 annotation based security.
 
 == Server Side Security

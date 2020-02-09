@@ -43,10 +43,10 @@ p.put("myDataSource.JdbcUrl", "jdbc:derby:myDatabaseTwo;create=true");
 This will allow an application to communicate through legacy drivers to
 the same JDBC provider.
 
-See link:embedded-configuration.html[Embedded Configuration] for further
+See xref:embedded-configuration.adoc[Embedded Configuration] for further
 details on properties and overrides.
 
-See link:containers-and-resources.html[Containers and Resources] for a
+See xref:containers-and-resources.adoc[Containers and Resources] for a
 full list of supported Resource types and their properties.
 
 == Note on <jta-data-source> and <non-jta-data-source>

@@ -29,7 +29,7 @@ The _openejb.jndiname.format_ property allows you to supply a template
 for the global JNDI names of all your EJBs. With it, you have complete
 control over the structure of the JNDI layout can institute a design
 pattern just right for your client apps. See the
-link:service-locator.html[Service Locator] doc for clever ways to use
+xref:service-locator.adoc[Service Locator] doc for clever ways to use
 the JNDI name formatting functionality in client code.
 
 variable
@@ -367,7 +367,7 @@ to read further. Go have fun.
 If you do not implement your business interfaces it may not be possible
 for us to implement all your business interfaces in a single interface.
 Conflicts in the throws clauses and the return values can occur as
-detailed link:multiple-business-interface-hazzards.html[here] . When
+detailed xref:multiple-business-interface-hazzards.adoc[here] . When
 creating a proxy for an interface we will detect and remove any other
 business interfaces that would conflict with the main interface.
 

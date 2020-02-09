@@ -90,4 +90,4 @@ With associated resources.xml which will define precisely the `wss4j` configurat
 
 == Sample for JAX-RS
 
-link:../json/index.html[JAX-RS JSON] page shows a sample dedicated to JAX-RS.
+xref:../json/index.adoc[JAX-RS JSON] page shows a sample dedicated to JAX-RS.

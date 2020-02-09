@@ -11,7 +11,7 @@ openejb validate - OpenEJB Validation Tool
 
 = SYNOPSIS
 
-openejb validate link:options.html[options] jarfiles
+openejb validate xref:options.adoc[options] jarfiles
 
 = NOTE
 
