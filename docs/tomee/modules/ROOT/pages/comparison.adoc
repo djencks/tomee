@@ -3,7 +3,10 @@
 :jbake-date: 2018-12-05
 :jbake-type: page
 :jbake-status: published
-
+:icons: font
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
+:c: icon:file-text-o[role="blue"]
 
 Apache OpenEJB and Apache TomEE are born from the same project and
 community. They differ in two major ways, only one of them technical:
@@ -17,189 +20,146 @@ and TomEE grew out of OpenEJB.
 
 Note: this table is for TomEE 1.x, TomEE 7 comments are under it.
 
-Tomcat
-
-TomEE
-
-TomEE JAX-RS (~ Microprofile)
-
-TomEE+
-
-TomEE PluME
-
-OpenEJB
-
-Java Servlets
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java ServerPages (JSP)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java ServerFaces (JSF)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java Transaction API (JTA)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java Persistence API (JPA)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java Contexts and Dependency Injection (CDI)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java Authentication and Authorization Service (JAAS)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java Authorization Contract for Containers (JACC)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-JavaMail API
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Bean Validation
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Enterprise JavaBeans
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java API for RESTful Web Services (JAX-RS)
-
-(/)
-
-(/)
-
-(/)
-
-(/)
-
-Java API for XML Web Services (JAX-WS)
-
-(/)
-
-(/)
-
-(/)
-
-Java EE Connector Architecture
-
-(/)
-
-(/)
-
-(/)
-
-Java Messaging Service (JMS)
-
-(/)
-
-(/)
-
-(/)
-
-EclipseLink
-
-(/)
-
-Mojarra
-
-(/)
+[cols="4,6*^1"]
+|===
+| |Tomcat |TomEE |TomEE JAX-RS (~ Microprofile) |TomEE+ |TomEE PluME |OpenEJB
+
+|Java Servlets
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+|
+
+|Java ServerPages (JSP)
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+|
+
+|Java ServerFaces (JSF)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+|
+
+|Java Transaction API (JTA)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java Persistence API (JPA)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java Contexts and Dependency Injection (CDI)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java Authentication and Authorization Service (JAAS)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java Authorization Contract for Containers (JACC)
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|JavaMail API
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Bean Validation
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Enterprise JavaBeans
+|
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java API for RESTful Web Services (JAX-RS)
+|
+|
+| {y}
+| {y}
+| {y}
+| {y}
+
+|Java API for XML Web Services (JAX-WS)
+|
+|
+|
+| {y}
+| {y}
+| {y}
+
+|Java EE Connector Architecture
+|
+|
+|
+| {y}
+| {y}
+| {y}
+
+|Java Messaging Service (JMS)
+|
+|
+|
+| {y}
+| {y}
+| {y}
+
+|EclipseLink
+|
+|
+|
+| {y}
+|
+|
+
+|Mojarra
+|
+|
+|
+| {y}
+|
+|
+|===
 
 TomEE 7 targets JavaEE 7 and implements these specifications (in
 parenthesis the distibution(s) containing it if not part of the basic
