@@ -4,5 +4,5 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
-- xref:maven-plugins.adoc[Maven Plugins]
-- xref:gradle-plugins.adoc[Gradle Plugin]
+- xref:developer/tools/maven-plugins.adoc[Maven Plugins]
+- xref:developer/tools/gradle-plugins.adoc[Gradle Plugin]
