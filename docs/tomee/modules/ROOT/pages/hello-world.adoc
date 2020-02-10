@@ -257,7 +257,7 @@ Hello World!!!!
 Just send us an email at users@tomee.apache.org. If possible, send us
 the contents of logs/openejb.log file in the email.
 
-= Looking for more?
+== Looking for more?
 
 More EJB 3.0 examples, sample applications, tutorials and howtos
 available xref:examples.adoc[here] .

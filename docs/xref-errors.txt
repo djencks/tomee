@@ -130,21 +130,13 @@ worktree: /github.com/apache/tomee-site/edit/antora/tomee | component: tomee | v
   path: modules/ROOT/pages/validation-tool.adoc | xref: user@host-openejb.adoc
 
 worktree: /github.com/apache/tomee/edit/antora/docs/tomee | component: tomee | version: 8.0
-  path: modules/ROOT/nav.adoc | xref: :getting-started-with-eclipse-and-webby.adoc
   path: modules/ROOT/nav.adoc | xref: :refcard/refcard.adoc
-  path: modules/ROOT/nav.adoc | xref: :unit-testing-transactions.adoc
-  path: modules/ROOT/nav.adoc | xref: :testcase-with-testbean-inner-class.adoc
-  path: modules/ROOT/pages/advanced/setup/index.adoc | xref: ../../admin/directory-structure.adoc
-  path: modules/ROOT/pages/advanced/shading/index.adoc | xref: advanced/shading/../tomee-embedded/index.adoc
-  path: modules/ROOT/pages/advanced/shading/index.adoc | xref: advanced/shading/../applicationcomposer/index.adoc
   path: modules/ROOT/pages/basics---getting-things.adoc | xref: container-managed-resource.adoc
   path: modules/ROOT/pages/basics---getting-things.adoc | xref: container-managed-component.adoc
   path: modules/ROOT/pages/collapsed-ear.adoc | xref: downloads.adoc
   path: modules/ROOT/pages/custom-injection.adoc | xref: downloads.adoc
-  path: modules/ROOT/pages/developer/configuration/cxf.adoc | xref: developer/configuration/../json/index.adoc
   path: modules/ROOT/pages/documentation.adoc | xref: refcard/refcard.adoc
   path: modules/ROOT/pages/documentation.old.adoc | xref: refcard/refcard.adoc
-  path: modules/ROOT/pages/eclipse-plugin.adoc | xref: mailing-lists.adoc
   path: modules/ROOT/pages/hello-world.adoc | xref: examples.adoc
   path: modules/ROOT/pages/quickstart.adoc | xref: downloads.adoc
   path: modules/ROOT/pages/spring-ejb-and-jpa.adoc | xref: downloads.adoc
