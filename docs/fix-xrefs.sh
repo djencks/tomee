@@ -7,7 +7,7 @@ const sourcepath = 'tomee/'
 const pagesPath = sourcepath + 'modules/ROOT/pages/'
 const fs = require('fs')
 
-const errorRx = /path\: (?<path>.*) \| xref\: (?<xref>.*)/
+const errorRx = /path\: (:?docs\/tomee\/)?(?<path>.*) \| xref\: (?<xref>.*)/
 
 const indexFile = fs.readFileSync('new-antora-index.txt').toString()
 const index = indexFile.split('\n').reduce((accum, line) => {
@@ -48,10 +48,10 @@ lines.filter((line) => {
 //      console.log('found xref at ' + offset)
         var target = found.groups.xref
         if (target.startsWith(':')) target = target.slice(1)
-        const dir = path.slice(path.indexOf('pages/') + 7, path.lastIndexOf('/') + 1)
-        console.log(`trimmed ${path} to ${dir}`)
+        const dir = path.slice(path.indexOf('pages/') + 6, path.lastIndexOf('/') + 1)
+        console.log(`trimmed ${path} to ${dir}, trying `)
         try {
-          const stat = fs.statSync(`${dir}${target}`)
+          const stat = fs.statSync(`${pagesPath}${dir}${target}`)
           console.log('returning 1 ', `xref:${dir}${target}`)
           return `xref:${dir}${target}`
         } catch (err) {
