@@ -9,27 +9,27 @@ content:
     start_path: docs/tomee
     branches: HEAD
 
-# This uses the local copy. I think you need to explicity set up local branches for these, tracking the remotes.
-#- url: ./../
-# This uses the remote git.
-  - url:  https://github.com/djencks/tomee.git
+    # This uses the local copy. I think you need to explicitly set up local branches for these, tracking the remotes.
+    # Even using git worktree, the path must be to the main git checkout.
+  - url: ./../
+    # This uses the remote git.
+  #- url:  https://github.com/djencks/tomee.git
     start_path: docs/tomee
     branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
 
-# currently producing version 0.1
-#  - url: ./../../tomee-site-generator
-  - url: https://github.com/djencks/tomee-site-generator.git
+  # currently producing version 0.1
+  - url: ./../../tomee-site-generator
+#  - url: https://github.com/djencks/tomee-site-generator.git
     start_path: tomee
     branches: antora
 
 # currently producing version 0.0
-#  - url: ./../../tomee-site
-  - url: https://github.com/djencks/tomee-site.git
+  - url: ./../../tomee-site
+#  - url: https://github.com/djencks/tomee-site.git
     start_path: tomee
     branches: antora
 
 # The .adoc files for the examples are not checked in; they are copied and renamed from ../examples.
-# Checking the copies in would make building the site much more self contained.
 # You need to run update-examples.sh to generate the copy scripts and nav files and show you if there are new or removed pages.
   - url: ./../
     start_path: docs/examples-en
