@@ -163,3 +163,4 @@
 * xref:webservice-ws-security.adoc[webservice-ws-security]
 * xref:webservice-ws-with-resources-config.adoc[webservice-ws-with-resources-config]
 * xref:websocket-tls-basic-auth.adoc[websocket-tls-basic-auth]
+* xref:xa-datasource.adoc[xa-datasource]

@@ -169,3 +169,4 @@ cp ../examples/webservice-ssl-client-cert/README.adoc examples-en/modules/ROOT/p
 cp ../examples/webservice-ws-security/README.adoc examples-en/modules/ROOT/pages/webservice-ws-security.adoc
 cp ../examples/webservice-ws-with-resources-config/README.adoc examples-en/modules/ROOT/pages/webservice-ws-with-resources-config.adoc
 cp ../examples/websocket-tls-basic-auth/README.adoc examples-en/modules/ROOT/pages/websocket-tls-basic-auth.adoc
+cp ../examples/xa-datasource/README.adoc examples-en/modules/ROOT/pages/xa-datasource.adoc
