@@ -10,10 +10,10 @@ TomEE specific configuration (ie not inherited one from Tomcat) is based on prop
 you can fully configure TomEE using properties in `conf/system.properties`.
 However for convenience it also provides a hybrid XML alternative a.k.a. `conf/tomee.xml`.
 
-- xref:server.adoc[Server Configuration: Properties].
-- xref:resources.adoc[Resources]
-- xref:containers.adoc[Containers]
-- xref:log4j2.adoc[Using log4j2]
+- xref:admin/configuration/server.adoc[Server Configuration: Properties].
+- xref:admin/configuration/resources.adoc[Resources]
+- xref:admin/configuration/containers.adoc[Containers]
+- xref:admin/configuration/log4j2.adoc[Using log4j2]
 
 == Application
 
@@ -22,4 +22,4 @@ are read in `WEB-INF/application.properties`. When you can't use `tomee.xml` to 
 resources you can use `WEB-INF/resources.xml` which inherit from `tomee.xml` its syntax
 but binds the resources to the application and reuses the application classloader.
 
-More about xref:application.adoc[Container Configuration].
+More about xref:admin/configuration/application.adoc[Container Configuration].

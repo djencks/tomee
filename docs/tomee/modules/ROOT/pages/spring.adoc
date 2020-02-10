@@ -114,7 +114,10 @@ example code and a working Spring xml file.
 = \{anchor:problems} Problems?
 
 If you are having problems with the installation, please send a message
-to the OpenEJB users xref:mailing-lists.adoc[mailing list] containing
+to the OpenEJB users 
+//FIXME CHOOSE ONE
+xref:0.0@tomee::mailing-lists.adoc[]
+xref:0.1@tomee::mailing-lists.adoc[mailing list] containing
 any error message(s) and the following information:
 
 * OpenEJB Version
