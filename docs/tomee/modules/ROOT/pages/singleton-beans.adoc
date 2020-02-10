@@ -23,7 +23,7 @@ has an _`@Startup_` annotation which is similar in concept to the servlet
 you can use an _`@DependsOn_` annotation to say which other Singletons you
 need and the container will ensure they start before you.
 
-See the xref:singleton-example.adoc[Singleton Example] for sample bean
+See the xref:0.0@tomee::singleton-example.adoc[Singleton Example] for sample bean
 code and client.
 
 == Concurrency

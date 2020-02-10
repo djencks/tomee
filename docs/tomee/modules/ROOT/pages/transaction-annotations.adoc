@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-_Also see xref:testing-transactions-example.adoc[Testing Transactions]
+_Also see xref:0.0@tomee::testing-transactions-example.adoc[Testing Transactions]
 for an example of how to use and test EJB transaction attributes_
 
 The _javax.ejb.TransactionAttribute_ annotation (`@TransactionAttribute`)

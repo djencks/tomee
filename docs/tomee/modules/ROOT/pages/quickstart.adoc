@@ -66,4 +66,7 @@ openejbx30:hello-world.html[Hello World] example.
 The OpenEJB User list is where the general OpenEJB community goes to ask
 questions, make suggestions, chat with other users, and keep a finger on
 the pulse of the project. More information about the user list and dev
-list can be found xref:mailing-lists.adoc[here]
+list can be found 
+//FIXME CHOOSE ONE
+xref:0.0@tomee::mailing-lists.adoc[]
+xref:0.1@tomee::mailing-lists.adoc[here]

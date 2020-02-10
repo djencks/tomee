@@ -1,6 +1,72 @@
 Title: Documentation
 
-See also the xref:examples-trunk/index.adoc[examples page] for
+See also the 
+//FIXME CHOOSE ONE
+xref:0.0@tomee::download/index.adoc[]
+xref:0.0@tomee::maven/index.adoc[]
+xref:0.0@tomee::security/index.adoc[]
+xref:0.1@tomee::blog/index.adoc[]
+xref:0.1@tomee::community/index.adoc[]
+xref:7.0@tomee::admin/cluster/index.adoc[]
+xref:7.0@tomee::admin/configuration/index.adoc[]
+xref:7.0@tomee::admin/index.adoc[]
+xref:7.0@tomee::advanced/applicationcomposer/index.adoc[]
+xref:7.0@tomee::advanced/index.adoc[]
+xref:7.0@tomee::advanced/setup/index.adoc[]
+xref:7.0@tomee::advanced/shading/index.adoc[]
+xref:7.0@tomee::advanced/tomee-embedded/index.adoc[]
+xref:7.0@tomee::application-composer/index.adoc[]
+xref:7.0@tomee::developer/classloading/index.adoc[]
+xref:7.0@tomee::developer/ide/index.adoc[]
+xref:7.0@tomee::developer/index.adoc[]
+xref:7.0@tomee::developer/json/index.adoc[]
+xref:7.0@tomee::developer/testing/applicationcomposer/index.adoc[]
+xref:7.0@tomee::developer/testing/arquillian/index.adoc[]
+xref:7.0@tomee::developer/testing/index.adoc[]
+xref:7.0@tomee::developer/testing/other/index.adoc[]
+xref:7.0@tomee::developer/tools/index.adoc[]
+xref:7.0@tomee::maven/index.adoc[]
+xref:7.1@tomee::admin/cluster/index.adoc[]
+xref:7.1@tomee::admin/configuration/index.adoc[]
+xref:7.1@tomee::admin/index.adoc[]
+xref:7.1@tomee::advanced/applicationcomposer/index.adoc[]
+xref:7.1@tomee::advanced/index.adoc[]
+xref:7.1@tomee::advanced/setup/index.adoc[]
+xref:7.1@tomee::advanced/shading/index.adoc[]
+xref:7.1@tomee::advanced/tomee-embedded/index.adoc[]
+xref:7.1@tomee::application-composer/index.adoc[]
+xref:7.1@tomee::developer/classloading/index.adoc[]
+xref:7.1@tomee::developer/ide/index.adoc[]
+xref:7.1@tomee::developer/index.adoc[]
+xref:7.1@tomee::developer/json/index.adoc[]
+xref:7.1@tomee::developer/testing/applicationcomposer/index.adoc[]
+xref:7.1@tomee::developer/testing/arquillian/index.adoc[]
+xref:7.1@tomee::developer/testing/index.adoc[]
+xref:7.1@tomee::developer/testing/other/index.adoc[]
+xref:7.1@tomee::developer/tools/index.adoc[]
+xref:7.1@tomee::maven/index.adoc[]
+xref:8.0@examples::index.adoc[]
+xref:8.0_es@examples::index.adoc[]
+xref:8.0_pt@examples::index.adoc[]
+xref:8.0@tomee::admin/cluster/index.adoc[]
+xref:8.0@tomee::admin/configuration/index.adoc[]
+xref:8.0@tomee::admin/index.adoc[]
+xref:8.0@tomee::advanced/applicationcomposer/index.adoc[]
+xref:8.0@tomee::advanced/index.adoc[]
+xref:8.0@tomee::advanced/setup/index.adoc[]
+xref:8.0@tomee::advanced/shading/index.adoc[]
+xref:8.0@tomee::advanced/tomee-embedded/index.adoc[]
+xref:8.0@tomee::application-composer/index.adoc[]
+xref:8.0@tomee::developer/classloading/index.adoc[]
+xref:8.0@tomee::developer/ide/index.adoc[]
+xref:8.0@tomee::developer/index.adoc[]
+xref:8.0@tomee::developer/json/index.adoc[]
+xref:8.0@tomee::developer/testing/applicationcomposer/index.adoc[]
+xref:8.0@tomee::developer/testing/arquillian/index.adoc[]
+xref:8.0@tomee::developer/testing/index.adoc[]
+xref:8.0@tomee::developer/testing/other/index.adoc[]
+xref:8.0@tomee::developer/tools/index.adoc[]
+xref:8.0@tomee::maven/index.adoc[examples page] for
 downloadable, executable and code-focused view of Java EE and TomEE. You
 can also find us on IRC freenode.org #openejb and #tomee
 
@@ -10,7 +76,7 @@ can also find us on IRC freenode.org #openejb and #tomee
 Intellij], xref:contrib/debug/debug-intellij.adoc[Debugging in
 Intellij] +
 xref:tomee-and-eclipse.adoc[Get started with Eclipse (WTP)] +
-xref:getting-started-with-eclipse-and-webby.adoc[Get started with
+xref:0.0@tomee::getting-started-with-eclipse-and-webby.adoc[Get started with
 Eclipse (m2e-Webby)] +
 xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
@@ -49,8 +115,8 @@ xref:configuring-containers-in-tests.adoc[Configuring Containers in
 Tests] +
 xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests] +
 xref:alternate-descriptors.adoc[Alternate Descriptors] +
-xref:unit-testing-transactions.adoc[Unit Testing Transactions] +
-xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean
+xref:0.0@tomee::unit-testing-transactions.adoc[Unit Testing Transactions] +
+xref:0.0@tomee::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
 inner-class] +
 [TestCase Injection (`@LocalClient`)](local-client-injection.html) +
 } } \{row

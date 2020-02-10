@@ -47,4 +47,4 @@ def tomeeEmbeddedDeps = configurations.getByName('tomee-embedded')
 ----
 
 tomee-embedded task has several more advanced configuration like tomee properties, modules to deploy etc...
-Its configuration is pretty close to xref:maven/embedded.adoc[Embedded Maven Plugin].
+Its configuration is pretty close to xref:developer/tools/maven/embedded.adoc[Embedded Maven Plugin].
