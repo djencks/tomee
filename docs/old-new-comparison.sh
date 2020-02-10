@@ -26,3 +26,11 @@ grep -vf old-sitemap-names.txt new-sitemap-index.txt >new-not-old-index-all.txt
 grep -E -v "_es.html|_pt.html" new-not-old-index-all.txt >new-not-old-index.txt
 grep -vf new-sitemap-names.txt old-sitemap-index.txt >old-not-new-index.txt
 
+# new sitemap addr without translations
+grep -E -v "_es.html|_pt.html" new-sitemap-addr.txt >new-sitemap-addr-en-only.txt
+
+# print some counts:
+echo old sitemap page count: `wc -l old-sitemap-addr.txt`
+echo new sitemap page count: `wc -l new-sitemap-addr-en-only.txt`
+echo old-not-new count: `wc -l old-not-new-index.txt`
+echo new-not-old count: `wc -l new-not-old-index.txt`
