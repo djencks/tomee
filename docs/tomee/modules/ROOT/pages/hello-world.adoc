@@ -9,7 +9,7 @@ run an EJB and EJB client in its most minimum form. It does not hide
 steps or rely on special build tools or IDEs and is about the most
 stripped down you can get.
 
-_See the xref:examples.adoc[Examples] page for a full list of examples
+_See the xref:8.0@examples::index.adoc[Examples] page for a full list of examples
 that range from [`@Stateles`|Simple Stateless Example] and
 [@Stateful|Simple Stateful Example] beans, to [Dependency
 Injection|Injection of env-entry Example] , JDBC [DataSources|Injection
@@ -34,7 +34,7 @@ OpenEJB
 == Download and install OpenEJB
 
 This example pertains to OpenEJB 3.0 which can be
-http://archive.apache.org/dist/openejb/3.0[downloaded here] . Once you
+link:http://archive.apache.org/dist/openejb/3.0[downloaded here] . Once you
 have downloaded OpenEJB, you can then simply extract the contents of the
 downloaded file to whichever directory you want to install OpenEJB in.
 
@@ -70,9 +70,13 @@ Go to the projects directory
 karan@poweredge:~$ cd projects
 ----
 
-We will do all our work in this directory. ### Install Java Download and
+We will do all our work in this directory.
+
+=== Install Java Download and
 install Java (version 5 or higher). Also set it up so that you can run
-the java and javac commands from any directory ### Set OPENEJB_HOME We
+the java and javac commands from any directory.
+
+=== Set OPENEJB_HOME We
 will setup this variable to refer to the openejb install location.
 
 [source,bash]
@@ -149,7 +153,9 @@ adding: org/acme/Hello.class(in = 203) (out= 168)(deflated 17%)
 adding: org/acme/HelloBean.class(in = 383) (out= 275)(deflated 28%)
 ----
 
-== Write an EJB Client Now we will write a Client class which will
+== Write an EJB Client
+
+Now we will write a Client class which will
 lookup the EJB , invoke the sayHello() business method and print the
 value returned from the method. While you are in the projects directory,
 create a new file named HelloClient.java . Add the following to this
@@ -174,14 +180,18 @@ new InitialContext(props); Object ref = ctx.lookup("HelloBeanRemote");
 Hello h = (Hello)PortableRemoteObject.narrow(ref,Hello.class); String
 result = h.sayHello(); System.out.println(result); } }
 
-=== Compile HelloClient.java Run the following command:
+=== Compile HelloClient.java
+
+Run the following command:
 
 [source,bash]
 ----
 karan@poweredge:~/projects$ javac  -d . HelloClient.java
 ----
 
-== Start the Server Go to the OpenEJB install directory (i.e.
+== Start the Server
+
+Go to the OpenEJB install directory (i.e.
 OPENEJB_HOME) and run the following command:
 
 [source,bash]
@@ -240,11 +250,10 @@ run the client:
 
 [source,bash]
 ----
-karan@poweredge:~/projects$ java -cp
+karan@poweredge:~/projects$ java -cp \
+$OPENEJB_HOME/lib/openejb-client-3.0.jar:$OPENEJB_HOME/lib/javaee-5.0-1.jar:\
+.org.acme.HelloClient
 ----
-
-latexmath:[$OPENEJB_HOME/lib/openejb-client-3.0.jar:$]OPENEJB_HOME/lib/javaee-5.0-1.jar:.
-org.acme.HelloClient
 
 The above should give you the following output:
 
@@ -260,4 +269,4 @@ the contents of logs/openejb.log file in the email.
 = Looking for more?
 
 More EJB 3.0 examples, sample applications, tutorials and howtos
-available xref:examples.adoc[here] .
+available xref:8.0@examples::index.adoc[here] .
