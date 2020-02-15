@@ -21,30 +21,30 @@ apache-openejb-[version]\NOTICE
 apache-openejb-[version]\README.txt
 ----
 
-= Directories
+== Directories
 
-== bin/
+=== bin/
 
 Contains commands to start/stop the server (You can also do a lot of
 other stuff like deploy/undeploy, but we will just talk about things
 needed to get you started)
 
-== lib/
+=== lib/
 
 Contains several jar files (you only need of few of these jars in your
 classpath to do EJB development)
 
-== apps/
+=== apps/
 
 Once you create your EJB's and jar them up, you can place your jar file
 in this directory and start the server. The server will automatically
 deploy all the EJB's contained in this JAR.
 
-== logs/
+=== logs/
 
 Contains log files.
 
-== conf/
+=== conf/
 
 This directory contains nothing but a README.txt file at the time
 OpenEJB is unpacked. The first time OpenEJB is started however, these
@@ -53,8 +53,8 @@ files will be created:
 [source,java]
 ----
   conf/
-    openejb.xml            (main config file)    
-    logging.properties         (log levels and files)    
+    openejb.xml            (main config file)
+    logging.properties         (log levels and files)
     login.config           (jaas config file)
     users.properties           (users that can log in)
     groups.properties          (groups in which users belong)
@@ -65,7 +65,7 @@ files will be created:
         ejbd.properties         (network socket for ejb invocations)
         hsql.properties         (network socket for hsql client access)
         httpejbd.properties     (network socket for ejb invocations over http)
-        telnet.properties       (network socket for telnet "server") 
+        telnet.properties       (network socket for telnet "server")
 ----
 
 These files can be edited as desired. If at any time you are unhappy
