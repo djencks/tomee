@@ -79,10 +79,10 @@ you can configure either one or the other or both. You can decide to
 check client credentials for incoming messages and sign outgoing
 messages (response).
 
-= Configuration principles
+== Configuration principles
 
-The configuration is made in the
-_openejb-jar.xml_. Each endpoint web service can provide a set of
+The configuration is made in the _openejb-jar.xml_.
+Each endpoint web service can provide a set of
 properties to customize WS-Security behavior through the element. The
 content of this element is consistent with the overall structure of
 _openejb.xml_. The format for properties is the same as if you would use
@@ -102,7 +102,7 @@ naming conventions. Each property is made of .<in|out>.=
 
 For example : _wss4j.in.action = UsernameToken_
 
-= Username Token (Password digest) example 
+== Username Token (Password digest) example
 
 Excerpt from _openejb-jar.xml_.
 
@@ -131,9 +131,7 @@ Excerpt from _openejb-jar.xml_.
 
 == Request sent by the client.
 
-This request contains SOAP headers to
-manage security. You can see _UsernameToken_ tag from the WS-Security
-specification.
+This request contains SOAP headers to manage security. You can see _UsernameToken_ tag from the WS-Security specification.
 
 [source,properties]
 ----
@@ -191,7 +189,7 @@ Server: OpenEJB/??? (unknown os)
 </soap:Envelope>
 ----
 
-= JAAS with WS-Security
+== JAAS with WS-Security
 
 1 doesn't work straight off with WS-Security, but you can add calls to
 the OpenEJB SecurityService to login to a JAAS provider to a
@@ -241,6 +239,6 @@ public class CustomPasswordHandler implements CallbackHandler {
 }
 ----
 
-= Examples
+== Examples
 
-A full example (webservice-ws-security) is available with https://github.com/apache/tomee/tree/master/examples/webservice-ws-security[OpenEJB Examples].
+A full example (webservice-ws-security) is available with link:https://github.com/apache/tomee/tree/master/examples/webservice-ws-security[OpenEJB Examples].

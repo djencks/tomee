@@ -1,6 +1,6 @@
 Title: Documentation
 
-See also the 
+See also the
 //FIXME CHOOSE ONE
 xref:0.0@tomee::download/index.adoc[]
 xref:0.0@tomee::maven/index.adoc[]
@@ -80,7 +80,7 @@ xref:0.0@tomee::getting-started-with-eclipse-and-webby.adoc[Get started with
 Eclipse (m2e-Webby)] +
 xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
-= General Informations xref:comparison.adoc[Comparison: OpenEJB, TomEE,
+== General Informations xref:comparison.adoc[Comparison: OpenEJB, TomEE,
 TomEE+] +
 xref:tomee-directory-structure.adoc[TomEE Directory structure] +
 xref:deploying-in-tomee.adoc[Deploying in TomEE] +
@@ -131,7 +131,7 @@ xref:multipoint-recommendations.adoc[Multipoint Recommendations] +
 xref:failover-logging.adoc[Logging Events] +
 } \{span-one-third
 
-= OpenEJB Standalone Server
+== OpenEJB Standalone Server
 xref:understanding-the-directory-layout.adoc[Understanding the Directory
 Layout] +
 xref:startup.adoc[Startup] +

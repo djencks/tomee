@@ -4,9 +4,9 @@
 :jbake-type: page
 :jbake-status: published
 
-= OpenEJB dynamic datasource
+== OpenEJB dynamic datasource
 
-== Goal
+=== Goal
 
 The openejb dynamic datasource api aims to allow to use multiple data
 sources as one.
@@ -14,7 +14,7 @@ sources as one.
 It can be useful for technical reasons (load balancing for example) or
 functionnal reasons (filtering, aggregation, enriching...).
 
-== The API
+=== The API
 
 The interface Router (_org.apache.openejb.resource.jdbc.Router_) have
 only one method to get the datasource to use:
@@ -32,7 +32,7 @@ You can implement all the policy you want in your Router implementation.
 A class called _org.apache.openejb.resource.jdbc.AbstractRouter_ is
 available to ease router development.
 
-== Known limitation(s)
+=== Known limitation(s)
 
 You have to use the same kind of databases (same version, same
 configuration...).
@@ -40,22 +40,22 @@ configuration...).
 All database have to be created when you use the router. The way to do
 it automatically can depend of your JPA provider.
 
-=== OpenJPA
+==== OpenJPA
 
 OpenJPA initializes its database when the entitymanager is called for
 the first time so you need to initialize all your proxied datasource
 before using the other one. It can be done using an Init EJB doing a
 find() on each proxied datasource.
 
-=== Hibernate
+==== Hibernate
 
 Hibernate initializes the database when it starts so if you declare a
 persistence unit by database all databases will be initialized at the
 start up.
 
-== Example
+=== Example
 
-=== The story (the unit test example)
+==== The story (the unit test example)
 
 You want to use only one datasource in the code but you have a criteria
 to set to choose the real database to use between three.
@@ -80,7 +80,7 @@ public class RoutedEJBBean {
 }
 ----
 
-== The router implementation
+=== The router implementation
 
 The router will simply manage a map to store proxied datasources and a
 field to store the datasource used in the current thread (ThreadLocal).
@@ -166,7 +166,7 @@ public class DeterminedRouter implements Router {
 }
 ----
 
-== Creation of the service provider for the router
+=== Creation of the service provider for the router
 
 To be able to use your router add a file called service-jar.xml under
 META-INF/. For example META-INF/org.router.
@@ -184,7 +184,7 @@ This file will contain something like:
 </ServiceJar>
 ----
 
-== openejb.xml
+=== openejb.xml
 
 In the openejb.xml file, you have to declare your dynamic database and
 in our example it needs the proxied datasources too:

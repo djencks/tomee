@@ -75,7 +75,7 @@ will broadcast all it's services with the group prefixed in the URI, as
 well it will ignore any services it sees broadcast if they do not share
 the same group name.
 
-= Details
+== Details
 
 Multicast
 

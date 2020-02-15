@@ -4,11 +4,12 @@
 :jbake-type: page
 :jbake-status: published
 
-\{note} This document and the related feature is considered a prototype
+[NOTE]
+This document and the related feature is considered a prototype
 and will change based on user feedback. All comments suggestions
-welcome. \{note}
+welcome.
 
-= Introduction
+== Introduction
 
 The OpenEJB Spring integration makes all Spring defined beans injectable
 to Java EE components, and all Java EE components can be injected to
@@ -32,7 +33,7 @@ including:
 
 _Requirements:_ * OpenEJB 3.1+ * Spring X.X * Java 1.5 or 1.6
 
-= Spring Beans
+== Spring Beans
 
 The following beans are usable in any spring xml file.
 
@@ -106,15 +107,16 @@ interface of each EJB, but explicit use can be nice if you desire to
 import an EJB with a specific name. Has the following properties:
 _deploymentId_, _interface_
 
-= Examples
+== Examples
 
 See the xref:spring-ejb-and-jpa.adoc[Spring EJB and JPA] page for
 example code and a working Spring xml file.
 
-= \{anchor:problems} Problems?
+[.problems]
+==  Problems?
 
 If you are having problems with the installation, please send a message
-to the OpenEJB users 
+to the OpenEJB users
 //FIXME CHOOSE ONE
 xref:0.0@tomee::mailing-lists.adoc[]
 xref:0.1@tomee::mailing-lists.adoc[mailing list] containing
@@ -125,7 +127,7 @@ any error message(s) and the following information:
 * Java Version (execute java -version)
 * Operating System Type and Version
 
-= Limitations
+== Limitations
 
 _JavaAgent_ - OpenEJB uses OpenJPA to provide JPA and CMP persistence,
 and OpenJPA currently requires a JavaAgent to function properly in a

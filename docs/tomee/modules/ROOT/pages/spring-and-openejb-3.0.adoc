@@ -8,7 +8,7 @@
 NOTE: OpenEJB 3.1 and later users should refer to the xref:spring.adoc[Spring]
 page.
 
-# Bootstrapping OpenEJB in Spring
+== Bootstrapping OpenEJB in Spring
 
 If you wish to use OpenEJB inside Spring you can do so pretty easily.
 Include OpenEJB and its dependencies in your classpath as you would in a
@@ -168,7 +168,7 @@ follows:
 [source,xml]
 ----
 <bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean">
-  <property name="context" ref="OpenEjbContext">
+  <property name="context" ref="OpenEjbContext"/>
 </bean>
 ----
 
@@ -193,7 +193,7 @@ In the spring xml
 [source,xml]
 ----
 <bean id="SomePojo" class="org.acme.SomePojo">
-  <property name="entityManager" ref="OrangeUnit">
+  <property name="entityManager" ref="OrangeUnit"/>
 </bean>
 ----
 
@@ -217,11 +217,11 @@ Spring bean definitions combined
 </bean>
 
 <bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean">
-  <property name="context" ref="OpenEjbContext">
+  <property name="context" ref="OpenEjbContext"/>
 </bean>
 
 <bean id="SomePojo" class="org.acme.SomePojo">
-  <property name="entityManager" ref="OrangeUnit">
+  <property name="entityManager" ref="OrangeUnit"/>
 </bean>
 ----
 

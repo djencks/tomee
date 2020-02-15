@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= InitialContext
+== InitialContext
 properties
 
 You can configure data sources from within your test case (avoiding the
@@ -49,7 +49,7 @@ details on properties and overrides.
 See xref:containers-and-resources.adoc[Containers and Resources] for a
 full list of supported Resource types and their properties.
 
-== Note on <jta-data-source> and <non-jta-data-source>
+=== Note on <jta-data-source> and <non-jta-data-source>
 
 When configuring DataSources to be used by persistence.xml files, the
 DataSource supplied for `<jta-data-source>` is typically identical to

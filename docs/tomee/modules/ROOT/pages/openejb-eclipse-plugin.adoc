@@ -4,9 +4,9 @@
 :jbake-type: page
 :jbake-status: published
 
-= OpenEJB Eclipse Plugin
+== OpenEJB Eclipse Plugin
 
-== Overview
+=== Overview
 
 The OpenEJB plugin for Eclipse provides the ability to run an OpenEJB
 standalone server and deploy projects directly from within the IDE,

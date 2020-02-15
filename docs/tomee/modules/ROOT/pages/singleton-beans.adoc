@@ -4,9 +4,9 @@
 :jbake-type: page
 :jbake-status: published
 
-= Singleton Overview For the first time in years EJB has a new
-bean type, the _`@Singleton_`. In my opinion, the javax.ejb.Singleton will
-replace a lot of what people are using `@Stateless` for today.
+== Singleton Overview
+For the first time in years EJB has a new bean type, the _`@Singleton_`.
+In my opinion, the javax.ejb.Singleton will replace a lot of what people are using `@Stateless` for today.
 
 The Singleton is essentially what you get if you take a Stateless bean
 and adjust the pool size to be exactly 1 resulting in there being
@@ -26,12 +26,12 @@ need and the container will ensure they start before you.
 See the xref:0.0@tomee::singleton-example.adoc[Singleton Example] for sample bean
 code and client.
 
-== Concurrency
+=== Concurrency
 
 Singletons support two modes of concurrent access, Container-Managed
 Concurrency (the default) and Bean-Managed Concurrency.
 
-=== Bean-Managed Concurrency
+==== Bean-Managed Concurrency
 
 With Bean-Managed Concurrency, annotated as
 _@ConcurrencyManagement(BEAN)_, the container sends all invocations into
@@ -39,7 +39,7 @@ the bean and lets the Singleton bean instance decide how and when to
 synchronize access, if at all. Here the 'synchronization' keyword is
 allowed as well as the full javax.util.concurrent set of libraries.
 
-=== Container-Managed Concurrency
+==== Container-Managed Concurrency
 
 With Container-Managed Concurrency, annotated as
 _@ConcurrencyManagement(CONTAINER)_, the container will enforce
@@ -47,7 +47,7 @@ concurrency for you via locking method access to the bean. Two modes,
 called locks exist and can be assigned to both the bean class and
 methods of the bean class.
 
-==== Lock type
+===== Lock type
 
 The first and the default is a "write" lock, annotated as
 _@Lock(WRITE)_. Essentially, with a write lock the caller holds an
@@ -100,12 +100,9 @@ The EJB container may use something other than ReadWriteLock but the
 semantics of a ReadWriteLock must be followed. Internally, we use an
 instance of
 http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html[java.util.concurrent.ReentrantReadWriteLock]
-which supports correct memory synchronization, some reentrancy, lock
-downgrading, and
-[more|http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html]
-.
+which supports correct memory synchronization, some reentrancy, lock downgrading, and more.
 
-==== Acquiring the Lock
+===== Acquiring the Lock
 
 The _`@AccessTimetout_` annotation can configure how long a thread will
 wait to acquire the read or write lock. This annotation can be used on
@@ -134,7 +131,7 @@ public interface Lock {
 
     /**
      * Blocks (potentially) up to a limit
-     * 
+     *
      * @AccessTimout(30, TimeUnit.SECONDS)
      */
     boolean tryLock(long time, TimeUnit unit) throws InterruptedException;
@@ -146,7 +143,7 @@ In the event it is not possible to acquire the lock a
 _javax.ejb.ConcurrentAccessException_ or
 _javax.ejb.ConcurrentAccessTimeoutException_ will be thrown.
 
-==== Default Timeout
+===== Default Timeout
 
 The default value of _`@AccessTimeout_` annotation is vendor specific. In
 OpenEJB it defaults to the value of the _AccessTimeout_ property which
@@ -165,7 +162,7 @@ The value of the property can be phrased in plain english such as "1
 hour and 23 minutes and 17 seconds" see
 xref:configuring-durations.adoc[Configuring Durations] for details.
 
-== Startup and Startup Ordering
+=== Startup and Startup Ordering
 
 Singletons have an _`@Startup_` annotation which can be applied to the
 bean class. When used, the Container will instantiate the Singleton
@@ -209,7 +206,7 @@ of creating circular dependencies, it is better not to use the
 @DependsOn annotation "just in case" and should only be used when truly
 needed.
 
-= XML and Annotation Overriding
+== XML and Annotation Overriding
 
 Singletons can be declared in the ejb-jar.xml as follows:
 
