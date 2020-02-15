@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= Installation
+== Installation
 
 Installation is easiest from an update site. In Eclipse, select Help,
 Software Updates, Find and install...

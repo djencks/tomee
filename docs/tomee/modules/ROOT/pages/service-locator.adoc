@@ -10,7 +10,7 @@ really fun service locator code. Creating the exact layout you want
 using the exact data you want means you can create robust libraries for
 pulling things out of JNDI.
 
-= Lookup examples
+== Lookup examples
 
 To get the creative juices flowing here are a few examples of lookup
 methods you could create for your service locator, the jndi name formats
@@ -47,7 +47,7 @@ public class MyLocator {
 }
 ----
 
-== Just the interface Usable with JNDI name formats ending in the full
+=== Just the interface Usable with JNDI name formats ending in the full
 class name of the interface such as: - \{interfaceClass}
 
 [source,java]
@@ -59,7 +59,7 @@ public <T> T lookup(Class<T> type) {
 
 
 MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(Widget.class);   
+Widget widget = locator.lookup(Widget.class);
 ----
 
 Or with a common prefix or with a common prefix supplied in constructor
@@ -69,11 +69,11 @@ ejb/\{moduleId}/\{interfaceClass}
 [source,java]
 ----
 MyLocator locator = new MyLocator("ejb/superbiz");
-Widget widget = locator.lookup(Widget.class);   
+Widget widget = locator.lookup(Widget.class);
 Store store = locator.lookup(Store.class);
 ----
 
-== Interface class and a prefix
+=== Interface class and a prefix
 
 Usable with JNDI name formats including a varying prefix such as ejbName
 or deploymentID and ending in the full class name of the interface
@@ -95,11 +95,11 @@ ejb/\{moduleId}/\{deploymentId}/\{interfaceClass}
 [source,java]
 ----
 MyLocator locator = new MyLocator("accountingApp");
-Widget widget = locator.lookup("RedWidgetBean", Widget.class);   
+Widget widget = locator.lookup("RedWidgetBean", Widget.class);
 Store store = locator.lookup("StoreBean", Store.class);
 ----
 
-== Interface class and ejb class
+=== Interface class and ejb class
 
 Usable with JNDI name formats comprised of the interfaceClass and
 ejbClass
@@ -120,7 +120,7 @@ public <T> T lookup(Class<T> type, Class ejbClass) {
 
 
 MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);   
+Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);
 ----
 
 Or with a common prefix or with a common prefix supplied in constructor
@@ -134,7 +134,7 @@ Widget widget = locator.lookup(Widget.class, RedWidgetBean.class);
 Store store = locator.lookup(Store.class, StoreBean.class);
 ----
 
-== Interface class and ejb class with simple names
+=== Interface class and ejb class with simple names
 
 Similar to the above example but using the simple name of the classes
 resulting in a JNDI tree that's a bit more human readable. -
@@ -152,7 +152,7 @@ and
 [source,java]
 ----
 MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);   
+Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);
 ----
 
 Or with a common prefix or with a common prefix supplied in constructor
@@ -163,6 +163,6 @@ ejb/\{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName}
 [source,java]
 ----
 MyLocator locator = new MyLocator("shippingApp");
-Widget widget = locator.lookup(GreenWidgetBean.class, Widget.class);   
+Widget widget = locator.lookup(GreenWidgetBean.class, Widget.class);
 Store store = locator.lookup(SuperStoreBean.class, Store.class);
 ----

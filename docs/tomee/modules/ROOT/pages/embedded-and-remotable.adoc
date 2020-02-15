@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= Overview
+== Overview
 
 This example shows how to use OpenEJB3's remoting capabilities in an
 embedded scenario. By remoting we mean that you wish to allow _clients
@@ -51,18 +51,18 @@ for network sockets. This example shows the use of OpenEJB in an
 embedded environment where connection _outside_ the vm is
 required.\{note}
 
-= The Code
+== The Code
 
 For this example we have a simple Stateful bean called TelephoneBean as
 defined below. As a simple way of demonstrating the state we have to
 methods: speak and listen. You call _speak_ and pass in some text, then
 you call _listen_ to get your answer.
 
-== bean
+=== bean
 
 \{snippet:id=code|url=openejb3/examples/telephone-stateful/src/main/java/org/superbiz/telephone/TelephoneBean.java|lang=java}
 
-== business interface
+=== business interface
 
 \{snippet:id=code|url=openejb3/examples/telephone-stateful/src/main/java/org/superbiz/telephone/Telephone.java|lang=java}
 
@@ -78,7 +78,7 @@ rules change and require that you specify both interfaces in the `@Remote`
 annotation as in `@Remote`(\{Telephone.class, SecondInterface.class}).
 \{tip}
 
-= Embedding
+== Embedding
 
 We're going to embed OpenEJB3 into a plain JUnit TestCase as a simple
 means of demonstrating the remote capabilities. We'll do the embedding
@@ -89,17 +89,17 @@ container system - one for invoking the bean's remote interface via the
 _RemoteInitialContextFactory_ which connects to a Socket and
 communicates to the embedded container system over the ejbd protocol.
 
-== setUp
+=== setUp
 
 \{snippet:id=setup|url=openejb3/examples/telephone-stateful/src/test/java/org/superbiz/telephone/TelephoneTest.java|lang=java}
 
-== LocalInitialContextFactory: making in-vm calls to a remote business
+=== LocalInitialContextFactory: making in-vm calls to a remote business
 
 interface
 
 \{snippet:id=localcontext|url=openejb3/examples/telephone-stateful/src/test/java/org/superbiz/telephone/TelephoneTest.java|lang=java}
 
-== RemoteInitialContextFactory: making networked calls to a remote
+=== RemoteInitialContextFactory: making networked calls to a remote
 
 business interface
 
@@ -111,13 +111,13 @@ like any other remote EJB client.
 
 \{snippet:id=remotecontext|url=openejb3/examples/telephone-stateful/src/test/java/org/superbiz/telephone/TelephoneTest.java|lang=java}
 
-= Maven setup
+== Maven setup
 
 \{snippet:id=desc|url=openejb3/examples/telephone-stateful/pom.xml}
 
 \{snippet:id=openejbdep|url=openejb3/examples/telephone-stateful/pom.xml|lang=xml}
 
-= Running
+== Running
 
 Running the example is fairly simple. In the "telephone-stateful"
 directory of the openejb:download.html[examples zip] , just run:

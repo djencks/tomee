@@ -26,7 +26,7 @@ For instance this java bean:
 public class MyModel {
   private int id;
   private String name;
-  
+
   // getters/setters
 }
 ----
@@ -53,7 +53,7 @@ if the mapper has a version:
 public class MyModel {
   @JohnzonIgnore
   private String name;
-  
+
   // getters/setters
 }
 ----
@@ -66,7 +66,7 @@ Or to support name for version 3, 4, ... but ignore it for 1 and 2:
 public class MyModel {
   @JohnzonIgnore(minVersion = 3)
   private String name;
-  
+
   // getters/setters
 }
 ----
@@ -77,11 +77,11 @@ Converters are used for advanced mapping between java and json.
 
 There are several converter types:
 
-1. Converter: map java to json and the opposite based on the string representation
-2. Adapter: a converter not limited to String
-3. ObjectConverter.Reader: to converter from json to java at low level
-4. ObjectConverter.Writer: to converter from java to json at low level
-4. ObjectConverter.Codec: a Reader and Writer
+. Converter: map java to json and the opposite based on the string representation
+. Adapter: a converter not limited to String
+. ObjectConverter.Reader: to converter from json to java at low level
+. ObjectConverter.Writer: to converter from java to json at low level
+. ObjectConverter.Codec: a Reader and Writer
 
 The most common is to customize date format but they all take. For that simple case we often use a Converter:
 
@@ -111,7 +111,7 @@ the field you want to convert with `@JohnzonConverter`:
 public class MyModel {
   @JohnzonConverter(LocalDateConverter.class)
   private LocalDate date;
-  
+
   // getters/setters
 }
 ----
@@ -126,7 +126,7 @@ Sometimes the json name is not java friendly (_foo or foo-bar or even 200 for in
 public class MyModel {
   @JohnzonProperty("__date")
   private LocalDate date;
-  
+
   // getters/setters
 }
 ----
@@ -160,8 +160,8 @@ final MySuperObject otherObject = mapper.readObject(inputStream, MySuperObject.c
 == Johnzon and JAX-RS
 
 TomEE uses by default Johnzon as JAX-RS provider for versions 7.x. If you want however to customize it you need to follow this procedure:
-   
-1. Create a WEB-INF/openejb-jar.xml:
+
+. Create a WEB-INF/openejb-jar.xml:
 
 [source,xml]
 ----
@@ -178,7 +178,8 @@ TomEE uses by default Johnzon as JAX-RS provider for versions 7.x. If you want h
 </openejb-jar>
 ----
 
-2. Create a WEB-INF/resources.xml to define johnzon service which will be use to instantiate the provider
+[start=2]
+. Create a WEB-INF/resources.xml to define johnzon service which will be use to instantiate the provider
 
 [source,xml]
 ----

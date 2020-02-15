@@ -27,9 +27,9 @@ Services (JAX-WS, JAX-RPC) - CORBA
 JAX-WS and CORBA support will be added in future releases. Support for
 the JAX-RPC API is not a planned feature.
 
-= Extensions to EJB 3.0
+== Extensions to EJB 3.0
 
-== CMP via JPA
+=== CMP via JPA
 
 Our CMP implementation is a thin layer over the new Java Persistence API
 (JPA). This means when you deploy an old style CMP 1.1 or CMP 2.1 bean
@@ -38,7 +38,7 @@ to use both CMP and JPA in the same application without any coherence
 issues that can come from using two competing persistence technologies
 against the same data. Everything is ultimately JPA in the end.
 
-== Extended Dependency Injection
+=== Extended Dependency Injection
 
 Dependency Injection in EJB 3.0 via `@Resource` is largely limited to
 objects provided by the container, such as DataSources, JMS Topics and
@@ -61,7 +61,7 @@ import java.net.URI;
 import java.io.File;
 import java.util.Date;
 
-@Stateful 
+@Stateful
 public class MyBean {
     @Resource URI blog;
     @Resource Date birthday;
@@ -69,7 +69,7 @@ public class MyBean {
 }
 ----
 
-== The META-INF/env-entries.properties
+=== The META-INF/env-entries.properties
 
 Along the lines of injection, one of the last remaining things in EJB 3
 that people need an ejb-jar.xml file for is to supply the value of
@@ -96,7 +96,7 @@ birthday = locale=en_US style=MEDIUM Mar 1, 1954
 homeDirectory = /home/esmith/
 ----
 
-== Support for GlassFish descriptors
+=== Support for GlassFish descriptors
 
 Unit testing EJBs with OpenEJB is a major feature and draw for people,
 even for people who may still use other app servers for final deployment
@@ -107,7 +107,7 @@ so people using GlassFish as their final server can still use OpenEJB
 for testing EJBs via plain JUnit tests in their build and only have one
 set of vendor descriptors to maintain.
 
-== JavaEE 5 EAR and Application Client support
+=== JavaEE 5 EAR and Application Client support
 
 JavaEE 5 EARs and Application Clients can be deployed in addition to ejb
 jars. EAR support is limited to ejbs, application clients, and
@@ -115,7 +115,7 @@ libraries; WAR files and RAR files will be ignored. Per the JavaEE 5
 spec, the META-INF/application.xml and META-INF/application-client.xml
 files are optional.
 
-== Application Validation for EJB 3.0
+=== Application Validation for EJB 3.0
 
 Incorrect usage of various new aspects of EJB 3.0 are checked for and
 reported during the deployment process preventing strange errors and
@@ -135,13 +135,18 @@ do next... even including valid code and annotation usage tailored to
 your app that you can copy and paste into your application. Very ideal
 for beginners and people using OpenEJB in a classroom setting.
 
-== Most configurable JNDI names ever
+=== Most configurable JNDI names ever
 
-= General Improvements
+== General Improvements
 
-== Online Deployment ## Security Service ## Connection Pooling ##
-Configuration Overriding ## Flexible JNDI Name Formatting ## Cleaner
-Embedding ## Tomcat 6 Support ## Business locals remotable
+* Online Deployment
+* Security Service
+* Connection Pooling
+* Configuration Overriding
+* Flexible JNDI Name Formatting
+* Cleaner Embedding
+* Tomcat 6 Support
+* Business locals remotable
 
 If you want to make business local interfaces remotable, you can set
 this property:

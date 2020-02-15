@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-= Adding a JavaAgent
+== Adding a JavaAgent
 
 NOTE: The java agent is only required if using OpenJPA as your
 persistence provider or if using CMP.
@@ -17,7 +17,7 @@ Adding a java agent is done via a vm parameter as follows:
 java -javaagent:openejb-javaagent-4.6.0.jar _\[other params...](other-params....html)
 ----
 
-== Maven2
+=== Maven2
 
 In maven2 you can enable the javaagent for your tests by adding this to
 your pom.xml file:

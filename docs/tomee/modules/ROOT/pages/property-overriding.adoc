@@ -15,7 +15,7 @@ overwritten before the component is created.
 
 We call this overriding and there are several ways to do it.
 
-= The openejb.xml
+== The openejb.xml
 
 The default openejb.xml file has most of the useful properties for each
 component explicitly listed with default values for documentation
@@ -26,7 +26,7 @@ Overriding can also be done via the command line or plain Java system
 properties. See xref:system-properties.adoc[System Properties] for
 details.
 
-== What properties are available?
+=== What properties are available?
 
 To know what properties can be overriden the './bin/openejb properties'
 command is very useful: see xref:properties-tool.adoc[Properties Tool]
@@ -37,7 +37,7 @@ configuration. When sending requests for help to the users list or jira,
 it is highly encouraged to send the output of this tool with your
 message.
 
-== Not configurable via openejb.xml
+=== Not configurable via openejb.xml
 
 The only thing not yet configurable via this file are ServerServices due
 to OpenEJB's embeddable nature and resulting long standing tradition of
@@ -51,7 +51,7 @@ style of configuration and even shares similar functionality and
 properties such as host-based authorization (HBA) via the 'only_from'
 property.
 
-== Restoring openejb.xml to the defaults
+=== Restoring openejb.xml to the defaults
 
 To restore this file to its original default state, you can simply
 delete it or rename it and OpenEJB will see it's missing and unpack
