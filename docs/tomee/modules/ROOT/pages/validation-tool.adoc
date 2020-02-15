@@ -11,6 +11,8 @@ openejb validate - OpenEJB Validation Tool
 
 = SYNOPSIS
 
+NOTE: there are no pages in website source this could refer to.
+
 openejb validate xref:options.adoc[options] jarfiles
 
 = NOTE
