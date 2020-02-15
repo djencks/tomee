@@ -4,11 +4,15 @@
 :jbake-type: page
 :jbake-status: published
 
-\{note}OpenEJB 3.1 or later required\{note} This example shows
+[NOTE]
+--
+*OpenEJB 3.1 or later required*
+This example shows
 how to combine Spring, OpenEJB and Hibernate using the integration code
 provided by OpenEJB. Here, OpenEJB is used as an embeddable EJB
 container inside of Spring. See the xref:spring.adoc[Spring] page for
 details.
+--
 
 We use the basic Movie example and expand it to include more objects to
 demonstrate both Spring beans, EJB Session beans, and JPA persistent
@@ -63,7 +67,7 @@ Spring bean
 Simple object used as a clever way to seed the EntityManager (and
 really, the database) with persistent _Movie_ objects
 
-# Required jars
+== Required jars
 
 To setup the integration you'll need:
 
@@ -80,10 +84,10 @@ pom.xml
 For other environments, you can simply xref:downloads.adoc[download an
 openejb-3.1.zip] or later and include all the jars under the lib/
 directory in your classpath. Then download and add the
-[openejb-spring-3.1.jar|http://people.apache.org/repo/m2-ibiblio-rsync-repository/org/apache/openejb/openejb-spring/3.1/openejb-spring-3.1.jar]
+link:http://people.apache.org/repo/m2-ibiblio-rsync-repository/org/apache/openejb/openejb-spring/3.1/openejb-spring-3.1.jar[openejb-spring-3.1.jar
 along with your Spring jars.
 
-# The Spring xml
+== The Spring xml
 
 Bootstrapping and Configuring OpenEJB is fairly simple.
 \{snippet:id=bootstrapping|url=openejb3/examples/spring-integration/src/main/resources/movies.xml|lang=xml}
@@ -103,7 +107,7 @@ and `@PersistenceUnit` (if available). Alternatively, you may choose to
 activate the individual BeanPostProcessors for those annotations.
 \{note}
 
-# The Code
+== The Code
 
 In efforts to keep the example page somewhat short, we'll show just
 three beans, each demonstrating a particular relationship.
@@ -118,7 +122,7 @@ The last is the AvailableMovies Spring bean which Shows Spring -> EJB ->
 JPA
 \{snippet:id=code|url=openejb3/examples/spring-integration/src/main/java/org/superbiz/spring/AvailableMovies.java|lang=java}
 
-# The TestCase
+== The TestCase
 
 The JUnit TestCase uses a ClassPathXmlApplicationContext to load the
 Spring ApplicationContext. Anything that loads your Spring xml file
@@ -127,7 +131,7 @@ well.
 
 \{snippet:id=code|url=openejb3/examples/spring-integration/src/test/java/org/superbiz/spring/MoviesTest.java|lang=java}
 
-# Running
+== Running
 
 The source for this example can be downloaded from svn via:
 

@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= Installation
+== Installation
 
 To install OpenEJB, simply xref:downloads.adoc[download the latest
 binary] and unpack your zip or tar.gz into the directory where you want
@@ -25,7 +25,7 @@ this directory is your OPENEJB_HOME directory. The OPENEJB_HOME
 directory is referred to in various parts of the documentation, so it's
 good to remember where it is.
 
-= Using OpenEJB
+== Using OpenEJB
 
 Now all you need to do is move to the bin directory in OPENEJB_HOME, the
 directory where OpenEJB was unpacked, and type:
@@ -61,12 +61,12 @@ That's it!
 If you don't have any EJBs or clients to run, try the ubiquitous
 openejbx30:hello-world.html[Hello World] example.
 
-= Join the mailing list
+== Join the mailing list
 
 The OpenEJB User list is where the general OpenEJB community goes to ask
 questions, make suggestions, chat with other users, and keep a finger on
 the pulse of the project. More information about the user list and dev
-list can be found 
+list can be found
 //FIXME CHOOSE ONE
 xref:0.0@tomee::mailing-lists.adoc[]
 xref:0.1@tomee::mailing-lists.adoc[here]

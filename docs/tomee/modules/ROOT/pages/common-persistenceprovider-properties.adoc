@@ -8,12 +8,12 @@ While not a definitive list, it
 does help to show a side-by-side view of common properties used by the
 various persistence providers out there.
 
-= TopLink
+== TopLink
 
 [source,xml]
 ----
 <properties>
- 
+
   <!--http://www.oracle.com/technology/products/ias/toplink/JPA/essentials/toplink-jpa-extensions.html-->
   <property name="toplink.ddl-generation" value="drop-and-create-tables"/>
   <property name="toplink.logging.level" value="FINEST"/>
@@ -22,7 +22,7 @@ various persistence providers out there.
 </properties>
 ----
 
-= OpenJPA
+== OpenJPA
 
 [source,xml]
 ----
@@ -39,7 +39,7 @@ various persistence providers out there.
 </properties>
 ----
 
-= Hibernate
+== Hibernate
 
 [source,xml]
 ----

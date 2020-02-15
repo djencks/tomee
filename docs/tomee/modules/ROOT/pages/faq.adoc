@@ -4,8 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-== 
- General
+== General
 
  
 
@@ -42,9 +41,7 @@ database like Derby, so it is usable in any application regardless if
 that application is run via Maven, Ant, Intellij, Eclipse, NetBeans,
 JUnit, TestNG, etc.
 
-== Can I start and stop OpenEJB from an IDE? If yes, which IDE is
-
-supported by OpenEJB?
+==  Can I start and stop OpenEJB from an IDE? If yes, which IDE is supported by OpenEJB?
 
 The short answer is yes. The basic approach for all embedding scenarios
 is to 1) add OpenEJB to your classpath, and 2) construct your
@@ -58,7 +55,7 @@ openejbx30:application-discovery-via-the-classpath.html[Application
 discovery via the classpath] for various ways to have your applications
 discovered.
 
-== During embedded testing, how can I externalize all my DataSource
+=== During embedded testing, how can I externalize all my DataSource
 
 configuration?
 
@@ -71,7 +68,7 @@ your test case do this:
 ----
    protected void setUp() throws Exception {
        Properties properties = new Properties();
-       properties.setProperty(Context.INITIAL_CONTEXT_FACTORY, 
+       properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,
 ----
 
 "org.apache.openejb.client.LocalInitialContextFactory");

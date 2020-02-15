@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= Security - How To.
+== Security - How To.
 
 We currently have two authentication mechanisms to choose from: *
 _PropertiesLoginModule_ (a basic text file based login that looks up
@@ -42,7 +42,7 @@ For examples and more information on JAAS configuration, see the
 http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html[JAAS
 Reference Guide] .
 
-== PropertiesLoginModule
+=== PropertiesLoginModule
 
 Supported options:
 
@@ -69,7 +69,7 @@ _UsersFile_ and _GroupsFile_ are read in on every login, so +you can
 update them+ on a running system and those users will "show up"
 immediately +without the need for a restart+ of any kind.
 
-== SQLLoginModule
+=== SQLLoginModule
 
 You can either use a data source or configure the JDBC URL through which
 the user/group lookups will be made.
@@ -155,7 +155,7 @@ the digest encoding, can be "hex" or "base64"
 
 no
 
-= PLUG POINTS
+== PLUG POINTS
 
 There are four-five different plug points where you could customize the
 functionality. From largest to smallest: - _The SecurityService

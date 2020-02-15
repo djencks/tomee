@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-= Sample persistence.xml
+== Sample persistence.xml
 
 For a unit called "movie-unit" using two datasources called
 "movieDatabase" and "movieDatabaseUnmanaged" the following
@@ -48,7 +48,7 @@ always be used and never replaced by OpenEJB.
 Note that if you need more functionality in this area we are always
 happy to add it.
 
-== Not using OpenEJB in production?
+=== Not using OpenEJB in production?
 
 If you're using OpenEJB 3.0 which does not support the dynamic switching
 of the `hibernate.transaction.manager_lookup_class` this is one way to
