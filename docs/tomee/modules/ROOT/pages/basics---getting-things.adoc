@@ -5,6 +5,7 @@
 :jbake-status: published
 
 == Getting Stuff from the Container
+NOTE: there are no pages in website source that container-managed-resource or container-managed-component could refer to.
 
 Generally speaking the only way to get a
 xref:container-managed-resource.adoc[Container-Managed Resource] is via
@@ -14,7 +15,6 @@ Component] .
 The _unbreakable rules_. Read these over and over again when things
 don't work.
 
-[arabic]
 . java:comp/env is the spec defined namespace for lookup of any
 xref:container-managed-resource.adoc[Container-Managed Resource]
 . java:comp/env is _empty_ by default
