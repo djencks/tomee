@@ -1,18 +1,18 @@
-= Startup
+== Startup
 :index-group: OpenEJB Standalone Server
 :jbake-date: 2018-12-05
 :jbake-type: page
 :jbake-status: published
 
-= NAME
+== NAME
 
 openejb start - OpenEJB Remote Server
 
-= SYNOPSIS
+== SYNOPSIS
 
 openejb start xref:#options.adoc[#options]
 
-= NOTE
+== NOTE
 
 The OpenEJB Remote Server can be started by running the openejb.bat
 script for windows and the openejb script for Linux and other Unix based
@@ -45,7 +45,7 @@ in shorthand as show below.
 
 _openejb start -help_
 
-= DESCRIPTION
+== DESCRIPTION
 
 Starts OpenEJB as an EJB Server that can be accessed by remote clients
 via the OpenEJB Remote Server.
@@ -61,30 +61,64 @@ OpenEJB itself is configured with the OpenEJB configuration file, which
 is extremely simple and self-documenting. This file is located at
 c:-3.0.xml.
 
-= OPTIONS
+== OPTIONS
 
-| _-D=_ | Specifies a system property passed into OpenEJB at startup. |
-| _--admin-bind _ | Sets the host to which the admin service should be
-bound.| | _--admin-port _ | Sets the port to which the admin service
-should be bound.| | _--conf _ | Sets the OpenEJB configuration to the
-specified file. | | _--ejbd-bind _ | Sets the host to which the ejbd
-service should be bound. | | _--ejbd-port _ | Sets the port to which the
-ejbd service should be bound. | +
-| _--examples_ | Show examples of how to use the options. | | -h,
---_help_ | Print this help message. | | _--hsql-bind _ | Sets the host
-to which the hsql service should be bound.| | _--hsql-port _ | Sets the
-port to which the hsql service should be bound.| | _--httpejbd-bind _ |
-Sets the host to which the httpejbd service should be bound.| |
-_--httpejbd-port _ | Sets the port to which the httpejbd service should
-be bound.| | _--local-copy _ | Instructs the container system to marshal
-(ie, copy) all calls between beans. | | _--telnet-bind _ | Sets the host
-to which the telnet service should be bound.| | _--telnet-port _ | Sets
-the port to which the telnet service should be bound.| | -v, --_version_
-| Print the version. |
+[cols="1,4"]
+|===
 
-= EXAMPLES
+| -D=
+| Specifies a system property passed into OpenEJB at startup.
 
-== Example: Simplest scenario
+| --_admin-bind_
+| Sets the host to which the admin service should be bound.
+
+| --_admin-port_
+| Sets the port to which the admin service should be bound.
+
+| --_conf_
+| Sets the OpenEJB configuration to the specified file.
+
+| --_ejbd-bind_
+| Sets the host to which the ejbd service should be bound.
+
+| --_ejbd-port_
+| Sets the port to which the ejbd service should be bound.
+
+|  --_examples_
+| Show examples of how to use the options.
+
+| -h, --_help_
+| Print this help message.
+
+| --_hsql-bind_
+| Sets the host to which the hsql service should be bound.
+
+| --_hsql-port_
+| Sets the port to which the hsql service should be bound.
+
+| --_httpejbd-bind_
+|Sets the host to which the httpejbd service should be bound.
+
+|--_httpejbd-port_
+| Sets the port to which the httpejbd service should be bound.
+
+| --_local-copy_
+| Instructs the container system to marshal (ie, copy) all calls between beans.
+
+| --_telnet-bind_
+| Sets the host to which the telnet service should be bound.
+
+| --_telnet-port_
+| Sets the port to which the telnet service should be bound.
+
+| -v, --_version_
+| Print the version.
+
+|===
+
+== EXAMPLES
+
+=== Example: Simplest scenario
 
 _openejb start_
 
@@ -96,15 +130,13 @@ from the Remote Server.
 
 [source,properties]
 ----
-java.naming.factory.initial  =
+java.naming.factory.initial  = org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.provider.url = ejbd://127.0.0.1:4201
+java.naming.security.principal = myuser
+java.naming.security.credentials = mypass
 ----
 
-org.apache.openejb.client.RemoteInitialContextFactory
-java.naming.provider.url = ejbd://127.0.0.1:4201
-java.naming.security.principal = myuser java.naming.security.credentials
-= mypass
-
-== Example: --conf=file
+=== Example: --conf=file
 
 _openejb start --conf=C:-3.0.conf_
 
@@ -112,7 +144,7 @@ Sets the openejb.configuration system variable to the file _C:.conf_.
 When the server starts up and initializes OpenEJB, this configuration
 will be used to assemble the container system and load beans.
 
-== Example: --local-copy
+=== Example: --local-copy
 
 The local-copy option controls whether Remote interface arguments and
 results are always copied.
@@ -132,9 +164,9 @@ but non-compliant with the EJB standard.
 Local interfaces are not affected; their arguments and results are
 passed by reference and never copied.
 
-== CONFIG OVERRIDE EXAMPLES
+=== CONFIG OVERRIDE EXAMPLES
 
-== Example: -D.bind=
+=== Example: -D.bind=
 
 _openejb start -Dejbd.bind=10.45.67.8_
 
@@ -145,13 +177,11 @@ Server Service.
 
 [source,properties]
 ----
-   java.naming.factory.initial      =
-----
-
-org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
 java.naming.provider.url = ejbd://10.45.67.8:4201
-java.naming.security.principal = myuser java.naming.security.credentials
-= mypass
+java.naming.security.principal = myuser
+java.naming.security.credentials = mypass
+----
 
 DNS names can also be used.
 
@@ -162,13 +192,12 @@ from the Remote Server.
 
 [source,properties]
 ----
-   java.naming.factory.initial      =
+java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.provider.url = ejbd://myhost.foo.com:4201
+java.naming.security.principal = myuser
+java.naming.security.credentials = mypass
 ----
 
-org.apache.openejb.client.RemoteInitialContextFactory
-java.naming.provider.url = ejbd://myhost.foo.com:4201
-java.naming.security.principal = myuser java.naming.security.credentials
-= mypass
 
 _openejb start -Dtelnet.bind=myhost.foo.com_
 
@@ -177,7 +206,7 @@ telnet client as such:
 
 _telnet myhost.foo.com 4202_
 
-== Example: -D.port=
+=== Example: -D.port=
 
 _openejb start -Dejbd.port=8765_
 
@@ -188,13 +217,11 @@ from the Remote Server.
 
 [source,properties]
 ----
-   java.naming.factory.initial      =
-----
-
-org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
 java.naming.provider.url = ejbd://127.0.0.1:8765
-java.naming.security.principal = myuser java.naming.security.credentials
-= mypass
+java.naming.security.principal = myuser
+java.naming.security.credentials = mypass
+----
 
 _openejb start -Dhttpejbd.port=8888_
 
@@ -206,15 +233,13 @@ from the HTTP/Remote Server.
 
 [source,properties]
 ----
-   java.naming.factory.initial      =
+java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.provider.url = http://127.0.0.1:8888/openejb
+java.naming.security.principal = myuser
+java.naming.security.credentials = mypass
 ----
 
-org.apache.openejb.client.RemoteInitialContextFactory
-java.naming.provider.url = http://127.0.0.1:8888/openejb
-java.naming.security.principal = myuser java.naming.security.credentials
-= mypass
-
-== Example: -D.only_from=
+=== Example: -D.only_from=
 
 _openejb start -Dadmin.only_from=192.168.1.12_
 
@@ -240,21 +265,21 @@ opperating system is able to resolve into a valid IP address. This is
 usually done via a hosts file, interal DNS server, or Windows Domain
 Server.
 
-== Example: -D.threads=
+=== Example: -D.threads=
 
 _openejb start -Dejbd.threads=200_
 
 Sets the max number of concurrent threads that can enter the EJBd Server
 Service to 200.
 
-== Example: -D.disabled=
+=== Example: -D.disabled=
 
 _openejb start -Dtelnet.disabled=true_
 
 Prevents the Telnet Server Service from starting when the OpenEJB Server
 starts.
 
-= CONSOLE OUTPUT
+== CONSOLE OUTPUT
 
 Once you start OpenEJB using the _openejb start_ command the following
 output will be seen on the console
