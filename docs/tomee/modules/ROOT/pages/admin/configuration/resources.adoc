@@ -83,7 +83,7 @@ In Oracle case for instance it matches the connection properties which can have 
 
 === Value ciphering
 
-The propertie values support ciphering using the syntax `cipher:{algorithm}:{cipheredValue}`, for instance `cipher:Static3DES:xMH5uM1V9vQzVUv5LG7YLA==` will
+The propertie values support ciphering using the syntax `cipher:\{algorithm\}:\{cipheredValue\}`, for instance `cipher:Static3DES:xMH5uM1V9vQzVUv5LG7YLA==` will
 be read as `Passw0rd`. Ciphers can be computed using `tomee.sh` script: `${tomee.home}/bin/tomee.sh cipher Passw0rd`.
 
 == Common Resources
