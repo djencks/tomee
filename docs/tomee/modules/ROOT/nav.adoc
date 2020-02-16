@@ -1,3 +1,4 @@
+= TomEE 7.1 Documentation
 
 * IDE
 ** xref::tomee-and-intellij.adoc[Get started with Intellij]
