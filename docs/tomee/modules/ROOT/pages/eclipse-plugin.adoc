@@ -17,14 +17,13 @@ Lists#MailingLists-DeveloperMailingList] .
 
 == How to get involved?
 
-Just the same as getting involved with any part of OpenEJB -- send a mail to the xref:0.1@tomee::mailing-lists.adoc#developermailinglist[OpenEJB Dev list] and say "Hi!".
+Just the same as getting involved with any part of OpenEJB -- send a mail to the xref:{common-vc}::mailing-lists.adoc#mailinglists-developermailinglist[OpenEJB Dev list] and say "Hi!"
 We're a very relaxed group so no need to be perfect or overly prepared.
 Just dive right in, we're always happy to have more.
 
 == Where do I get it?
 
-The initiative is just launching, but you can grab what we have right
-here and start hacking.
+The initiative is just launching, but you can grab what we have right here and start hacking.
 
 http://svn.apache.org/repos/asf/tomee/openejb-eclipse-plugin/trunk/
 

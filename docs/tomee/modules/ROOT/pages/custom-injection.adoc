@@ -4,9 +4,10 @@
 :jbake-type: page
 :jbake-status: published
 
+NOTE: TODO! This seems to be related to or another version of the example xref:{examples-vc}::custom-injection.adoc[]
 == Overview
 
-As noted in the xref:0.0@tomee::injection-of-env-entry-example.adoc[Injection of
+As noted in the xref:{examples-vc}::injection-of-env-entry.adoc[Injection of
 env-entry Example] , the EJB 3.0 supported env-entry types are fairly
 limited. Also the use of several tags in an ejb-jar.xml can get a bit
 verbose.
@@ -29,7 +30,7 @@ NOTE: unverified link
 
 The source for this example is the "custom-injection" directory located
 in the openejb-examples.zip available on the
-xref:0.1@tomee::downloads-ng.adoc[download page].
+xref:{common-vc}::downloads-ng.adoc[download page].
 
 == The Code
 

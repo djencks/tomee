@@ -24,10 +24,7 @@ bundle. This guide provides a set of step-by-step instructions to this
 approach. Please note that TomEE 1.7.x does not recommend Tomcat
 versions less than 7.0.54. Tomcat 8 is not currently supported in the
 released version, but you can check out the developer branch to see
-progress 
-//FIXME CHOOSE ONE
-xref:0.0@tomee::dev/source-code.adoc[]
-xref:0.1@tomee::dev/source-code.adoc[here].
+progress xref:{common-vc}::dev/source-code.adoc[here].
 
 * Download the Apache Tomcat 7.0.55 server.
 http://tomcat.apache.org/download-70.cgi

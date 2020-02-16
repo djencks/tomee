@@ -20,7 +20,7 @@ License.
 == Downloading a Distribution Archive
 
 Download a distribution archive of the latest TomEE release from the
-xref:0.1@tomee::download-ng.adoc[Downloads] page. If you are not sure which one to
+xref:{common-vc}::download-ng.adoc[Downloads] page. If you are not sure which one to
 use, take apache-tomee-webprofile-x.y.z.zip.
 
 If you want to try out the latest development snapshot (e.g. to test a
