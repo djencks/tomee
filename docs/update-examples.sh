@@ -12,6 +12,7 @@ rm -rf ./examples-en/modules/ROOT/pages ./examples-es/modules/ROOT/pages ./examp
 ./copy-examples-en.sh
 ./copy-examples-es.sh
 ./copy-examples-pt.sh
+./copy-example-source.sh
 
 #show changes
 git status .
