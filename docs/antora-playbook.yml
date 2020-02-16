@@ -16,7 +16,7 @@ content:
     start_path: docs/tomee
     branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
 
-# currently producing version 0.1
+# currently producing master@common
 #  - url: ./../../tomee-site-generator
   - url: https://github.com/djencks/tomee-site-generator.git
     start_path: tomee
@@ -24,9 +24,9 @@ content:
 
 # currently producing version 0.0
 #  - url: ./../../tomee-site
-  - url: https://github.com/djencks/tomee-site.git
-    start_path: tomee
-    branches: antora
+#  - url: https://github.com/djencks/tomee-site.git
+#    start_path: tomee
+#    branches: antora
 
 # The .adoc files for the examples are not checked in; they are copied and renamed from ../examples.
 # Checking the copies in would make building the site much more self contained.
@@ -42,6 +42,11 @@ content:
   - url: ./../
     start_path: docs/examples-pt
     branches: HEAD
+
+asciidoc:
+  attributes:
+    common-vc: master@common
+    examples-vc: 8.0@examples
 
 # This is the Antora default UI.
 # We need to modify it with supplemental files or replace it.
