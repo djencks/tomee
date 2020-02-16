@@ -6,7 +6,7 @@
 
 == Installation
 
-To install OpenEJB, simply xref:{common-vc}::downloads-ng.adoc[download the latest
+To install OpenEJB, simply xref:{common-vc}::download-ng.adoc[download the latest
 binary] and unpack your zip or tar.gz into the directory where you want
 OpenEJB to live.
 
