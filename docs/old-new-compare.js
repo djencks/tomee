@@ -56,6 +56,16 @@ result.oldToNew = compare(oldSort, newSort, 'old', 'new')
 console.log('\n\n\ncomparing svn and old')
 result.svnToOld = compare(svnSort, oldSort, 'svn', 'old')
 
+result.new00and01 = and(newSort['0.0@tomee'], newSort['0.1@tomee'])
+result.new00notSvn = minus(newSort['0.0@tomee'], svnSort['0.0@tomee'])
+result.new00toRemove = plus(result.new00and01, result.new00notSvn)
+result.new00Remainng = minus(newSort['0.0@tomee'], result.new00toRemove)
+result.new00Counts = {
+    new00and01: result.new00and01.length,
+    new00notSvn: result.new00notSvn.length,
+    new00toRemove: result.new00toRemove.length
+}
+
 // console.log("RESULT: ", result)
 fs.writeFileSync('comparison.json', JSON.stringify(result, null, 2))
 
@@ -191,4 +201,16 @@ function newFiles() {
             return accum
         }, {})
 
+}
+
+function and(arr1, arr2) {
+    return arr1.filter((e) => arr2.includes(e))
+}
+
+function minus(arr1, arr2) {
+    return arr1.filter((e) => !arr2.includes(e))
+}
+
+function plus(arr1, arr2) {
+    return arr1.concat(minus(arr2, arr1)).sort()
 }
