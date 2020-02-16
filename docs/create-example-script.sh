@@ -38,7 +38,7 @@ do
 #    echo $readme
     stem=`echo  $readme |sed -E "s/\.\.\/examples\/(.*)\/README$suffix.adoc/\1/"`
 #    echo $stem
-    targetFile=${stem}${suffix}.adoc
+    targetFile=${stem}.adoc
 #    echo $targetFile
     targetLoc=$targetDir/pages/$targetFile
 #    echo $targetLoc
