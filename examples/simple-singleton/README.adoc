@@ -15,7 +15,7 @@ entire application and all users using it, without the need for a
 static. Additionally, Singleton beans can be invoked by several threads
 at one time similar to a Servlet.
 
-See the link:../../singleton-beans.html[Singleton Beans] page for a full
+See the xref:8.0@tomee::singleton-beans.adoc[Singleton Beans] page for a full
 description of the javax.ejb.Singleton api.
 
 #The Code
