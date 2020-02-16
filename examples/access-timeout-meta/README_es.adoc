@@ -13,7 +13,7 @@ endif::[]
 == Introducción
 Cualquier anotación que reciba parámetros se puede beneficiar de las meta-annotations.
 Aquí obsvervamos cómo `@AccessTimeout` puede ser más facíl de comprender y administrar mediante meta-annotatios.
-Usaremos xref:access-timeout_es.adoc[access-timeout] como nuestro ejemplo de caso de uso.
+Usaremos xref:access-timeout.adoc[access-timeout] como nuestro ejemplo de caso de uso.
 
 El valor de los parámetros suministrador a `@AccessTimeout` tienen un efecto dramático en lo que la anotación realmente hace. Además, `@AccessTimeout` tiene uno de esos diseños
 donde `-1` y `0` tienen un significado totalmente diferente. Uno quiere decir "espera por siempre", el otro "nunca esperes". Solo algunos con suerte pueden recordar cual es cual.
