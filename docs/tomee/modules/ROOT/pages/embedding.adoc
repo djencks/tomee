@@ -24,8 +24,8 @@ PersistenceUnits in Tests]
 Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
-* xref:0.0@tomee::unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:0.0@tomee::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
+* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
 inner-class]
 * [TestCase Injection (@LocalClient)](local-client-injection.html)
 
