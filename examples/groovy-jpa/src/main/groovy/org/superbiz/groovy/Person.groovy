@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// tag::content[]
 package org.superbiz.groovy
 
 import javax.persistence.Entity
@@ -27,3 +28,4 @@ class Person {
     @GeneratedValue long id
     String name
 }
+// end::content[]

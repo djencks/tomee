@@ -7,17 +7,17 @@ Esté exemplo demostra como as anotações @Produces e @Disposes trabalham. Um L
 dependendo de um atributo "type". Para o propósito deste exemplo, o type é hard-coded para especificar um valor.
 Uma implementação Logger deve conter uma lista de LogHandlers.
 
- Teremos três implementações da interface LogHandler: 
+ Teremos três implementações da interface LogHandler:
 
 * Uma DatabaseHandler
 * Uma FileHandler
 * Uma ConsoleHandler
 
-O DatabaseHandler aparentemente gravaria os logs em um banco de dados. 
+O DatabaseHandler aparentemente gravaria os logs em um banco de dados.
 
 O FileHandler gravaria os logs em um arquivo.
 
-O ConsoleHandler apenas imprimiria os logs para um console (saída padrão). 
+O ConsoleHandler apenas imprimiria os logs para um console (saída padrão).
 
 Esté exemplo é apenas uma ilustração de como os conceitos dentro do CDI funcionam e não destina-se a fornecer uma implementação/design de um framework de log.
 
@@ -267,7 +267,7 @@ public class LoggerTest {
 }
 ----
 
-= Executando
+== Executando
 
 [source,console]
 ----

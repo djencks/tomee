@@ -1,12 +1,12 @@
+= MyFaces CODI Demo
 :index-group: Unrevised
 :jbake-type: page
 :jbake-status: status=published
-= MyFaces CODI Demo
 
-=== Steps to run the example
+== Steps to run the example
 
 [discrete]
-==== Build and start the demo:
+=== Build and start the demo:
 
 [source,bash]
 ----
@@ -14,8 +14,8 @@ mvn clean package tomee:run
 ----
 
 
-==== Open:
-[source,java]
+=== Open:
+[source,text]
 ----
 http://localhost:8080/myfaces-codi-demo-8.0.1-SNAPSHOT/
 ----
@@ -23,8 +23,7 @@ http://localhost:8080/myfaces-codi-demo-8.0.1-SNAPSHOT/
 This example shows how to improve JSF2/CDI/BV/JPA applications with
 features provided by Apache MyFaces CODI and ExtVal.
 
-[discrete]
-==== Intro of MyFaces CODI and ExtVal
+=== Intro of MyFaces CODI and ExtVal
 
 The Apache MyFaces Extensions CDI project (aka CODI) hosts portable
 extensions for Contexts and Dependency Injection (CDI - JSR 299). CODI

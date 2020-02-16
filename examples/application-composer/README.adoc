@@ -129,8 +129,9 @@ Used in an actual testcase, that might look like so:
     }
 ----
 
-# Running
-```
+== Running
+
+----
     -------------------------------------------------------
      T E S T S
     -------------------------------------------------------
@@ -168,4 +169,4 @@ Used in an actual testcase, that might look like so:
     Results :
 
     Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-```
+----

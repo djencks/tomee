@@ -170,7 +170,7 @@ public class MoviesTest extends TestCase {
 }
 ----
 
-= Running
+== Running
 
 When we run our test case we should see output similar to the following.
 

@@ -86,9 +86,9 @@ navigation-rules and the respective page is rendered.
 In our case, `result.xhtml` page is rendered where use EL and display
 the result from the request-scoped `calculatorBean`.
 
-# Source Code
+== Source Code
 
-== CalculatorBean
+=== CalculatorBean
 
 [source,java]
 ----
@@ -136,7 +136,7 @@ public class CalculatorBean {
 }
 ----
 
-== Calculator
+=== Calculator
 
 [source,java]
 ----

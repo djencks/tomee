@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// tag::content[]
 package org.superbiz.groovy
 
 class Hello {
@@ -27,3 +28,4 @@ class Hello {
         "This is the Hello instance";
     }
 }
+// end::content[]

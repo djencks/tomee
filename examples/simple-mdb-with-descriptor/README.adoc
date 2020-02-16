@@ -201,7 +201,7 @@ public class ChatBeanTest extends TestCase {
 }
 ----
 
-= Running
+== Running
 
 [source,console]
 ----

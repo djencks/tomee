@@ -7,15 +7,16 @@ This examples shows in practice the  `@Startup` and `@DependsOn` annotations on 
 
 
 
-=== Run the tests
-[source,java]
+== Run the tests
+
+[source,console]
 ----
 mvn clean test 
 ----
 
 
 
-=== The scenario
+== The scenario
 
 * The example is composed by three singleton beans: `SingletonA`, `SingletonB`, `SingletonC`.
 * The three EJB's contains a `@PostConstruct` annotation for the `init` method that is executed after dependency injection is done to perform any initialization. This method is invoked before the class is put into service.
@@ -142,7 +143,7 @@ public class Supervisor {
 ----
 
 
-=== The tests
+== The tests
 
 * The class `TestSingletonStartupOrder.java` contains two test that are executed in order via the annotation `@FixMethodOrder(MethodSorters.NAME_ASCENDING)`
 * `firstTest`: assert true if an only if the records stored in the `Supervisor.record` are equals to `[SingletonA, SingletonB]`. Notice that the order is validated too. In this test we don't expect to see `SingletonC` initilized since it's not annotated with `@Startup`.
@@ -202,7 +203,7 @@ public class TestSingletonStartupOrder {
 }
 ----
 
-=== About the Test architecture
+== About the Test architecture
 
 The test cases from this project are built using Arquillian and TomEE
 Remote. The arquillian configuration can be found in

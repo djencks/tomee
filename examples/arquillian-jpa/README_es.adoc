@@ -10,9 +10,9 @@ Tenga en cuenta que no funciona con contenedores integrados (openejb, tomee-embe
 si no usa soluciones como https://github.com/rmannibucau/persistence-with-openejb-and-arquillian
 (vea la carpeta src/test/resources).
 
-# Ejecutando (salida)
+== Ejecutando (salida)
 
-```
+----
     -------------------------------------------------------
      T E S T S
     -------------------------------------------------------
@@ -169,4 +169,4 @@ si no usa soluciones como https://github.com/rmannibucau/persistence-with-openej
     Results :
     
     Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-```
+----

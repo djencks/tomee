@@ -1,13 +1,12 @@
+= MyFaces CODI Demo
 :index-group: Unrevised
 :jbake-type: page
 :jbake-status: status=published
-= MyFaces CODI Demo
 
 
-=== Pasos para ejecutar el ejemplo
+== Pasos para ejecutar el ejemplo
 
-[discrete]
-==== Construir y arrancar la demo:
+=== Construir y arrancar la demo:
 
 [source,bash]
 ----
@@ -15,8 +14,8 @@ mvn clean package tomee:run
 ----
 
 
-==== Abrir:
-[source,java]
+=== Abrir:
+[source,text]
 ----
 http://localhost:8080/myfaces-codi-demo-8.0.1-SNAPSHOT/
 ----
@@ -25,16 +24,15 @@ http://localhost:8080/myfaces-codi-demo-8.0.1-SNAPSHOT/
 Este ejemplo muestra como mejorar aplicaciones JSF2/CDI/BV/JPA usando
 la funcionalidad proporcionada por  Apache MyFaces CODI y ExtVal.
 
-[discrete]
-==== Introducción a MyFaces CODI y ExtVal
+=== Introducción a MyFaces CODI y ExtVal
 
-El proyecto CDI de Extensiones de Apache MyFaces (también conocido como CODI) 
+El proyecto CDI de Extensiones de Apache MyFaces (también conocido como CODI)
 aloja extensiones portábles para Contextos e Inyección de Dependencias (CDI - JSR 299). CODI
 es una caja de herramientas para su aplicación CDI. Al igual que CDI, CODI está enfocado
 en seguridad de tipo (type-safety). Es un marco modularizado y extensible. Entonces es
 Fácil elegir las piezas necesarias para facilitar el trabajo diario en su proyecto.
 
-MyFaces Extensions Validator (también conocido como ExtVal) es un framework centrado 
+MyFaces Extensions Validator (también conocido como ExtVal) es un framework centrado
 en validación JSF que es compatible con JSF 1.xy JSF 2.x. Este ejemplo
 muestra cómo mejorar la integración predeterminada de Bean-Validation
 (JSR-303) con JSF2 y validación de campo cruzado (cross-field) basada en metadatos.

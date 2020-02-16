@@ -9,8 +9,6 @@ Before taking a look at `@AccessTimeout`, it might help to see when a caller mig
 
 === Stateful Bean
 
-[note]
-
 NOTE: By default, clients are allowed to make concurrent calls to a stateful session object and the container is required to serialize such concurrent requests. The container never permits multi-threaded access to the stateful session bean instance. For this reason, Read/Write method locking metadata, as well as the bean-managed concurrency mode, are not applicable to stateful session beans and must not be used.
 
 This means that when a method `foo()` of a stateful bean instance is being executed and a second request comes in for that method or another method, EJB container would serialize the second request. It would not let the method be executed concurrently but wait until the first request is processed.
@@ -31,7 +29,7 @@ The container enforces a single-threaded access by default to singleton beans. T
  - `@Stateful` - any method of the instance is being invoked and a second invocation occurs.  OR the `@Stateful` bean is in a transaction and the caller is invoking it from outside that transaction.
  - `@Stateless` - no instances are available in the pool. As noted, however, pooling sematics, if any, are not covered by the spec.  If the vendor's pooling semantics do involve a wait condition, the @AccessTimeout should apply.
 
-= @AccessTimeout
+== @AccessTimeout
 
 The `@AccessTimeout` is simply a convenience wrapper around the `long` and `TimeUnit` tuples commonly used in the `java.util.concurrent` API.
 

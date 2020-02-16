@@ -5,19 +5,19 @@
 
 Este es un ejemplo básico sobre cómo configurar y utilizar Cliente Rest de MicroProfile en TomEE.
 
-[source,java]
+[source,shell]
 ----
 mvn clean test 
 ----
 
-=== Requisitos y configuración
+== Requisitos y configuración
 
 Para utilizar el Cliente Rest de MicroProfile se requieren 3 cambios en su proyecto:
 
 [arabic]
 . Agregar la siguiente dependencia al `pom.xml`:
 +
-[source,java]
+[source,xml]
 ----
  <dependency>
      <groupId>org.eclipse.microprofile.rest.client</groupId>
@@ -28,7 +28,7 @@ Para utilizar el Cliente Rest de MicroProfile se requieren 3 cambios en su proye
 ----
 . Proveer el archivo de configuración: `microprofile-config.properties`
 +
-[source,java]
+[source,properties]
 ----
  org.superbiz.rest.BookResourceClient/mp-rest/url=http://localhost:4444
 ----
@@ -78,9 +78,9 @@ que desea consumir: `BookResourceClient.java`
  }
 ----
 
-=== Uso del Client Rest de MicroProfile en TomEE
+== Uso del Client Rest de MicroProfile en TomEE
 
-La clase `BookResourceTest.java` muestra lo fácil que es utilizar el enfoque 
+La clase `BookResourceTest.java` muestra lo fácil que es utilizar el enfoque
 con seguridad de tipos (type-safe) proporcionado por el Client Rest de MicroProfile
 para consumir un recurso JAX-RS existente.
 
@@ -148,8 +148,8 @@ public class BookResourceTest {
 }
 ----
 
-=== Acerca de la arquitectura de prueba
+== Acerca de la arquitectura de prueba
 
-Los casos de prueba de este proyecto se construyen utilizando Arquillian 
-y TomEE Remote. La configuración del arquillianse se puede encontrar en 
+Los casos de prueba de este proyecto se construyen utilizando Arquillian
+y TomEE Remote. La configuración del arquillianse se puede encontrar en
 `src/test/resources/arquillian.xml`

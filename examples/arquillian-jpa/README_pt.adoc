@@ -9,8 +9,9 @@ Observe que ele não funciona com contêineres incorporados (openejb, tomee-embe
 se você não usar soluções alternativas como https://github.com/rmannibucau/persistence-with-openejb-and-arquillian
 (ver a pasta src/test/resources).
 
-# Executando (saída)
-```
+== Executando (saída)
+
+----
     -------------------------------------------------------
      T E S T S
     -------------------------------------------------------
@@ -89,7 +90,7 @@ se você não usar soluções alternativas como https://github.com/rmannibucau/p
     INFOS - Deployed Application(path=openejb)
     INFOS - Creating ServerService(id=cxf-rs)
     INFOS -   ** Bound Services **
-    INFOS -   NAME                 IP              PORT  
+    INFOS -   NAME                 IP              PORT
     INFOS - -------
     INFOS - Ready!
     INFOS - Initialization processed in 2589 ms
@@ -123,7 +124,7 @@ se você não usar soluções alternativas como https://github.com/rmannibucau/p
     INFOS - OpenJPA dynamically loaded a validation provider.
     INFOS - Starting OpenJPA 2.4.0-nonfinal-1598334
     INFOS - Using dictionary class "org.apache.openjpa.jdbc.sql.HSQLDictionary" (HSQL Database Engine 2.3.2 ,HSQL Database Engine Driver 2.3.2).
-    INFOS - Connected to HSQL Database Engine version 2.2 using JDBC driver HSQL Database Engine Driver version 2.3.2. 
+    INFOS - Connected to HSQL Database Engine version 2.2 using JDBC driver HSQL Database Engine Driver version 2.3.2.
     INFOS - SELECT SEQUENCE_SCHEMA, SEQUENCE_NAME FROM INFORMATION_SCHEMA.SYSTEM_SEQUENCES --> 0ms
     INFOS - CREATE TABLE User (id BIGINT NOT NULL, name VARCHAR(255), PRIMARY KEY (id)) --> 0ms
     INFOS - PersistenceUnit(name=demoApplicationPU, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 1075ms
@@ -163,8 +164,8 @@ se você não usar soluções alternativas como https://github.com/rmannibucau/p
     INFOS - Closing DataSource: demoDataSourceNonJta
     INFOS - Destroying ProtocolHandler ["http-nio-52256"]
     INFOS - Destroying ProtocolHandler ["ajp-nio-40071"]
-    
+
     Results :
-    
+
     Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-```
+----

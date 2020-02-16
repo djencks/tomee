@@ -1,18 +1,16 @@
+= REST Simple
 :index-group: REST
 :jbake-type: page
 :jbake-status: status=published
 
-= REST Simple
-
 Definir un servicio Rest es muy fácil, simplemente necesitamos agregar la anotación ``@Path`` en la clase y después definir los métodos HTTP que vamos a usar (``@GET``, ``@POST``, …).
 
-= El Código
+== El Código
 
-== El servicio REST: ``@Path``, ``@GET``, ``@POST``
+=== El servicio REST: ``@Path``, ``@GET``, ``@POST``
 
 Aquí tenemos un REST simple, anotamos la clase con ``@Path("/greeting")`` para indicar la ruta correspondiente a la clase ``GreetingService``. Definimos ``message()`` como ``@GET`` y ``lowerCase()`` como ``@POST`` para la ruta ``/greeting``. Pronto tenemos un servicio, muy simple ¿verdad?
 
-[source,java]
 [source,java]
 ----
 package org.superbiz.rest;
@@ -35,9 +33,9 @@ public class GreetingService {
 }
 ----
 
-== Probando
+=== Probando
 
-== Prueba para el servicio JAXRS
+=== Prueba para el servicio JAXRS
 
 Usamos el OpenEJB ApplicationComposer para facilitar la prueba.
 
@@ -47,7 +45,6 @@ Entonces creamos la aplicación simplemente devolviendo un objeto representando 
 
 Finalmente para probarlo utilizamos la API cliente de ``cxf`` para llamar el servicio REST en los métodos  ``get()`` y ``post()``.
 
-[source,java]
 [source,java]
 ----
 package org.superbiz.rest;
@@ -86,20 +83,18 @@ public class GreetingServiceTest {
 }
 ----
 
-== Ejecución
+=== Ejecución
 
 Ejecutar la aplicación es muy simple. En el directorio ``simple-rest`` ejecuta:
 
-[source,bash]
-[source,java]
+[source,console]
 ----
 $ mvn clean install
 ----
 
 Que probablemente genere una salida como la siguiente.
 
-[source,bash]
-[source,java]
+[source,console]
 ----
 INFO - Cannot find the configuration file [conf/openejb.xml].  Will attempt to create one for the beans deployed.
 INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)

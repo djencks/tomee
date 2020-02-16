@@ -16,6 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
+<!-- tag::content[] -->
 <persistence version="2.0"
              xmlns="http://java.sun.com/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -29,3 +30,4 @@
     </properties>
   </persistence-unit>
 </persistence>
+<!-- end::content[] -->

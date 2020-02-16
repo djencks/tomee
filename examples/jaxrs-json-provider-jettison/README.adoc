@@ -9,16 +9,17 @@ This is a example on how to configure on TomEE  7.x or later the legacy JSON pro
 This scenario is useful when REST applications are migrated from TomEE 1.7.x into TomEE  7.x or later and you want to keep the legacy JSON output from Jettison 1.3.7.
 
 
-=== Run the tests
+== Run the tests
+
 This example contains 2 test cases, one using Jettison and one without it for comparison purposes.
 
-[source,java]
+[source,shell]
 ----
 mvn clean test 
 ----
 
 
-=== Enabling Jettison as Json Provider
+== Enabling Jettison as Json Provider
 
 You need to provide the following 2 files in your `WEB-INF` folder:
 
@@ -33,14 +34,12 @@ You need to provide the following 2 files in your `WEB-INF` folder:
         </properties>
     </pojo-deployment>
 </openejb-jar>
-
 ----
 
 * resources.xml
 
-[source,java]
+[source,xml]
 ----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <Service id="json" class-name="org.apache.cxf.jaxrs.provider.json.JSONProvider">
@@ -50,12 +49,11 @@ You need to provide the following 2 files in your `WEB-INF` folder:
         SingleJaxbContext = true
     </Service>
 </resources>
-
 ----
 
 And finally make sure the Jettison JAR 1.3.7 is available in TomEE /lib folder.
 
-=== Comparing outputs
+== Comparing outputs
 
 `Item.java` is the POJO we are going to process:
 
@@ -127,19 +125,19 @@ public class Item {
 
 
 Legacy JSON output using Jettison 1.3.7:
-[source,java]
+[source,json]
 ----
 {"book":{"@id":"134","@availableSince":"2019-05-27 15:27:16.878","@available":"false","$":"TomEE Tutorial"}}
 ----
 
 Current JSON output:
 
-[source,java]
+[source,json]
 ----
 {"available":false,"availableSince":"2019-05-27 15:27:16.878","id":134,"name":"TomEE Tutorial"}
 ----
 
-=== About the Test architecture
+== About the Test architecture
 
 The test cases from this project are built using Arquillian and TomEE
 Remote. The arquillian configuration can be found in

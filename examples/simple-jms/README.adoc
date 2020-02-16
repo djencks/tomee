@@ -1,12 +1,11 @@
+= Simple JMS
 :index-group: JMS and MDBs
 :jbake-type: page
 :jbake-status: status=published
 
-= Simple JMS
-
 This example demostrate how to set up a ``CustomJmsService`` in order to produce and consume a JMS ``Message``.
 
-= The Code
+== The Code
 
 == The JMS service: ``Message``, ``Queue``, MessageProducer``, ``MessageConsumer``
 
@@ -81,9 +80,9 @@ public class CustomJmsService {
 
 ----
 
-== Testing
+=== Testing
 
-=== Test for the JMS service
+==== Test for the JMS service
 
 The test is trivial. The idea is first to POST a message to the service. This is done using instances of ``ClientBuilder`` and ``WebTarget``.
 
@@ -129,18 +128,18 @@ public class CustomJmsServiceTest {
 ----
 
 
-=== Running the Test for the JMS service
+==== Running the Test for the JMS service
 
 Building and testing the example is simple. In the ``simple-jms`` directory run:
 
-[source,java]
+[source,console]
 ----
 $ mvn clean install
 ----
 
 Which should create output like the following.
 
-[source,java]
+[source,console]
 ----
 INFO [http-nio-6586-exec-2] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.deployApplication Using writers:
 INFO [http-nio-6586-exec-2] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.deployApplication      org.apache.johnzon.jaxrs.WadlDocumentMessageBodyWriter@7a6a8b01
@@ -169,7 +168,7 @@ org.apache.openejb.client.EventLogger log
 INFO: RemoteInitialContextCreated{providerUri=http://localhost:6586/tomee/ejb}
 INFO [http-nio-6586-exec-8] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /tomee/examples/simple-jms/target/arquillian-test-working-dir/0/test
 WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [PoolIdleReleaseTimer]
-WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-1] 
+WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-1]
 WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-2]
 org.apache.openejb.arquillian.common.TomEEContainer undeploy
 INFO: cleaning /tomee/examples/simple-jms/target/arquillian-test-working-dir/0/test.war
@@ -215,11 +214,11 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 ----
 
 
-= Running the app
+== Running the app
 
 Running the example is simple. In the ``simple-jms`` directory run:
 
-[source,java]
+[source,console]
 ----
 $ mvn tomee:run
 ----
@@ -227,7 +226,7 @@ $ mvn tomee:run
 
 Which should create output like the following.
 
-[source,java]
+[source,console]
 ----
 [main] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.logEndpoints REST Application: http://localhost:8080/simple-jms-8.0.1-SNAPSHOT/        -> org.apache.openejb.server.rest.InternalApplication@3b8b5b40
 [main] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.logEndpoints      Service URI: http://localhost:8080/simple-jms-8.0.1-SNAPSHOT/message ->  EJB org.superbiz.jms.CustomJmsService
@@ -246,14 +245,14 @@ Which should create output like the following.
 
 Note: now you can use the ``CURL`` command (or a browser-client tool) to send a POST request and then a GET request to the equivalent URL:
 
-[source,java]
+[source,text]
 ----
 http://localhost:8080/simple-jms<-TOMEE-VERSION>/message
 ----
 
 Finally, you can ``quit``, ``exit``, ``reload`` the example, by typing one of the available commands
 
-[source,java]
+[source,console]
 ----
 [WARNING] Command '' not understood. Use one of [quit, exit, reload]
 ----

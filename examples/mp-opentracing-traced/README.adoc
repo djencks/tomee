@@ -8,56 +8,56 @@ This is an example on how to use the @Traced annotation in TomEE.
 
 NOTE: This example is a work in progress.
 
-===== Run the application:
+== Run the application:
 
     mvn clean install tomee:run
 
 
 NOTE: Add text here for information about the endpoint.
 
-===== Request:
+== Request:
 
     curl -X GET http://localhost:8080/mp-opentracing-traced/...
 
 NOTE: Complete the URL for the above `curl` command.
 
-===== Response:
+== Response:
 
 NOTE: Add the response from the example application
 
-==== @Traced Feature
+=== @Traced Feature
 
 NOTE: Add text here to include how to implement and some source code.
 
-===== For the traced status:
+== For the traced status:
 
     GET http://localhost:8080/mp-opentracing-traced/...
 
 NOTE: Complete the URL for the above `curl` command.
 
-===== Reponse:
+== Reponse:
 
 
-===== Expected Prometheus format:
+== Expected Prometheus format:
 
-===== Request:
+== Request:
 
     curl -X GET http://localhost:8080/mp-opentracing-traced/...
 
 NOTE: Complete the URL for the above `curl` command.
 
-===== Response:
+== Response:
 
-==== Metric Metadata:
+=== Metric Metadata:
 
-===== Request:
+== Request:
 
     curl -X OPTIONS http://localhost:8080/mp-opentracing/traced/...
 
 NOTE: Complete the URL for the above `curl` command.
 
-===== Response:
+== Response:
 
-===== Test the application:
+== Test the application:
 
     mvn test

@@ -9,8 +9,6 @@
 
 Filters may be utilized in your project through implementing the ContainerRequestFilter or ContainerResponseFilter interfaces. Each interface handles a separate filter scenario—inbound, or outbound—with unique function parameters to the overridden *filter* method. Note: the **@Provider** annoation on the class is necessary to perform the servlet mapping independent of the web.xml.
 
-[note]
-
 NOTE: It is possible to do redirects using the provided ContextRequestFilter argument. The method abortWith(Response response) allows the developer to change the request destination as it is being received, according to the provided filter logic. The code included in this example can be executed on the TomEE application server. Steps to replicate are below the code snippet.
 
 [source,java,numbered]

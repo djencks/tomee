@@ -213,4 +213,4 @@ com o percentual completo.
 
 Para processamento assíncrono complexo, a resposta do JavaEE é
 `@ MessageDrivenBean`. Dê uma olhada no exemplo
-link:../simple-mdb/README.html[simple-mdb]
+xref:simple-mdb.adoc[simple-mdb]

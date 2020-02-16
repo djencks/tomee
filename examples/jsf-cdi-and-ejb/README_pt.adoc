@@ -58,13 +58,13 @@ Em seguida criaremos o arquivo calculator.xhtml.
        <h:commandButton action="#{calculatorBean.add}" value="Add"/>
 ----
 
-Observe como usamos o bean aqui. Por padrão, o nome do bean seria o nome simples da classe bean com a primeira letra minúscula 
+Observe como usamos o bean aqui. Por padrão, o nome do bean seria o nome simples da classe bean com a primeira letra minúscula
 
 Nós temos o `CalculatorBean` anotado com `@RequestScoped`. Então quando uma requisição vem, o bean é instanciado e colocado no escopo da requisição.
 
 Aqui, o método getX() do calculatorBean é invocado e valor do resultado é apresentado. x sendo um Double, nós devemos ver justamente 0.0 sendo exibido.
 
-Quando você modifica o valor e submete o formulário, esses valores inseridos são vinculados no bean usando os setters e então o método commandButton-action é invocado. 
+Quando você modifica o valor e submete o formulário, esses valores inseridos são vinculados no bean usando os setters e então o método commandButton-action é invocado.
 
 Neste caso, CalculatorBean#add() é invocado.
 
@@ -76,9 +76,9 @@ navigation-rules e a respectiva página é renderizada.
 
 No nosso caso, a página `result.xhtml` é renderizada onde usar EL e mostra o resultado do request-scoped `calculatorBean`.
 
-# Código-fonte
+== Código-fonte
 
-== CalculatorBean
+=== CalculatorBean
 
 [source,java]
 ----
@@ -126,7 +126,7 @@ public class CalculatorBean {
 }
 ----
 
-== Calculator
+=== Calculator
 
 [source,java]
 ----

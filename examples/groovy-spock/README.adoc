@@ -9,7 +9,7 @@ _This example is guide of implementation the http://spockframework.org[Spock Fra
 
 [source,groovy]
 ----
-include::src/main/groovy/org/superbiz/groovy/Hello.groovy[]
+include::example$src/main/groovy/org/superbiz/groovy/Hello.groovy[tag=content]
 ----
 
 == HelloSpecification
@@ -20,7 +20,7 @@ Inject bean *Hello* with _@Inject_ and use http://arquillian.org[Arquilian] for 
 
 [source,groovy]
 ----
-include::src/test/groovy/org/superbiz/groovy/HelloSpecification.groovy[]
+include::example$src/test/groovy/org/superbiz/groovy/HelloSpecification.groovy[tag=content]
 ----
 
 == Running

@@ -121,7 +121,7 @@ Inside the example there are no reference to the JPA implementations.
 
 The test classes inside org.superbiz.enricher package simply load the implementation libraries and the test runs twice as described inside the pom.xml, a system property variable is used to distinguish between Hibernate and OpenJPA.
 
-= Running
+== Running
 
 Running the example can be done from maven with a simple 'mvn clean install' command run from the 'multi-jpa-provider-testing' directory.
 

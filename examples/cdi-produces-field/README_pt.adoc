@@ -11,7 +11,7 @@ Para o proposito deste exemplo, `type` é hard-coded em um valor especifico. Uma
 * Uma FileHandler
 * Uma ConsoleHandler
 
-A implementação DatabaseHandler aparentemente gravaria os logs em um banco de dados. O FileHandler gravaria os mesmos logs em um arquivo. E o ConsoleHandler apenas imprimiria os logs no console. Este exemplo é apenas uma ilustração de como os conceitos dentro do CDI funcionam e não tem a intenção de fornecer uma implementação/design de estrutura de log. 
+A implementação DatabaseHandler aparentemente gravaria os logs em um banco de dados. O FileHandler gravaria os mesmos logs em um arquivo. E o ConsoleHandler apenas imprimiria os logs no console. Este exemplo é apenas uma ilustração de como os conceitos dentro do CDI funcionam e não tem a intenção de fornecer uma implementação/design de estrutura de log.
 
 == ConsoleHandler
 
@@ -250,7 +250,7 @@ public class LoggerTest {
 }
 ----
 
-= Executando
+== Executando
 
 [source,console]
 ----

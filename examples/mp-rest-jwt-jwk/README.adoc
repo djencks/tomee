@@ -71,7 +71,7 @@ The application enables us to manipulate and view products with specific users. 
 
 We access endpoints from our test class by creating a `JWT` with the help of
 our `TokenUtils.generateJWTString(String jsonResource, String keyId)` which signs our user
-data in json format with the help of our `src/test/resources/{keyId}` private key.
+data in json format with the help of our `src/test/resources/\{keyId}` private key.
 
 We can also generate new `privateKey.pem` and `publicKey.pem` with the
 `GenerateKeyUtils.generateKeyPair(String keyAlgorithm, int keySize)` method which

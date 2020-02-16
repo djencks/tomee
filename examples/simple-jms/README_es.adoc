@@ -1,15 +1,14 @@
+= Simple JMS
 :index-group: JMS and MDBs
 :jbake-type: page
 :jbake-status: status=published
 
-= Simple JMS
-
-Este ejemplo demuestra cómo configurar un servicio JMS personalizado ``CustomJmsService`` 
+Este ejemplo demuestra cómo configurar un servicio JMS personalizado ``CustomJmsService``
 para producir y consumir un Mensaje JMS ``Message``.
 
-= Código
+== Código
 
-== El servicio JMS: ``Message``, ``Queue``, MessageProducer``, ``MessageConsumer``
+=== El servicio JMS: ``Message``, ``Queue``, MessageProducer``, ``MessageConsumer``
 
 Aquí tenemos un punto final REST, una clase con la anotación: ``@Path("/ message")`` que indica la ruta correspondiente a la clase ``CustomJmsService``. Por lo tanto, definimos ``sendMessage()`` como ``@POST`` y ``acceptMessage()`` como ``@GET`` para la  ruta ``/message``.
 
@@ -82,13 +81,13 @@ public class CustomJmsService {
 
 ----
 
-== Probando
+=== Probando
 
-=== Test para el servicio JMS
+==== Test para el servicio JMS
 
 La prueba es trivial. La idea consiste en hacer primero una petición POST que contiene el mensaje para el servicio. Esto se realiza usando instancias de las clases ``ClientBuilder`` y ``WebTarget``.
 
-Luego, de manera similar a la petición POST, se lleva a cabo una petición GET que consume el mensaje anterior. 
+Luego, de manera similar a la petición POST, se lleva a cabo una petición GET que consume el mensaje anterior.
 
 Finalmente, se verifican los HTTP status de las respuestas de manera que sean equivalentes a los códigos HTTP esperados (204/200), así como también que el contenido del mensaje recibido sea igual al mensaje enviado.
 
@@ -131,18 +130,18 @@ public class CustomJmsServiceTest {
 ----
 
 
-=== Ejecutando el test del servicio JMS
+==== Ejecutando el test del servicio JMS
 
 Construir y probar el ejemplo es simple. En el directorio ``simple-jms`` hay que ejecutar:
 
-[source,java]
+[source,console]
 ----
 $ mvn clean install
 ----
 
 Esto creara una salida similar a lo siguiente:
 
-[source,java]
+[source,console]
 ----
 INFO [http-nio-6586-exec-2] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.deployApplication Using writers:
 INFO [http-nio-6586-exec-2] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.deployApplication      org.apache.johnzon.jaxrs.WadlDocumentMessageBodyWriter@7a6a8b01
@@ -171,7 +170,7 @@ org.apache.openejb.client.EventLogger log
 INFO: RemoteInitialContextCreated{providerUri=http://localhost:6586/tomee/ejb}
 INFO [http-nio-6586-exec-8] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: /tomee/examples/simple-jms/target/arquillian-test-working-dir/0/test
 WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [PoolIdleReleaseTimer]
-WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-1] 
+WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-1]
 WARNING [http-nio-6586-exec-8] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [test] appears to have started a thread named [ActiveMQ VMTransport: vm://localhost#0-2]
 org.apache.openejb.arquillian.common.TomEEContainer undeploy
 INFO: cleaning /tomee/examples/simple-jms/target/arquillian-test-working-dir/0/test.war
@@ -217,18 +216,18 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 ----
 
 
-= Running the app
+== Running the app
 
 Ejecutar el ejemplo es simple. En el directorio ``simple-jms`` ingrese:
 
-[source,java]
+[source,console]
 ----
 $ mvn tomee:run
 ----
 
 Esto creara una salida similiar a lo siguiente.
 
-[source,java]
+[source,console]
 ----
 [main] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.logEndpoints REST Application: http://localhost:8080/simple-jms-8.0.1-SNAPSHOT/        -> org.apache.openejb.server.rest.InternalApplication@3b8b5b40
 [main] org.apache.openejb.server.cxf.rs.CxfRsHttpListener.logEndpoints      Service URI: http://localhost:8080/simple-jms-8.0.1-SNAPSHOT/message ->  EJB org.superbiz.jms.CustomJmsService
@@ -247,7 +246,7 @@ Esto creara una salida similiar a lo siguiente.
 
 Nota: es posible usar el comando ``CURL`` (o una herramienta cliente) para enviar una solicitud POST y luego una solicitud GET a la URL del servicio equivalente a:
 
-[source,java]
+[source,text]
 ----
 http://localhost:8080/simple-jms<-TOMEE-VERSION>/message
 ----
@@ -255,7 +254,7 @@ http://localhost:8080/simple-jms<-TOMEE-VERSION>/message
 Finalmente, puedes salir o recargar el ejemplo ingresando uno de los comandos disponibles:
 ``quit``, ``exit``, ``reload``,
 
-[source,java]
+[source,console]
 ----
 [WARNING] Command '' not understood. Use one of [quit, exit, reload]
 ----

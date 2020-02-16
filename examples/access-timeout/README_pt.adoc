@@ -9,8 +9,6 @@ Antes de darmos uma olhada no `@AccessTimeout`, pode ajudar entender quando uma 
 
 === Stateful Bean
 
-[note]
-
 NOTE: Por padrão, é permitido que clientes façam chamadas concorrentes para um stateful session object e o container é requerido para serializar cada requisição concorrente. O container nunca permite acesso multi-thread a instancia de um componente stateful. Por essa razão, métodos de leitura/escrita bloqueiam metadados assim como componentes que gerenciam a própria concorrência (bean-managed concurrency) não são aplicáveis a um stateful session bean e não devem ser usados.
 
 Isso significa que quando um método `foo()` de uma instancia stateful esta sendo executado e uma chega uma segunda requisição para esse ou outro método, o container EJB serializa a segunda requisição. Isso não permite com que o método seja executado concorrentemente mas espere ate o primeiro método ser processado.
@@ -108,7 +106,7 @@ public class BusyBee {
 }
 ----
 
-O método `@Asynchronous` não tem uma relação direta com o `@AccessTimeout`, mas serve como uma forma simple de travar ("lockar") o bean para realizarmos o teste. Ele nos permite testar o comportamento concorrente do componente. 
+O método `@Asynchronous` não tem uma relação direta com o `@AccessTimeout`, mas serve como uma forma simple de travar ("lockar") o bean para realizarmos o teste. Ele nos permite testar o comportamento concorrente do componente.
 
 [source,java,numbered]
 ----

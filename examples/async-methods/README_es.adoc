@@ -189,4 +189,4 @@ Para obtener status del proceso, simplemente pasa un objeto thread-safe como htt
 == Ejemplos Relacionados
 
 Para procesamiento asíncrono complejo, la respuesta de JavaEE’s es `@MessageDrivenBean`. Échale una mirada al ejemplo
-link:../simple-mdb/README.html[simple-mdb]
+xref:simple-mdb.adoc[simple-mdb]

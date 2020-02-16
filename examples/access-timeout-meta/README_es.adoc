@@ -1,4 +1,4 @@
-= @AccessTimeout la forma  Meta-Annotation 
+= @AccessTimeout la forma  Meta-Annotation
 :index-group: Meta-Annotations
 :jbake-type: page
 :jbake-status: status=published
@@ -11,8 +11,9 @@ ifdef::env-github[]
 endif::[]
 
 == Introducción
-Cualquier anotación que reciba parámetros se puede beneficiar de las meta-annotations. Aquí obsvervamos cómo `@AccessTimeout` puede ser más facíl de comprender y administrar mediante meta-annotatios.
-Usaremos [access-timeout](../access-timeout/README.html) como nuestro ejemplo de caso de uso.
+Cualquier anotación que reciba parámetros se puede beneficiar de las meta-annotations.
+Aquí obsvervamos cómo `@AccessTimeout` puede ser más facíl de comprender y administrar mediante meta-annotatios.
+Usaremos xref:access-timeout_es.adoc[access-timeout] como nuestro ejemplo de caso de uso.
 
 El valor de los parámetros suministrador a `@AccessTimeout` tienen un efecto dramático en lo que la anotación realmente hace. Además, `@AccessTimeout` tiene uno de esos diseños
 donde `-1` y `0` tienen un significado totalmente diferente. Uno quiere decir "espera por siempre", el otro "nunca esperes". Solo algunos con suerte pueden recordar cual es cual.
@@ -135,7 +136,7 @@ Una vez que hayas creado un par de meta-annotations y la diversión se vuelva vu
 Realmente tienes que empezar a pensar como quieres hacer uso de la meta-annotation y ponerte el sombrero de diseñador. El dilema fundamental es
 **configuración vs operación** y la respuesta es subjetiva; cuanta flexibilidad quieres diseñar en tu aplicación y en donde?
 
-## Nombres de configuración [.small]#describiendo la configuración#
+=== Nombres de configuración [.small]#describiendo la configuración#
 
 El enfoque más sencillo es llamar a tus meta-annotations después de la **configuración** que encapsulan. Hemos seguido este formato hasta ahora con `@AwaitNever` y `@AwaitForever`
 para que sea claro el contenido de cada meta-annotation (`@AccessTimeout(-1)` y `@AccessTimeout(0)` respectivamente).
@@ -143,7 +144,7 @@ para que sea claro el contenido de cada meta-annotation (`@AccessTimeout(-1)` y 
 Los **contras** de este enfoque es que tu querrás cambiar la configuración de esta aplicación con tan solo cambiar las meta-annotations -- este es uno de los grandes beneficios
 de meta-annotations -- pero esto podría cambiar el significado de la anotación. Ciertamente , la anotación `@AwaitNever` no puede tener otro valor más que `0` si es que esta a la altura del nombre.
 
-## Nombres de operación  [.small]#describiendo el código#
+=== Nombres de operación  [.small]#describiendo el código#
 
 El enfoque alterno es llamar las meta-annotations después de **operaciones** a las cuales aplica. En breve para describir , para describir el código en si y no la configuración. Así que,
 nombres como `@OrderCheckTimeout` ó `@TwitterUpdateTimeout`. Estos nombres son prueba de cambio de configuración. Estos no cambiarán si la configuración cambia y de hecho, pueden facilitar control de
@@ -153,7 +154,7 @@ Los **contras** de este enfoque es que requiere mucha más deliberación y consi
 administrador serán puestas a prueba. Tienes que ser bueno para ponerte el sombrero dev-opts.
 
 
-## Pragmatismo  [.small]#lo mejor de ambos mundos#
+=== Pragmatismo  [.small]#lo mejor de ambos mundos#
 
 Afortunadamente, meta-annotations son recursivas.  Puedes hacer un poco de ambas.
 
@@ -172,7 +173,7 @@ Claro todavía tienes que ser muy deliberado en como usar las anotaciones. Cuand
 "No quiere reconfigurarlo después". Si eso no se siente bien, haz un esfuerzo extra en crear una operación llamada anotación y úsala en el código.
 
 
-# Aplicando las Meta-Annotations
+== Aplicando las Meta-Annotations
 
 Juntando todo , tal vez así es como deberíamos aplicar nuestras meta-annotations para el ejemplo  [access-timeout](../access-timeout/README.html).
 

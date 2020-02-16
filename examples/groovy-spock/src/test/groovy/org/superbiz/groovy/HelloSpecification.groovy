@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// tag::content[]
 package org.superbiz.groovy
 
 import org.apache.ziplock.JarLocation
@@ -55,3 +56,4 @@ class HelloSpecification extends Specification {
         assertEquals "hi", hello.hi()
     }
 }
+// end::content[]

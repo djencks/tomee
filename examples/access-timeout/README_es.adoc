@@ -9,8 +9,6 @@ Antes de ver la anotación `@AccessTimeout`, es importante ver cuando una llamad
 
 === Bean con estado (Stateful Bean)
 
-[note]
-
 NOTE: De forma predeterminada, los clientes pueden realizar llamadas concurrentes a un objeto de sesión con estado y el contenedor es requerido para serializar dichas solicitudes concurrentes. El contenedor nunca permite el acceso multi-threaded a una instancia de un bean de sesión con estado. Por este motivo, los metadatos de bloqueo de los método de lectura / escritura (Read/Write), así como el modo de concurrencia administrada por el bean, no son aplicables a los beans de sesión con estado y no deben ser utilizados.
 
 Esto significa que cuando se ejecuta un método `foo ()` de una instancia de bean con estado (Stateful Bean) y se recibe una segunda solicitud para ese método u otro método, el contenedor EJB serializaría la segunda solicitud. No permitiría que el método se ejecute concurrentemente, sino esperará hasta que se procese la primera solicitud.
@@ -31,7 +29,7 @@ El contenedor impone un acceso de un solo hilo (single-threaded) por defecto a l
 - `@Stateful`: se invoca cualquier método de la instancia y se produce una segunda invocación. O el bean `@Stateful` está en una transacción y la llamada es invocada desde fuera de esa transacción.
  - `@Stateless` - no hay instancias disponibles en la pila. Sin embargo, como se señaló, la semática de pila, si corresponde, no está cubierta por la especificación. Si la semántica de agrupación del proveedor implica una condición de espera, se debe aplicar @AccessTimeout.
 
-= @AccessTimeout
+== @AccessTimeout
 
 `@AccessTimeout` es simplemente un envoltorio de conveniencia alrededor de las tuplas `long` y `TimeUnit` comúnmente usadas en la API `java.util.concurrent`.
 

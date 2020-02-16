@@ -103,7 +103,7 @@ public class Movies {
 }
 ----
 
-== Persistence.xml com a configuração do EclipseLink 
+== Persistence.xml com a configuração do EclipseLink
 
 Essa configuração é bem fácil, apenas ajuste `provider` para `org.eclipse.persistence.jpa.PersistenceProvider` e adicione propriedades adicionais a unidade de persistência.
 O exemplo seguiu uma estratégia que permite a criação de tabelas em um banco de dados HSQL.
@@ -171,7 +171,7 @@ public class MoviesTest extends TestCase {
 }
 ----
 
-= Executando
+== Executando
 
 Quando executamos nosso caso de teste, devemos ver uma saída semelhante a seguinte.
 

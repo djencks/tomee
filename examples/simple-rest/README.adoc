@@ -1,14 +1,13 @@
+= Simple REST
 :index-group: REST
 :jbake-type: page
 :jbake-status: status=published
 
-= Simple REST
-
 Defining a REST service is pretty easy, simply ad ``@Path`` annotation to a class then define on methods the HTTP method to use (``@GET``, ``@POST``, …).
 
-= The Code
+== The Code
 
-== The REST service: ``@Path``, ``@GET``, ``@POST``
+=== The REST service: ``@Path``, ``@GET``, ``@POST``
 
 Here we have a simple REST, we annotate the class with ``@Path("/greeting")`` to indicate the route corresponding to class ``GreetingService``. So we define ``message()`` as ``@GET`` and ``lowerCase()`` as ``@POST`` for this ``/greeting`` route. There we have a service, pretty simple huh?
 
@@ -34,9 +33,9 @@ public class GreetingService {
 }
 ----
 
-== Testing
+=== Testing
 
-=== Test for the JAXRS service
+==== Test for the JAXRS service
 
 The test uses the OpenEJB ApplicationComposer to make it trivial.
 
@@ -84,18 +83,18 @@ public class GreetingServiceTest {
 }
 ----
 
-= Running
+== Running
 
 Running the example is fairly simple. In the ``simple-rest`` directory run:
 
-[source,java]
+[source,console]
 ----
 $ mvn clean install
 ----
 
 Which should create output like the following.
 
-[source,java]
+[source,console]
 ----
 INFO - Cannot find the configuration file [conf/openejb.xml].  Will attempt to create one for the beans deployed.
 INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)

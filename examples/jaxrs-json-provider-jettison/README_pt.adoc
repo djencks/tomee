@@ -8,10 +8,11 @@ Este é um exemplo de como configurar no TomEE 7.x ou posterior o provedor JSON 
 Este cenário é util quando aplicações REST são migradas de TomEE 1.7.x para TomEE 7.x ou posterior e você quer manter a saída JSON herdada do Jettison 1.3.7.
 
 
-=== Executando os testes
+== Executando os testes
+
 Este exemplo contém 2 casos de teste, um usando o Jettison e outro sem ele para fins de comparação.
 
-[source,java]
+[source,shell]
 ----
 mvn clean test 
 ----
@@ -37,9 +38,8 @@ Você precisa fornecer os 2 arquivos a seguir na pasta `WEB-INF`:
 
 * resources.xml
 
-[source,java]
+[source,xml]
 ----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <Service id="json" class-name="org.apache.cxf.jaxrs.provider.json.JSONProvider">
@@ -49,7 +49,6 @@ Você precisa fornecer os 2 arquivos a seguir na pasta `WEB-INF`:
         SingleJaxbContext = true
     </Service>
 </resources>
-
 ----
 
 E, finalmente, verifique se o Jettison JAR 1.3.7 está disponível na pasta TomEE /lib.
@@ -126,14 +125,14 @@ public class Item {
 
 
 Saída JSON herdada usando o Jettison 1.3.7:
-[source,java]
+[source,json]
 ----
 {"book":{"@id":"134","@availableSince":"2019-05-27 15:27:16.878","@available":"false","$":"TomEE Tutorial"}}
 ----
 
 Saída JSON atual:
 
-[source,java]
+[source,json]
 ----
 {"available":false,"availableSince":"2019-05-27 15:27:16.878","id":134,"name":"TomEE Tutorial"}
 ----

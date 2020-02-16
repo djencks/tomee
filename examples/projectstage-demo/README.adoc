@@ -43,8 +43,6 @@ There is a few ways to set current project stage, on this example we will use a 
 org.apache.deltaspike.ProjectStage=Development
 ----
 
-[tip]
-
 TIP: Full source of our project stage producer can be https://github.com/apache/tomee/blob/master/examples/projectstage-demo/src/test/java/org/superbiz/projectstage/util/ProjectStageProducer.java[found here^].
 
 === Configuring project stage on tests

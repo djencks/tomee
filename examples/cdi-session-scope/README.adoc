@@ -9,11 +9,11 @@ beans that inject it throughout the same HTTPSession.
 
 == Run the application:
 
-    mvn clean install tomee:run 
-	
+    mvn clean install tomee:run
+
 == Example
 
-This example has an endpoint wherein a user provides a request parameter `name` which is persisted as a field in a session scoped bean `SessionBean` and 
+This example has an endpoint wherein a user provides a request parameter `name` which is persisted as a field in a session scoped bean `SessionBean` and
 then retrieved through another endpoint.
 
 == Request
@@ -30,11 +30,11 @@ GET http://localhost:8080/cdi-session-scope/name
 
 == Response
 
-name = {Puneeth} 
- 
+name = \{Puneeth}
+
 == SessionBean
 
-The annotation `@SessionScoped` specifies that a bean is session scoped ie there will be only one instance of the class associated with a particular HTTPSession.  
+The annotation `@SessionScoped` specifies that a bean is session scoped ie there will be only one instance of the class associated with a particular HTTPSession.
 
 [source,java]
 ----
@@ -50,13 +50,13 @@ public class SessionBean implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-}  
+}
 ----
 
 == InputServlet
 
 `InputServlet` is a generic servlet which is mapped to the url pattern `/set-name`.
-The session scoped bean `SessionBean` has been injected into this servlet, and the incoming request parameter is set to the field `name` of the bean. 
+The session scoped bean `SessionBean` has been injected into this servlet, and the incoming request parameter is set to the field `name` of the bean.
 
 [source,java]
 ----
@@ -67,7 +67,7 @@ public class InputServlet extends HttpServlet {
     private SessionBean bean;
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp 
+    protected void service(HttpServletRequest req, HttpServletResponse resp
     throws ServletException, IOException {
         final String name = req.getParameter("name");
         if (name == null || name.isEmpty()) {
@@ -83,7 +83,7 @@ public class InputServlet extends HttpServlet {
 
 == AnswerBean
 
-`AnswerBean` is a request scoped bean with an injected `SessionBean`. It has an `@PostConstruct` method 
+`AnswerBean` is a request scoped bean with an injected `SessionBean`. It has an `@PostConstruct` method
 wherein the value from the `SessionBean` is retrieved and set to a field.
 
 [source,java]

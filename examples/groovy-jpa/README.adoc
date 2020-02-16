@@ -24,7 +24,7 @@ To automatically generate the sequential add the annotation `@GeneratedValue`.
 
 [source,java]
 ----
-include::src/main/groovy/org/superbiz/groovy/Person.groovy[]
+include::example$src/main/groovy/org/superbiz/groovy/Person.groovy[tag=content]
 ----
 
 === Persistence
@@ -33,7 +33,7 @@ In the persistence is added the entity `Person` with `<class>org.superbiz.groovy
 
 [source,java]
 ----
-include::src/main/resources/META-INF/persistence.xml[]
+include::example$src/main/resources/META-INF/persistence.xml[tag=content]
 ----
 
 == Running example

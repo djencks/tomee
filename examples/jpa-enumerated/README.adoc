@@ -210,7 +210,7 @@ public class MoviesTest extends TestCase {
 }
 ----
 
-= Running
+== Running
 
 To run the example via maven:
 

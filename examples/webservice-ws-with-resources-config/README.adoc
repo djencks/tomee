@@ -6,6 +6,7 @@
 TomEE relies on Apache CXF for JAX-RS (RESTful Services) and JAX-WS (Web Services). This is an example of how to develop  EJB webservices thanks to CXF implementation.
 
 == openejb-jar.xml Configuration
+
 You can use (http://tomee.apache.org/details-on-openejb-jar.html[openejb-jar.xml]) to configure your webservice.
 
 CXF API is reusable but you can also configure the interceptors through `openejb-jar.xml`(located in WEB-INF).
@@ -13,7 +14,6 @@ As a quick reminder the configuration `openejb-jar.xml` looks like the following
 
 [source,xml]
 ----
-
 <openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
   <ejb-deployment ejb-name="CalculatorBean"> <!-- configure the bean, values are in resources.xml -->
     <properties>
@@ -47,11 +47,11 @@ Then once you selected your prefix and know where to write the config just use t
 For features and interceptors the rule is the same: value is a list comma separated. Each value of the list is either a qualified class name or an id of a service in resources.xml.
 
 == Sample for JAX-WS
+
 To configure WSS4J on the EJB `CalculatorBean` for instance add in openejb-jar.xml:
 
 [source,xml]
 ----
-
 <resources>
   <!-- the interceptors -->
   <Service id="wss4j1" class-name="org.apache.openejb.server.cxf.config.WSS4JInInterceptorFactory" factory-name="create">
@@ -61,6 +61,7 @@ To configure WSS4J on the EJB `CalculatorBean` for instance add in openejb-jar.x
   </Service>
 </resources>
 ----
+
 == passwordCallbackClass
 
 `passwordCallbackClass` is one of property of `WSS4JInInterceptorFactory` and his value is the class `PasswordCallbackHandler`.
@@ -68,7 +69,7 @@ To configure WSS4J on the EJB `CalculatorBean` for instance add in openejb-jar.x
 `PasswordCallbackHandler` use `org.apache.wss4j.common.ext.WSPasswordCallback` to provide password callback mechanism.
 
 
-==== Example
+=== Example
 
 Full example can be found https://github.com/apache/tomee/blob/master/examples/webservice-ws-with-resources-config/src/main/java/org/superbiz/ws/security/PasswordCallbackHandler.java[here]:
 
@@ -78,9 +79,11 @@ Full example can be found https://github.com/apache/tomee/blob/master/examples/w
 Full project example can be found https://github.com/apache/tomee/tree/master/examples/webservice-ws-with-resources-config[here].
 It's a maven project, and all the tests can be executed by running `mvn clean test` command.
 
-    mvn clean test
-    
-```
+[source,console]
+----
+mvn clean test
+
 [INFO] Results:
-[INFO] 
+[INFO]
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+----

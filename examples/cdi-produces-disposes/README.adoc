@@ -262,7 +262,7 @@ public class LoggerTest {
 }
 ----
 
-= Running
+== Running
 
 [source,console]
 ----

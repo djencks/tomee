@@ -6,16 +6,15 @@
 
 == Passos para executar o exemplo
 
-[discrete]
-== Crie e inicie a demonstração:
+=== Crie e inicie a demonstração:
 
 [source,bash]
 ----
 mvn clean package tomee:run
 ----
 
-==== Abrir:
-[source,java]
+=== Abrir:
+[source,text]
 ----
 http://localhost:8080/myfaces-codi-demo-8.0.4-SNAPSHOT/
 ----
@@ -23,7 +22,6 @@ http://localhost:8080/myfaces-codi-demo-8.0.4-SNAPSHOT/
 Este exemplo mostra como melhorar aplicativos JSF2/CDI/BV/JPA usando
 a funcionalidade fornecida pelo Apache MyFaces CODI e ExtVal.
 
-[discrete]
 === Introdução ao MyFaces CODI e ExtVal
 
 O projeto CDI do Apache MyFaces Extensions (também conhecido como CODI)

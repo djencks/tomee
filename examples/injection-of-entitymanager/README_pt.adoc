@@ -177,7 +177,7 @@ public class MoviesTest extends TestCase {
 }
 ----
 
-= Executando
+== Executando
 
 Quando executamos nosso caso de teste, devemos ver uma saída semelhante à seguinte.
 

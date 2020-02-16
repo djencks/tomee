@@ -1,14 +1,13 @@
+= REST Simples
 :index-group: REST
 :jbake-type: page
 :jbake-status: status=published
 
-= REST Simples
-
 Definir um serviço REST é fácil, simplesmente adicione a anotação ``@Path`` na classe, então defina o método HTTP (``@GET``, ``@POST``, ...) ao método da classe que deseja usar.
 
-= O código
+== O código
 
-== O Serviço REST: ``@Path``, ``@GET``, ``@POST``
+=== O Serviço REST: ``@Path``, ``@GET``, ``@POST``
 
 Aqui nós temos um REST simples, anotamos a classe com ``@Path("/greeting")`` para indicar a rota correspondente a classe ``GreetingService``. Definimos ``message()`` como ``@GET`` e ``lowerCase()`` como ``@POST`` para esta rota ``/greeting``. Pronto, temos um serviço! Simples não?
 
@@ -34,9 +33,9 @@ public class GreetingService {
 }
 ----
 
-== Testando
+=== Testando
 
-=== Teste para o serviço JAXRS
+==== Teste para o serviço JAXRS
 
 Usamos o OpenEJB ``ApplicationComposer`` para facilitar o teste.
 
@@ -84,15 +83,15 @@ public class GreetingServiceTest {
 }
 ----
 
-= Running
+== Running
 
 Executar o exemplo é bastante simples. No diretório ``simple-rest`` dê o seguinte comando:
-[source,java]
+[source,console]
 ----
 $ mvn clean install
 ----
 Com isso, provavelmente você terá a seguinte saida.
-[source,java]
+[source,console]
 ----
 INFO - Cannot find the configuration file [conf/openejb.xml].  Will attempt to create one for the beans deployed.
 INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)

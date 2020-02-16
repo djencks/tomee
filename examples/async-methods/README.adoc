@@ -213,6 +213,5 @@ it with the percent complete.
 
 == Related Examples
 
-For complex asynchronous processing, JavaEE’s answer is
-`@MessageDrivenBean`. Have a look at the
-link:../simple-mdb/README.html[simple-mdb] example
+For complex asynchronous processing, JavaEE’s answer is `@MessageDrivenBean`.
+Have a look at the xref:simple-mdb.adoc[simple-mdb] example
