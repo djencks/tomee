@@ -7,11 +7,7 @@
 
 == Overview
 
-The manual installation process is significantly harder then the
-
-//FIXME CHOOSE ONE
-xref:0.0@tomee::tomcat.adoc[]
-xref:0.1@tomee::tomcat.adoc[automatic installation] which we normally recommend. In
+The manual installation process is significantly harder then the xref:{common-vc}::tomcat.adoc[automatic installation] which we normally recommend. In
 this installation process you will do the following:
 
 [arabic]
@@ -28,12 +24,9 @@ script
 
 == Install openejb.war
 
-Once Tomcat has been 
-//FIXME CHOOSE ONE
-xref:0.0@tomee::tomcat-installation.adoc[]
-xref:0.1@tomee::tomcat-installation.adoc[installed] , the
+Once Tomcat has been xref:{common-vc}::tomcat-installation.adoc[installed] , the
 OpenEJB plugin for Tomcat can be installed. The war can be obtained from
-the http://tomee.apache.org/downloads.html[download page]
+the xref:{common-vc}::downloads-ng.adoc[download page]
 
 The commands in this example are executed from within the Tomcat
 installation directory.
@@ -84,7 +77,7 @@ Documentation at /docs/config/server.html
 <Listener
 className="org.apache.openejb.loader.OpenEJBListener" />
 
-<!--APR library loader. Documentation at /docs/apr.html -->    
+<!--APR library loader. Documentation at /docs/apr.html -->
 <Listener
 className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
 ----

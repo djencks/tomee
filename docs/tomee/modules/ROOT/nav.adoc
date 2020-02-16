@@ -4,7 +4,7 @@
 * xref::tomee-and-intellij.adoc[Get started with Intellij]
 * xref::contrib/debug/debug-intellij.adoc[Debugging in Intellij]
 * xref::tomee-and-eclipse.adoc[Get started with Eclipse (WTP)]
-* xref:0.0@tomee::getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse (m2e-Webby)]
+* xref:{common-vc}::getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse (m2e-Webby)]
 * xref::tomee-and-netbeans.adoc[Get started with Netbeans]
 
 .General Information
@@ -39,8 +39,8 @@
 * xref::configuring-containers-in-tests.adoc[Configuring Containers in Tests]
 * xref::configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref::alternate-descriptors.adoc[Alternate Descriptors]
-* xref:0.0@tomee::unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:0.0@tomee::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
+* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
 * xref::local-client-injection.adoc[TestCase Injection (`@LocalClient`)]
 
 .Discovery and Failover

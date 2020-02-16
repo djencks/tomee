@@ -47,4 +47,4 @@ NOTE: out of date, links not on website.
 If you want to try to work with Servlets/JSP and OpenEJB using Tomcat,
 see the openejbx30:tomcat.html[setup page] and the
 "/webapps/ejb-examples" section of the
-xref:0.1@tomee::downloads-ng.adoc[download page].
+xref:{common-vc}::downloads-ng.adoc[download page].

@@ -6,12 +6,11 @@
 
 
 See also the
-//FIXME CHOOSE ONE
-xref:0.0@tomee::download/index.adoc[]
-xref:0.0@tomee::maven/index.adoc[]
-xref:0.0@tomee::security/index.adoc[]
-xref:0.1@tomee::blog/index.adoc[]
-xref:0.1@tomee::community/index.adoc[]
+xref:{common-vc}::download/index.adoc[]
+xref:{common-vc}::maven/index.adoc[]
+xref:{common-vc}::security/security.adoc[]
+xref:{common-vc}::blog/index.adoc[]
+xref:{common-vc}::community/index.adoc[]
 xref:7.0@tomee::docs.adoc[]
 xref:7.0@tomee::admin/cluster/index.adoc[]
 xref:7.0@tomee::admin/configuration/index.adoc[]
@@ -73,7 +72,7 @@ can also find us on IRC freenode.org #openejb and #tomee
 * xref:tomee-and-intellij.adoc[Get started with Intellij]
 * xref:contrib/debug/debug-intellij.adoc[Debugging in Intellij]
 * xref:tomee-and-eclipse.adoc[Get started with Eclipse (WTP)]
-* xref:0.0@tomee::getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse
+* xref:{common-vc}::getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse
 (m2e-Webby)]
 * xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
@@ -113,8 +112,8 @@ PersistenceUnits in Tests]
 Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
-* xref:0.0@tomee::unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:0.0@tomee::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
+* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
 inner-class]
 * xref:local-client-injection.adoc[TestCase Injection (`@LocalClient`)]
 
