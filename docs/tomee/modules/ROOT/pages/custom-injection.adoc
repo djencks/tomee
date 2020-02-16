@@ -30,7 +30,7 @@ NOTE: unverified link
 
 The source for this example is the "custom-injection" directory located
 in the openejb-examples.zip available on the
-xref:{common-vc}::downloads-ng.adoc[download page].
+xref:{common-vc}::download-ng.adoc[download page].
 
 == The Code
 
