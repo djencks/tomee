@@ -47,6 +47,7 @@ asciidoc:
   attributes:
     common-vc: master@common
     examples-vc: 8.0@examples
+    tomee-latest-vc: 8.0@tomee
 
 # This is the Antora default UI.
 # We need to modify it with supplemental files or replace it.
