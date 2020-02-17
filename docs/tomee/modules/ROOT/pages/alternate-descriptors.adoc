@@ -4,34 +4,23 @@
 :jbake-type: page
 :jbake-status: published
 
-As of OpenEJB 3.1.1, you have the
-ability to specify an alternate set of deployment descriptors to use for
-a given environment. This is focused mostly on testing where it is often
-desirable to use a slightly different configuration for a set of tests
-or even a specific test.
+As of OpenEJB 3.1.1, you have the ability to specify an alternate set of deployment descriptors to use for a given environment.
+This is focused mostly on testing where it is often desirable to use a slightly different configuration for a set of tests or even a specific test.
 
 == When nothing else does the trick
 
-Note that this approach was added as a catch-all for when one of the
-simpler overriding techniques will not work. For the common case of
-needing to tweak your persistence.xml, see the
-xref:configuring-persistenceunits-in-tests.adoc[Configuring
-PersistenceUnits in Tests] page for a simpler approach.
+Note that this approach was added as a catch-all for when one of the simpler overriding techniques will not work.
+For the common case of needing to tweak your persistence.xml, see the xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits in Tests]  page for a simpler approach.
 
-For many reasons it is very inconvenient to have to maintain two sets of
-descriptors, one for production and one for testing. We aggressively add
-features based on user feedback and questions. If you are looking for a
-way to solve a problem without duplicating entire descriptors, please
-let us know. You should never have to go the long way to do something
-simple.
+For many reasons it is very inconvenient to have to maintain two sets of descriptors, one for production and one for testing.
+We aggressively add features based on user feedback and questions.
+If you are looking for a way to solve a problem without duplicating entire descriptors, please let us know.
+You should never have to go the long way to do something simple.
 
 == openejb.altdd.prefix
 
-To use this functionality, just set the new "openejb.altdd.prefix"
-system property or `InitialContext` property to something like "_test_",
-then any descriptors in your META-INF/ directory that start with
-"_test._" will override the regular descriptor. So for example with an
-app like this:
+To use this functionality, just set the new "openejb.altdd.prefix" system property or `InitialContext` property to something like "_test_", then any descriptors in your META-INF/ directory that start with "_test._" will override the regular descriptor.
+So for example with an app like this:
 
 * META-INF/ejb-jar.xml
 * META-INF/_test_.ejb-jar.xml
@@ -50,32 +39,24 @@ Just initialize your test case like so:
  InitialContext initialContext = new InitialContext(properties);
 ----
 
-The logical result will be the prefixed file replacing the non-prefixed
-file as the active descriptor:
+The logical result will be the prefixed file replacing the non-prefixed file as the active descriptor:
 
 * META-INF/ejb-jar.xml -> _test_.ejb-jar.xml
 * META-INF/persistence.xml
 * META-INF/env-entry.properties -> _test_.env-entry.properties
 
-This will work in any environment in which OpenEJB works (embedded,
-standalone, tomcat, geronimo, etc.).
+This will work in any environment in which OpenEJB works (embedded, standalone, tomcat, geronimo, etc.).
 
-Note that there does _not_ have to be an equivalent non-prefixed version
-of the file. In the example above, only a "test.env-entry.properties"
-file exists and there is no equivalent plain "env-entry.properties"
-file. This prefixing works for any deployment descriptor in the
-META-INF/ directory or WEB-INF/ directory. The prefix does not have to
-be "test" and could be anything you choose. You can also have as many
-prefixed files as you need and could even go as far as to have one
-prefix per individual test.
+Note that there does _not_ have to be an equivalent non-prefixed version of the file.
+In the example above, only a "test.env-entry.properties" file exists and there is no equivalent plain "env-entry.properties" file.
+This prefixing works for any deployment descriptor in the META-INF/ directory or WEB-INF/ directory.
+The prefix does not have to be "test" and could be anything you choose.
+You can also have as many prefixed files as you need and could even go as far as to have one prefix per individual test.
 
 == More than one prefix
 
-It is possible to have several prefixes, specified in order of
-preference, so that it is possible to avoid duplicating descriptors that
-are used in more than one "profile". For example, the "foo" test case
-uses the same "env-entries.properties" file as the "bar" test case, but
-both have their own ejb-jar.xml files:
+It is possible to have several prefixes, specified in order of preference, so that it is possible to avoid duplicating descriptors that are used in more than one "profile".
+For example, the "foo" test case uses the same "env-entries.properties" file as the "bar" test case, but both have their own ejb-jar.xml files:
 
 * META-INF/ejb-jar.xml
 * META-INF/test.ejb-jar.xml
@@ -116,9 +97,6 @@ Resulting the following logical view of the app:
 * META-INF/persistence.xml
 * META-INF/env-entry.properties -> test.env-entry.properties
 
-In both scenarios the same env-entry.properties file
-(test.env-entry.properties) is shared.
+In both scenarios the same env-entry.properties file (test.env-entry.properties) is shared.
 
-Note that there is a "test.ejb-jar.xml" file that is present, however in
-both cases it is not used as the order of preference in the list is
-"left to right" meaning most preferred first.
+Note that there is a "test.ejb-jar.xml" file that is present, however in both cases it is not used as the order of preference in the list is "left to right" meaning most preferred first.

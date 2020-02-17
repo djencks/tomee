@@ -4,9 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-While not a definitive list, it
-does help to show a side-by-side view of common properties used by the
-various persistence providers out there.
+While not a definitive list, it does help to show a side-by-side view of common properties used by the various persistence providers out there.
 
 == TopLink
 

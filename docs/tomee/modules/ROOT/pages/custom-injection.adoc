@@ -7,30 +7,21 @@
 NOTE: TODO! This seems to be related to or another version of the example xref:{examples-vc}::custom-injection.adoc[]
 == Overview
 
-As noted in the xref:{examples-vc}::injection-of-env-entry.adoc[Injection of
-env-entry Example] , the EJB 3.0 supported env-entry types are fairly
-limited. Also the use of several tags in an ejb-jar.xml can get a bit
-verbose.
+As noted in the xref:{examples-vc}::injection-of-env-entry.adoc[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.
+Also the use of several tags in an ejb-jar.xml can get a bit verbose.
 
-OpenEJB does not restrict you to just these data types or require you to
-use an ejb-jar.xml to declare them.
+OpenEJB does not restrict you to just these data types or require you to use an ejb-jar.xml to declare them.
 
-* `@Resource` can be used on any type for which there is
-`java.beans.PropertyEditor`
-* You may `install your own` PropertyEditors and package them with your
-app.
+* `@Resource` can be used on any type for which there is`java.beans.PropertyEditor`
+* You may `install your own` PropertyEditors and package them with your app.
 * Java Generics are supported (e.g. List myURIs)
-* You may use a `META-INF/env-entries.properties` file as an alternative
-to an ejb-jar.xml
+* You may use a `META-INF/env-entries.properties` file as an alternative to an ejb-jar.xml
 
-See xref:built-in-type-converters.adoc[Built-in Type Converters] for a
-full list of supported env-entry types.
+See xref:built-in-type-converters.adoc[Built-in Type Converters] for a full list of supported env-entry types.
 
 NOTE: unverified link
 
-The source for this example is the "custom-injection" directory located
-in the openejb-examples.zip available on the
-xref:{common-vc}::download-ng.adoc[download page].
+The source for this example is the "custom-injection" directory located in the openejb-examples.zip available on the xref:{common-vc}::download-ng.adoc[download page].
 
 == The Code
 
@@ -98,10 +89,8 @@ style=VINTAGE
 
 === The Custom Type and Editor
 
-Support for java.lang.Enum types is already built-in, but we've decided
-we'd like to allow abbreviated versions of the enum constants to be
-usable. We do this by creating a custom PropertyEditor for our Pickup
-enum like so:
+Support for java.lang.Enum types is already built-in, but we've decided we'd like to allow abbreviated versions of the enum constants to be usable.
+We do this by creating a custom PropertyEditor for our Pickup enum like so:
 
 [source,java]
 ----
@@ -116,9 +105,7 @@ public class PickupEditor extends java.beans.PropertyEditorSupport {
 }
 ----
 
-We cleverly install this PropertyEditor in a static block in the Pickup
-class that will be executed should someone actually reference the Pickup
-type.
+We cleverly install this PropertyEditor in a static block in the Pickup class that will be executed should someone actually reference the Pickup type.
 
 [source,java]
 ----
@@ -173,14 +160,14 @@ public class StratocasterTest extends TestCase {
 
 == Running it
 
-Running the example is fairly simple. In the "custom-injection"
-directory of the openejb:download.html[examples zip], just run:
+Running the example is fairly simple.
+In the "custom-injection" directory of the openejb:download.html[examples zip], just run:
 
 ___________________
 $ mvn clean install
 ___________________
 
-Which should create output like the following.
+Which should create output like the following:
 
 [source,java]
 ----
