@@ -34,6 +34,7 @@ const unversionedOld = ['0.0', '0.1', unversioned]
     'tomee-7.0/examples/movies-complete',
     'tomee-8.0/pt/examples/vaadin-lts-v08-simple',
     'downloads',
+    "alternate-descriptors",
 
 ].forEach((file) => doAnalyzeOld(file))
 
@@ -41,25 +42,28 @@ function doAnalyzeOld(file) {
     // console.log(`file: ${file}`, analyzeOld(file))
 }
 
-const svnSort = oldFiles(svnListFile)
-const oldSort = oldFiles(oldListFile)
-const newSort = newFiles()
+analyze()
 
-const result = {}
+function analyze() {
+    const svnSort = oldFiles(svnListFile)
+    const oldSort = oldFiles(oldListFile)
+    const newSort = newFiles()
 
-console.log('comparing svn and new')
-result.svnToNew = compare(svnSort, newSort, 'svn', 'new')
+    const result = {}
 
-console.log('\n\n\ncomparing old and new')
-result.oldToNew = compare(oldSort, newSort, 'old', 'new')
+    console.log('comparing svn and new')
+    result.svnToNew = compare(svnSort, newSort, 'svn', 'new')
 
-console.log('\n\n\ncomparing svn and old')
-result.svnToOld = compare(svnSort, oldSort, 'svn', 'old')
+    console.log('\n\n\ncomparing old and new')
+    result.oldToNew = compare(oldSort, newSort, 'old', 'new')
 
-result.new00and01 = and(newSort['0.0@tomee'], newSort['0.1@tomee'])
-result.new00notSvn = minus(newSort['0.0@tomee'], svnSort['0.0@tomee'])
+    console.log('\n\n\ncomparing svn and old')
+    result.svnToOld = compare(svnSort, oldSort, 'svn', 'old')
+
+result.new00and01 = and(newSort['0.0@common'], newSort['0.1@common'])
+result.new00notSvn = minus(newSort['0.0@common'], svnSort['0.0@common'])
 result.new00toRemove = plus(result.new00and01, result.new00notSvn)
-result.new00Remainng = minus(newSort['0.0@tomee'], result.new00toRemove)
+result.new00Remainng = minus(newSort['0.0@common'], result.new00toRemove)
 result.new00Counts = {
     new00and01: result.new00and01.length,
     new00notSvn: result.new00notSvn.length,
@@ -67,7 +71,8 @@ result.new00Counts = {
 }
 
 // console.log("RESULT: ", result)
-fs.writeFileSync('comparison.json', JSON.stringify(result, null, 2))
+    fs.writeFileSync('comparison.json', JSON.stringify(result, null, 2))
+}
 
 function compare(oldSort, newSort, oldName, newName) {
     const result = {}
@@ -113,7 +118,7 @@ function compare(oldSort, newSort, oldName, newName) {
 }
 
 function analyzeOld(file) {
-    const src = {version: unversionedOld, component: 'tomee'}
+    const src = {version: unversionedOld, component: 'common'}
     var keyFound = false
     var stage = 0
     const rel = file.replace(noSlashRx, (match, p1) => {
@@ -137,7 +142,7 @@ function analyzeOld(file) {
                     src.version = unversionedOld
                     return ''
                 }
-                src.component = 'tomee'
+                src.component = 'common'
                 src.version = unversionedOld
                 keyFound = true
                 return match
@@ -193,10 +198,14 @@ function newFiles() {
         .filter((file) => file)
         .reduce((accum, file) => {
             const match = file.match(newPathRx)
-            const version = match.groups.version
-            collectFile(version, match, accum);
-            if (version === '0.0' || version === '0.1') {
-                collectFile(unversioned, match, accum)
+            if (match) {
+                const version = match.groups.version
+                collectFile(version, match, accum);
+                if (version === '0.0' || version === '0.1') {
+                    collectFile(unversioned, match, accum)
+                }
+            } else {
+                console.log(`newPathRx did not match ${file}`)
             }
             return accum
         }, {})
