@@ -12,8 +12,8 @@ org.apache.openejb.maven:tomee-maven-plugin[:Current Version]:help
 
 Description:
 
-Display help information on tomee-maven-plugin. Call mvn tomee:help
--Ddetail=true -Dgoal=<goal-name> to display parameter details.
+Display help information on tomee-maven-plugin.
+Call mvn tomee:help -Ddetail=true -Dgoal=<goal-name> to display parameter details.
 
 Attributes:
 
@@ -44,8 +44,8 @@ String
 
 -
 
-The name of the goal for which to show help. If unspecified, all goals
-will be displayed.User property is: goal.
+The name of the goal for which to show help.
+If unspecified, all goals will be displayed.User property is: goal.
 
 indentSize
 
@@ -53,8 +53,7 @@ int
 
 -
 
-The number of spaces per indentation level, should be positive.Default
-value is: 2.User property is: indentSize.
+The number of spaces per indentation level, should be positive.Default value is: 2.User property is: indentSize.
 
 lineLength
 
@@ -62,8 +61,7 @@ int
 
 -
 
-The maximum length of a display line, should be positive.Default value
-is: 80.User property is: lineLength.
+The maximum length of a display line, should be positive.Default value is: 80.User property is: lineLength.
 
 Parameter Details
 
@@ -81,8 +79,8 @@ Default: false
 
 goal:
 
-The name of the goal for which to show help. If unspecified, all goals
-will be displayed.
+The name of the goal for which to show help.
+If unspecified, all goals will be displayed.
 
 Type: java.lang.String
 

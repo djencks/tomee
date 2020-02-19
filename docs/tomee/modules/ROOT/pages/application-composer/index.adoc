@@ -6,15 +6,11 @@
 Here is the subdomain dedicated to the Application Composer.
 
 If you don't know at all what ApplicationComposer means,
-xref:application-composer/history.adoc[History] page will explain you where does it come from
-and what it can be used to today.
+xref:application-composer/history.adoc[History] page will explain you where does it come from and what it can be used to today.
 
-If you are already familiar with ApplicationComposer concept and are
-just looking for a sample, xref:getting-started.adoc[Getting Started] is
-designed for you.
+If you are already familiar with ApplicationComposer concept and are just looking for a sample, xref:getting-started.adoc[Getting Started] is designed for you.
 
-Finally if you already use ApplicationComposer and just desire to go
-further, xref:application-composer/advanced.adoc[Advanced] page is the one you need to look!
+Finally if you already use ApplicationComposer and just desire to go further, xref:application-composer/advanced.adoc[Advanced] page is the one you need to look!
 
 Children:
 

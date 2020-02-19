@@ -239,9 +239,7 @@ List
 
 -
 
-supported formats: --> groupId:artifactId:version... -->
-unzip:groupId:artifactId:version... --> remove:prefix (often prefix =
-artifactId)
+supported formats: --> groupId:artifactId:version... --> unzip:groupId:artifactId:version... --> remove:prefix (often prefix = artifactId)
 
 mainDir
 
@@ -265,8 +263,7 @@ boolean
 
 -
 
-use a real random instead of secure random. saves few ms at
-startup.Default value is: true.User property is:
+use a real random instead of secure random. saves few ms at startup.Default value is: true.User property is:
 tomee-plugin.quick-session.
 
 realm
@@ -319,8 +316,7 @@ boolean
 
 -
 
-when you set docBases to src/main/webapp setting it to true will allow
-hot refresh.Default value is: false.User property is:
+when you set docBases to src/main/webapp setting it to true will allow hot refresh.Default value is: false.User property is:
 tomee-plugin.skipWarResources.
 
 systemVariables
@@ -478,8 +474,7 @@ File
 
 -
 
-(no description)Default value is: $\{project.build.outputDirectory}.User
-property is: tomee-plugin.webappClasses.
+(no description)Default value is: $\{project.build.outputDirectory}.User property is: tomee-plugin.webappClasses.
 
 webappDefaultConfig
 
@@ -487,8 +482,7 @@ boolean
 
 -
 
-forcing nice default for war development (WEB-INF/classes and web
-resources)Default value is: false.User property is:
+forcing nice default for war development (WEB-INF/classes and web resources)Default value is: false.User property is:
 tomee-plugin.webappDefaultConfig.
 
 webappDir
@@ -533,8 +527,7 @@ File
 -
 
 (no description)Default value is:
-latexmath:[${project.build.directory}/$]\{project.build.finalName}.zip.User
-property is: tomee-plugin.zip-file.
+latexmath:[${project.build.directory}/$]\{project.build.finalName}.zip.User property is: tomee-plugin.zip-file.
 
 Parameter Details
 
@@ -784,9 +777,7 @@ Default: lib
 
 libs:
 
-supported formats: --> groupId:artifactId:version... -->
-unzip:groupId:artifactId:version... --> remove:prefix (often prefix =
-artifactId)
+supported formats: --> groupId:artifactId:version... --> unzip:groupId:artifactId:version... --> remove:prefix (often prefix = artifactId)
 
 Type: java.util.List
 
@@ -884,8 +875,7 @@ Default: false
 
 skipWarResources:
 
-when you set docBases to src/main/webapp setting it to true will allow
-hot refresh.
+when you set docBases to src/main/webapp setting it to true will allow hot refresh.
 
 Type: boolean
 
@@ -1102,8 +1092,7 @@ Default: $\{project.build.outputDirectory}
 
 webappDefaultConfig:
 
-forcing nice default for war development (WEB-INF/classes and web
-resources)
+forcing nice default for war development (WEB-INF/classes and web resources)
 
 Type: boolean
 

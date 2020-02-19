@@ -4,8 +4,7 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
-TomEE Embedded is based on Tomcat embedded and starts a real TomEE in the launching JVM. It is also
-able to deploy the classpath as a webapp and to use either `META-INF/resources` or a folder as web resources.
+TomEE Embedded is based on Tomcat embedded and starts a real TomEE in the launching JVM. It is also able to deploy the classpath as a webapp and to use either `META-INF/resources` or a folder as web resources.
 
 Here is a basic programmatic usage based on `org.apache.tomee.embedded.Container` class:
 
@@ -160,15 +159,14 @@ The default configuration allows to start tomee without issue but you can desire
 Note: passing to `Container` constructor a `Configuration` it will start the container automatically but using `setup(Configuration)`
 to initialize the configuration you will need to call `start()`.
 
-You can also pass through the properties `connector.xxx` and `connector.attributes.xxx` to customize connector(s)
-configuration directly.
+You can also pass through the properties `connector.xxx` and `connector.attributes.xxx` to customize connector(s) configuration directly.
 
 == Standalone applications or TomEE Embedded provided main(String[])
 
-Deploying an application in a server is very nice cause the application is generally small and it allows to update the
-container without touching the application (typically insanely important in case of security issues for instance).
+Deploying an application in a server is very nice cause the application is generally small and it allows to update the container without touching the application (typically insanely important in case of security issues for instance).
 
-However sometimes you don't have the choice so TomEE Embedded provides a built-in `main(String[])`. Here are its options:
+However sometimes you don't have the choice so TomEE Embedded provides a built-in `main(String[])`.
+Here are its options:
 
 NOTE: this is still a TomEE so all system properties work (for instance to create a resource).
 
@@ -251,7 +249,6 @@ NOTE: if you already do a custom shade/fatjar this is not really impacting since
 `--configuration-location` option allows to simplify the configuration of tomee embedded through properties.
 
 Here are the recognized entries (they match the configuration, see org.apache.tomee.embedded.Configuration for the detail):
-
 
 |===
 |Name
@@ -386,7 +383,8 @@ properties.openejb.container.additional.include = com.fasterxml.jackson,org.apac
 == Application Runner
 
 SInce TomEE 7.0.2, TomEE provide a light ApplicationComposer integration for TomEE Embedded (all features are not yet supported but the main ones are):
-`org.apache.tomee.embedded.TomEEEmbeddedApplicationRunner`. It relies on the definition of an `@Application`:
+`org.apache.tomee.embedded.TomEEEmbeddedApplicationRunner`.
+It relies on the definition of an `@Application`:
 
 [source,java]
 ----

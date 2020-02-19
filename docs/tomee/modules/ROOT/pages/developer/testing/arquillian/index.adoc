@@ -13,8 +13,8 @@ TomEE has several arquillian adapter flavors:
 
 == Embedded or Remote?
 
-Big advantage of embedded adapters is to be able to debug as usual. However it has few drawbacks which can make you
-rething this choice:
+Big advantage of embedded adapters is to be able to debug as usual.
+However it has few drawbacks which can make you rething this choice:
 
 - JVM resources are available where it will likely not be the case in war mode (src/main/resources typically)
 - You can mix server and client side features when writing a test
@@ -22,9 +22,7 @@ rething this choice:
 
 To summarize: the choice is the trade off you choose between easiness and reality of the simulation.
 
-TIP: in TomEE build we build the same tests against all tomee adapters in the same build/module, this means you can use embedded adapter in dev
-and activate remote tomee too (not only cause then if there is a failure you don't know if you missed it locally or if it is due
-to the switch of adapter) on your continuous integration platform.
+TIP: in TomEE build we build the same tests against all tomee adapters in the same build/module, this means you can use embedded adapter in dev and activate remote tomee too (not only cause then if there is a failure you don't know if you missed it locally or if it is due to the switch of adapter) on your continuous integration platform.
 
 NOTE: all configurations have defaults
 
@@ -124,7 +122,6 @@ Sample:
 |webResourcesCached   |should resources be cached or not (`DefaultServlet` caching)
 |===
 
-
 Sample:
 
 [source,xml]
@@ -182,7 +179,8 @@ Sample:
 
 IMPORTANT: if a server is already started on host:port then it will be used instead of starting the configured TomEE type.
 
-To use a custom instance with arquillian ensure to have ejbd and tomee webapp activated. A way is to have in `conf/system.properties` these entries:
+To use a custom instance with arquillian ensure to have ejbd and tomee webapp activated.
+A way is to have in `conf/system.properties` these entries:
 
 [source,properties]
 ----
@@ -272,7 +270,6 @@ For really remote instances (= not on localhost) you need the `deployerPropertie
 |deployerProperties    |deployer properties, useful when not deploying on an instance managed by the build (remote instance typically)
 |===
 
-
 Sample:
 
 [source,xml]
@@ -354,7 +351,8 @@ Sample:
 
 == Multiple instances
 
-With arquillian you can create cluster or isolated instances. Here is a sample `arquillian.xml`:
+With arquillian you can create cluster or isolated instances.
+Here is a sample `arquillian.xml`:
 
 [source,xml]
 ----

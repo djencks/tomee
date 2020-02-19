@@ -6,29 +6,22 @@
 
 == Installation
 
-To install OpenEJB, simply xref:{common-vc}::download-ng.adoc[download the latest
-binary] and unpack your zip or tar.gz into the directory where you want
-OpenEJB to live.
+To install OpenEJB, simply xref:{common-vc}::download-ng.adoc[download the latest binary] and unpack your zip or tar.gz into the directory where you want OpenEJB to live.
 
-Windows users can download the zip and unpack it with the WinZip
-program.
+Windows users can download the zip and unpack it with the WinZip program.
 
-Linux users can download the tar.gz and unpack it with the following
-command:
+Linux users can download the tar.gz and unpack it with the following command:
 
 _tar xzvf openejb-3.0.tar.gz_
 
 Congratulations, you've installed OpenEJB.
 
-If you've unpacked OpenEJB into the directory C:-3.0, for example, then
-this directory is your OPENEJB_HOME directory. The OPENEJB_HOME
-directory is referred to in various parts of the documentation, so it's
-good to remember where it is.
+If you've unpacked OpenEJB into the directory C:-3.0, for example, then this directory is your OPENEJB_HOME directory.
+The OPENEJB_HOME directory is referred to in various parts of the documentation, so it's good to remember where it is.
 
 == Using OpenEJB
 
-Now all you need to do is move to the bin directory in OPENEJB_HOME, the
-directory where OpenEJB was unpacked, and type:
+Now all you need to do is move to the bin directory in OPENEJB_HOME, the directory where OpenEJB was unpacked, and type:
 
 _openejb_
 
@@ -63,7 +56,5 @@ xref:openejbx30:hello-world.html[Hello World] example.
 
 == Join the mailing list
 
-The OpenEJB User list is where the general OpenEJB community goes to ask
-questions, make suggestions, chat with other users, and keep a finger on
-the pulse of the project. More information about the user list and dev
-list can be found xref:{common-vc}::mailing-lists.adoc[here]
+The OpenEJB User list is where the general OpenEJB community goes to ask questions, make suggestions, chat with other users, and keep a finger on the pulse of the project.
+More information about the user list and dev list can be found xref:{common-vc}::mailing-lists.adoc[here]

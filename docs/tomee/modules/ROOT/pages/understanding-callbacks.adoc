@@ -4,15 +4,10 @@
 :jbake-type: page
 :jbake-status: published
 
-The rules here are pretty hard to follow without
-examples.
+The rules here are pretty hard to follow without examples.
 
-When they say one AroundInvoke per class they mean that in the most
-literal sense as in one individual java class definition, not including
-it's parent class or classes, may exactly one AroundInvoke method. The
-bean or interceptor class may have an AroundInvoke method, its parent
-class may have an AroundInvoke method, the parent's parent class may
-have an AroundInvoke method and so on.
+When they say one AroundInvoke per class they mean that in the most literal sense as in one individual java class definition, not including it's parent class or classes, may exactly one AroundInvoke method.
+The bean or interceptor class may have an AroundInvoke method, its parent class may have an AroundInvoke method, the parent's parent class may have an AroundInvoke method and so on.
 
 So the following is legal.
 
@@ -49,14 +44,10 @@ public interface AppleLocal {
 }
 ----
 
-The result is that when the "grow" method on AppleLocal (and
-consequently on Apple) is invoked, the container will first invoke the
-following AroundInvoke methods in this order; a, b, c.
+The result is that when the "grow" method on AppleLocal (and consequently on Apple) is invoked, the container will first invoke the following AroundInvoke methods in this order; a, b, c.
 
-What the ejb spec doesn't do such a good job at stating is that there
-are ways to effectively shut off the callbacks, including AroundInvoke,
-of a parent class by simply overriding the method. We can shut off the
-"a" around invoke with a slightly different version of Apple as follows:
+What the ejb spec doesn't do such a good job at stating is that there are ways to effectively shut off the callbacks, including AroundInvoke, of a parent class by simply overriding the method.
+We can shut off the "a" around invoke with a slightly different version of Apple as follows:
 
 [source,java]
 ----
@@ -79,13 +70,10 @@ public class Apple extends Fruit implements AppleLocal {
 }
 ----
 
-The result of this is that when the "grow" method on AppleLocal is
-invoked, the container will first invoke the AroundInvoke methods "b"
-then "c" skipping "a" completely.
+The result of this is that when the "grow" method on AppleLocal is invoked, the container will first invoke the AroundInvoke methods "b" then "c" skipping "a" completely.
 
-When they say that an AroundInvoke method cannot be a business method,
-they mean that they cannot be exposed to clients through a local or
-remote interface. The following would be illegal.
+When they say that an AroundInvoke method cannot be a business method, they mean that they cannot be exposed to clients through a local or remote interface.
+The following would be illegal.
 
 [source,java]
 ----

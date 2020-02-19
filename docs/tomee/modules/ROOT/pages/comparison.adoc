@@ -4,19 +4,17 @@
 :jbake-type: page
 :jbake-status: published
 :icons: font
-:y: icon:check[role="green"]
-:n: icon:times[role="red"]
-:c: icon:file-text-o[role="blue"]
+:y: icon:check[role="green"
+:n: icon:times[role="red"
+:c: icon:file-text-o[role="blue"
 
-Apache OpenEJB and Apache TomEE are born from the same project and
-community. They differ in two major ways, only one of them technical:
+Apache OpenEJB and Apache TomEE are born from the same project and community.
+They differ in two major ways, only one of them technical:
 
 * TomEE incorporates two additional projects; Tomcat and MyFaces
-* TomEE, as a name, more easily implies the breadth of technologies
-included
+* TomEE, as a name, more easily implies the breadth of technologies included
 
-Effectively, TomEE is a superset of OpenEJB. They share the same code
-and TomEE grew out of OpenEJB.
+Effectively, TomEE is a superset of OpenEJB. They share the same code and TomEE grew out of OpenEJB.
 
 Note: this table is for TomEE 1.x, TomEE 7 comments are under it.
 
@@ -161,9 +159,7 @@ Note: this table is for TomEE 1.x, TomEE 7 comments are under it.
 |
 |===
 
-TomEE 7 targets JavaEE 7 and implements these specifications (in
-parenthesis the distibution(s) containing it if not part of the basic
-packages):
+TomEE 7 targets JavaEE 7 and implements these specifications (in parenthesis the distibution(s) containing it if not part of the basic packages):
 
 * WebSocket JSR 356
 * JSON-P JSR 353
@@ -179,10 +175,8 @@ JSR 318 + JSR 250
 * Bean Validation 1.1 JSR 349
 * EJB 3.2 JSR 345
 * JavaEE Connector JSR 322
-* JPA 2.1 JSR 338 (WARNING: openjpa based distributions provide a JPA
-2.0 runtime)
-* JMS 2.0 JSR 343 (layer based on ActiveMQ 5 / JMS 1.1 for default
-distributions)
+* JPA 2.1 JSR 338 (WARNING: openjpa based distributions provide a JPA 2.0 runtime)
+* JMS 2.0 JSR 343 (layer based on ActiveMQ 5 / JMS 1.1 for default distributions)
 * JTA 1.2 JSR 907
 * Javamail 1.4 (NOTE: EE 7 requires 1.5)
 * JAX-RS 2.0 JSR 339

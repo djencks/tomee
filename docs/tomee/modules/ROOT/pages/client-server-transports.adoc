@@ -12,7 +12,8 @@ transport description
 
 openejb-ejbd-3.0.jar
 
-provides the 'ejbd' protocol. A binary protocol traveling over a socket
+provides the 'ejbd' protocol.
+A binary protocol traveling over a socket
 
 openejb-http-3.0.jar
 

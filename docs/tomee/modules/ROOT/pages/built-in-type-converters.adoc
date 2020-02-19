@@ -4,9 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-The following built-in types are supported for
-@Resource injection in EJBs via elements in a META-INF/ejb-jar.xml or
-via plain properties in a META-INF/env-entries.properties file.
+The following built-in types are supported for @Resource injection in EJBs via elements in a META-INF/ejb-jar.xml or via plain properties in a META-INF/env-entries.properties file.
 
 EJB 3.0 required types:
 
@@ -56,9 +54,8 @@ OpenEJB 3.0 additional types:
 * org.apache.commons.logging.Log
 * org.apache.log4j.Logger
 
-To use an OpenEJB additional type in xml, simply declare it as
-java.lang.String and it will be converted on the fly to the field/setter
-type used by the bean class. For example:
+To use an OpenEJB additional type in xml, simply declare it as java.lang.String and it will be converted on the fly to the field/setter type used by the bean class.
+For example:
 
 [source,java]
 ----

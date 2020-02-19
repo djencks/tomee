@@ -5,13 +5,10 @@
 :jbake-status: published
 
 
-TomEE complains it doesn't know the container type, so I added
-type="javax.naming.InitialContext" and it worked (mostly). ##
-Referencing a bean in another jar (with annotations)
+TomEE complains it doesn't know the container type, so I added type="javax.naming.InitialContext" and it worked (mostly).
+## Referencing a bean in another jar (with annotations)
 
-When using annotations to reference a bean from another ejb in your ear
-you have to supplement the `@EJB` reference with a small chunk of xml in
-the ejb-jar.xml of the referring bean.
+When using annotations to reference a bean from another ejb in your ear you have to supplement the `@EJB` reference with a small chunk of xml in the ejb-jar.xml of the referring bean.
 
 So in ejb app A colorsApp.jar you have this bean:
 
@@ -26,8 +23,7 @@ public class OrangeBean implements OrangeRemote {
 }
 ----
 
-Then in ejb app B shapesApp.jar you have this bean with a reference to
-OrangeRemote:
+Then in ejb app B shapesApp.jar you have this bean with a reference to OrangeRemote:
 
 [source,java]
 ----
@@ -42,8 +38,7 @@ public class SquareBean implements SquareRemote {
 }
 ----
 
-To hook this reference up you need to override this ref and add more
-info in the ejb-jar.xml of shapesApp.jar as follows:
+To hook this reference up you need to override this ref and add more info in the ejb-jar.xml of shapesApp.jar as follows:
 
 [source,xml]
 ----
@@ -64,8 +59,7 @@ info in the ejb-jar.xml of shapesApp.jar as follows:
 
 == Referencing a bean in another jar (xml only, no annotations)
 
-The same basic approach applies and dependency injection is still
-possible, however more information must be described in the xml.
+The same basic approach applies and dependency injection is still possible, however more information must be described in the xml.
 
 In ejb app A colorsApp.jar you have this bean:
 
@@ -95,9 +89,8 @@ public class SquareBean implements SquareRemote {
 }
 ----
 
-Here's how you would hook this reference up, injection and all, with
-just xml. The following would be added to the ejb-jar.xml of
-shapesApp.jar:
+Here's how you would hook this reference up, injection and all, with just xml.
+The following would be added to the ejb-jar.xml of shapesApp.jar:
 
 [source,xml]
 ----
@@ -122,16 +115,13 @@ shapesApp.jar:
 </ejb-jar>
 ----
 
-Note that the value of could actually be anything and the above example
-would still work as there is no annotation that needs to match the and
-no one will likely be looking up the EJB as it's injected.
+Note that the value of could actually be anything and the above example would still work as there is no annotation that needs to match the and no one will likely be looking up the EJB as it's injected.
 
 == Referencing a bean in another server
 
 As of OpenEJB 4.0.0-beta-3, server to server references work.
 
-First we need to configure and name the InitialContext that will be used
-to satisfy the lookup to the other server.
+First we need to configure and name the InitialContext that will be used to satisfy the lookup to the other server.
 
 In this example we are calling our InitialContext `shoe` for fun.
 
@@ -148,8 +138,7 @@ In this example we are calling our InitialContext `shoe` for fun.
 </openejb>
 ----
 
-Declaring the `@EJB` reference is then done using a `mappedName` that
-references the named `InitialContext`
+Declaring the `@EJB` reference is then done using a `mappedName` that references the named `InitialContext`
 
 [source,java]
 ----
@@ -171,11 +160,9 @@ Specifically, the `mappedName` syntax is as follows:
 
 === Referencing a bean in "many" servers
 
-Note the above also works with the various forms of failover that TomEE
-supports.
+Note the above also works with the various forms of failover that TomEE supports.
 
-If say, there are two servers that have the `OrangeBeanRemote` bean, you
-could expand the `<JndiProvider>` delcaration like so:
+If say, there are two servers that have the `OrangeBeanRemote` bean, you could expand the `<JndiProvider>` delcaration like so:
 
 [source,xml]
 ----
@@ -185,14 +172,10 @@ could expand the `<JndiProvider>` delcaration like so:
   </JndiProvider>
 ----
 
-In the event that the `ejbd://192.168.1.20:4201` server cannot be
-contacted, the second server will be tried.
+In the event that the `ejbd://192.168.1.20:4201` server cannot be contacted, the second server will be tried.
 
-This sort of arangement can also happen dynamicall against a list of
-servers that continuously grows and shrinks. The server list is
-maintained behind the scenes using server discovery logic that can
-function on either UDP or TCP. See these docs for more details on
-Failover and Discovery:
+This sort of arangement can also happen dynamicall against a list of servers that continuously grows and shrinks.
+The server list is maintained behind the scenes using server discovery logic that can function on either UDP or TCP. See these docs for more details on Failover and Discovery:
 
 * xref:multicast-discovery.adoc[Multicast Discovery (UDP)]
 * xref:multipulse-discovery.adoc[Multipulse Discovery (TCP)]

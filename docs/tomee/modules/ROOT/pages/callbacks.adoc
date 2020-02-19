@@ -4,8 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-Correct usage of PostConstruct, PreDestroy, PrePassivate, PostActivate,
-and AroundInvoke for EJBs and Interceptors.
+Correct usage of PostConstruct, PreDestroy, PrePassivate, PostActivate, and AroundInvoke for EJBs and Interceptors.
 
 For Stateful, Stateless, and MessageDriven, the syntax is as follows:
 
@@ -23,8 +22,7 @@ For an Interceptor, the syntax includes InvocationContext as follows:
 
 The AroundInvoke syntax for an EJB or Interceptor is the same:
 
-* @AroundInvoke <any-scope> Object <method-name>(InvocationContext)
-throws Exception
+* @AroundInvoke <any-scope> Object <method-name>(InvocationContext) throws Exception
 
 == Stateless
 

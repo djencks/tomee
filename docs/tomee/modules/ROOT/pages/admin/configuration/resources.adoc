@@ -4,20 +4,18 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
-In TomEE resources are mainly "singleton" (understood as defined once per server or application). Technically
-it can be anything but you will probably meet more Datasources than other type of resources.
+In TomEE resources are mainly "singleton" (understood as defined once per server or application).
+Technically it can be anything but you will probably meet more Datasources than other type of resources.
 
-
-Most resources will be created automatically if there is no matching resources - by name and type -
-when an injection will be found. To avoid that use `openejb.offline` property and set it to `true`.
+Most resources will be created automatically if there is no matching resources - by name and type - when an injection will be found.
+To avoid that use `openejb.offline` property and set it to `true`.
 See xref:admin/configuration/server.adoc[Server Configuration] for more detail.
 
 == Definition a resource: how does it work?
 
 Before all let see how properties syntax is equivalent to XML one (system.properties and tomee.xml typically).
 
-Properties syntax uses dot notation to represent setters/properties which are plain properties in XML syntax
-and a URL syntax with query parameters to define the resource where it is directly the resource and tag attributes in XML.
+Properties syntax uses dot notation to represent setters/properties which are plain properties in XML syntax and a URL syntax with query parameters to define the resource where it is directly the resource and tag attributes in XML.
 Finally the id is an attribute in XML and the key of the resource definition in properties.
 
 Let see it with a sample, both delcarations are the same:
@@ -63,10 +61,8 @@ Here are the attributes of a resource:
 | Lazy | true | for resources set them to be created when first accessed and not when deployed
 |===
 
-TomEE supports some implicit properties for resources but sometimes you just want to fully control the
-resource and not use implicit properties which can be affected to a property which doesn't expect such a value (typically the case
-if you create a custom Oracle datasource). For such case you can set `SkipImplicitAttributes` property to `true` and your resource
-will ignore implicit properties.
+TomEE supports some implicit properties for resources but sometimes you just want to fully control the resource and not use implicit properties which can be affected to a property which doesn't expect such a value (typically the case if you create a custom Oracle datasource).
+For such case you can set `SkipImplicitAttributes` property to `true` and your resource will ignore implicit properties.
 
 Implicit properties are:
 
@@ -77,28 +73,27 @@ Implicit properties are:
 | ServiceId | the "id" of the resource (its name)
 |===
 
-In the same spirit you can skip properties fallback using `SkipPropertiesFallback` and setting it to `true`. It typically avoids to
-fallback all unset properties (no matching property found) to a `Properties` instance and set it if one matching property is found.
+In the same spirit you can skip properties fallback using `SkipPropertiesFallback` and setting it to `true`.
+It typically avoids to fallback all unset properties (no matching property found) to a `Properties` instance and set it if one matching property is found.
 In Oracle case for instance it matches the connection properties which can have side effects.
 
 === Value ciphering
 
-The propertie values support ciphering using the syntax `cipher:\{algorithm\}:\{cipheredValue\}`, for instance `cipher:Static3DES:xMH5uM1V9vQzVUv5LG7YLA==` will
-be read as `Passw0rd`. Ciphers can be computed using `tomee.sh` script: `${tomee.home}/bin/tomee.sh cipher Passw0rd`.
+The propertie values support ciphering using the syntax `cipher:\{algorithm\}:\{cipheredValue\}`, for instance `cipher:Static3DES:xMH5uM1V9vQzVUv5LG7YLA==` will be read as `Passw0rd`.
+Ciphers can be computed using `tomee.sh` script: `${tomee.home}/bin/tomee.sh cipher Passw0rd`.
 
 == Common Resources
 
 === DataSources
 
-DataSources have defaults for all values and a default datasource can be provided automatically but if you want to
-configure it here are the common properties:
+DataSources have defaults for all values and a default datasource can be provided automatically but if you want to configure it here are the common properties:
 
 You can set the boolean `JtaManaged` to false if you don't want your datasource to be using JTA - if you manage transactions yourself.
 
-Then other configurations are linked the pool the datasource is using. By default TomEE uses https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html[tomcat-jdbc] but we also provide
+Then other configurations are linked the pool the datasource is using.
+By default TomEE uses https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html[tomcat-jdbc] but we also provide
 https://commons.apache.org/proper/commons-dbcp/configuration.html[commons-dbcp] (2 for TomEE 7.x and 1 for TomEE 1.x).
-The properties are then the related configurations with these particular
-entries we try to keep in sync for both:
+The properties are then the related configurations with these particular entries we try to keep in sync for both:
 
 [.table.table-bordered,options="header"]
 |===
@@ -111,9 +106,13 @@ entries we try to keep in sync for both:
 
 ==== Password and ciphering
 
-DataSource were the first resource to support password ciphering. Originally it was another property which is still supported.
-It is called `PasswordCipher`. Its value is the ciphering algorithm and it affects the password value. However `cipher:xxx`
-is still supported on `Password` value. Default `PasswordCipher` being `PlainText` it behaves as no ciphering is in place by default.
+DataSource were the first resource to support password ciphering.
+Originally it was another property which is still supported.
+It is called `PasswordCipher`.
+Its value is the ciphering algorithm and it affects the password value.
+However `cipher:xxx`
+is still supported on `Password` value.
+Default `PasswordCipher` being `PlainText` it behaves as no ciphering is in place by default.
 
 Sample:
 
@@ -143,11 +142,10 @@ TomEE also provides few utilities you can add in DataSource properties:
 
 ==== DataSource and JTA
 
-`JtaManaged` determines wether or not this data source should be JTA managed
-or user managed.  If set to 'true' it will automatically be enrolled
-in any ongoing transactions.  Calling begin/commit/rollback or setAutoCommit
-on the datasource or connection will not be allowed.  If you need to perform
-these functions yourself, set `JtaManaged` to `false`
+`JtaManaged` determines wether or not this data source should be JTA managed or user managed.
+If set to 'true' it will automatically be enrolled in any ongoing transactions.
+Calling begin/commit/rollback or setAutoCommit on the datasource or connection will not be allowed.
+If you need to perform these functions yourself, set `JtaManaged` to `false`
 
 ==== DataSource and JPA
 
@@ -185,8 +183,7 @@ Foo.StartupTimeout = 10 seconds
 
 ==== BrokerXmlConfig
 
-Broker configuration URI as defined by ActiveMQ
-see http://activemq.apache.org/broker-configuration-uri.html
+Broker configuration URI as defined by ActiveMQ see http://activemq.apache.org/broker-configuration-uri.html
 BrokerXmlConfig xbean:file:conf/activemq.xml - Requires xbean-spring.jar and dependencies
 
 ==== ServerUrl
@@ -200,7 +197,6 @@ DataSource for persistence messages
 ==== StartupTimeout
 
 How long to wait for broker startup
-
 
 == javax.jms.ConnectionFactory
 
@@ -241,8 +237,8 @@ An ActiveMQ (JMS) resource adapter.
 
 ==== TransactionSupport
 
-Specifies if the connection is enrolled in global transaction
-allowed values: `xa`, `local` or `none`. Default to `xa`.
+Specifies if the connection is enrolled in global transaction allowed values: `xa`, `local` or `none`.
+Default to `xa`.
 
 ==== PoolMaxSize
 
@@ -259,7 +255,6 @@ Maximum amount of time to wait for a connection.
 ==== ConnectionMaxIdleTime
 
 Maximum amount of time a connection can be idle before being reclaimed.
-
 
 == javax.jms.Queue
 
@@ -290,7 +285,6 @@ Foo.destination =
 
 Specifies the name of the queue
 
-
 == javax.jms.Topic
 
 An ActiveMQ (JMS) topic.
@@ -320,7 +314,6 @@ Foo.destination =
 
 Specifies the name of the topic
 
-
 == org.omg.CORBA.ORB
 
 NOTE: to use it you need to add an implementation of corba.
@@ -338,7 +331,6 @@ Declarable in properties via
 ----
 Foo = new://Resource?type=org.omg.CORBA.ORB
 ----
-
 
 == javax.mail.Session
 
@@ -374,10 +366,8 @@ mail/mysession.password = abcdefghij
 ----
 
 The properties are `javax.mail.Session` ones with the addition of `useDefault` which specifies if `getDefaultInstance()`
-or `getInstance` is used to create the session. `getDefaultInstance()` will ensure that several calls are done with the
-same configuration and return the same instance. For tomee it is likely better to rely on `getInstance()`(ie keep `useDefault` to false)
-and use `aliases` option of the resource to define an alias if you need to share the same instance accross multiple names.
-
+or `getInstance` is used to create the session. `getDefaultInstance()` will ensure that several calls are done with the same configuration and return the same instance.
+For tomee it is likely better to rely on `getInstance()`(ie keep `useDefault` to false) and use `aliases` option of the resource to define an alias if you need to share the same instance accross multiple names.
 
 == ManagedExecutorService
 
@@ -436,7 +426,6 @@ The thread factory implementation class.
 
 If set to true the pool is created when first accessed otherwise it is created at startup.
 
-
 == ManagedScheduledExecutorService
 
 Inherit from `ManagedExecutorService` and adds scheduling abilities.
@@ -465,7 +454,6 @@ Foo.Lazy = true
 === Configuration
 
 See `ManagedExecutorService`.
-
 
 == ManagedThreadFactory
 
@@ -496,12 +484,10 @@ Foo.Lazy = true
 
 The thread prefix (suffixed with thread id).
 
-
-
 == ContextService
 
-A concurrency utilities for JavaEE context service. It allows to create
-contextual proxies (inheriting from security, classloader...contexts).
+A concurrency utilities for JavaEE context service.
+It allows to create contextual proxies (inheriting from security, classloader...contexts).
 
 Declarable in tomee.xml via
 
@@ -516,7 +502,6 @@ Declarable in properties via
 ----
 Foo = new://Resource?type=ContextService
 ----
-
 
 == JndiProvider: inject remote clients
 
@@ -548,12 +533,10 @@ Foo.Lazy = true
 
 The thread prefix (suffixed with thread id).
 
-
-
 == ContextService
 
-A concurrency utilities for JavaEE context service. It allows to create
-contextual proxies (inheriting from security, classloader...contexts).
+A concurrency utilities for JavaEE context service.
+It allows to create contextual proxies (inheriting from security, classloader...contexts).
 
 Declarable in tomee.xml via
 

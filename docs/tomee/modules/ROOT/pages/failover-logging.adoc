@@ -3,8 +3,7 @@
 :jbake-type: page
 :jbake-status: published
 
-Setting the following logging category to "debug" will open up some new
-logging information.
+Setting the following logging category to "debug" will open up some new logging information.
 
 [source,properties]
 ----
@@ -19,8 +18,7 @@ log4j.category.OpenEJB.server.discovery.multipoint = debug
 log4j.category.OpenEJB.server.discovery.multicast = debug
 ----
 
-The nature of the debug output is to display all configuration
-information at startup:
+The nature of the debug output is to display all configuration information at startup:
 
 [source,properties]
 ----

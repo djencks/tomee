@@ -11,8 +11,7 @@ page.
 == Bootstrapping OpenEJB in Spring
 
 If you wish to use OpenEJB inside Spring you can do so pretty easily.
-Include OpenEJB and its dependencies in your classpath as you would in a
-plain embedded scenario then add a custom factory like the following:
+Include OpenEJB and its dependencies in your classpath as you would in a plain embedded scenario then add a custom factory like the following:
 
 [source,java]
 ----
@@ -67,26 +66,18 @@ And include that at the top of your spring xml file as follows:
 </bean>
 ----
 
-The value of is meant to be illustrative of the kinds of properties you
-can pass into OpenEJB. It's possible to create any number of
-datasources, topics, queues, containers and more this way.
+The value of is meant to be illustrative of the kinds of properties you can pass into OpenEJB. It's possible to create any number of datasources, topics, queues, containers and more this way.
 
-Just as with Unit Testing, OpenEJB will find and automatically deploy
-all the EJB beans it [finds in the classpath|Application discovery via
-the classpath]. You can then expose any of these things to other Spring
-components with custom factory beans.
+Just as with Unit Testing, OpenEJB will find and automatically deploy all the EJB beans it [finds in the classpath|Application discovery via the classpath].
+You can then expose any of these things to other Spring components with custom factory beans.
 
 == Injecting OpenEJB-created resources into Spring components
 
-If you want to have any of the Topics, Queues, DataSources,
-EntityManagers or more that OpenEJB creates injected into components
-that Spring creates, here's one technique....
+If you want to have any of the Topics, Queues, DataSources, EntityManagers or more that OpenEJB creates injected into components that Spring creates, here's one technique....
 
-Let's say you have a persistence unit called "_OrangeUnit_" declared in
-a persistence.xml file. One way to get the related _EntityManager_
-created by OpenEJB is to do as follows. Create an `@Stateless` bean with
-an `@PersistenceContext` ref in it, then use a factory bean to look it up,
-pull the EntityManager out and return it
+Let's say you have a persistence unit called "_OrangeUnit_" declared in a persistence.xml file.
+One way to get the related _EntityManager_ created by OpenEJB is to do as follows.
+Create an `@Stateless` bean with an `@PersistenceContext` ref in it, then use a factory bean to look it up, pull the EntityManager out and return it
 
 OrangeUnitBean.java
 
@@ -162,8 +153,7 @@ public class OrangeUnitFactoryBean implements org.springframework.beans.factory.
 }
 ----
 
-The factory bean would then be declared in your spring xml file as
-follows:
+The factory bean would then be declared in your spring xml file as follows:
 
 [source,xml]
 ----
@@ -197,8 +187,7 @@ In the spring xml
 </bean>
 ----
 
-Here's what all three declarations would look like together in your
-spring xml:
+Here's what all three declarations would look like together in your spring xml:
 
 Spring bean definitions combined
 
@@ -227,10 +216,9 @@ Spring bean definitions combined
 
 [NOTE]
 ====
-Here is a bunch of links suggested
-by a user. If anybody has time to go through them and write a doc, that
-would be great. These links explain how to make available spring
-components to openejb.
+Here is a bunch of links suggested by a user.
+If anybody has time to go through them and write a doc, that would be great.
+These links explain how to make available spring components to openejb.
 
 - http://twasink.net/blog/archives/2007/01/using_spring_wi.html
 - http://static.springframework.org/spring/docs/2.5.x/api/org/springframework/ejb/interceptor/SpringBeanAutowiringInterceptor.html

@@ -21,7 +21,8 @@ TomEE Maven Plugin is a set of goals for the development and to prepare to go in
 
 == Run
 
-The most commonly used goal, it allows to start a tomee with applications. Here is its configuration:
+The most commonly used goal, it allows to start a tomee with applications.
+Here is its configuration:
 
 [.table.table-bordered,options="header"]
 |===
@@ -91,22 +92,22 @@ The most commonly used goal, it allows to start a tomee with applications. Here 
 |keystore|-|path to keystore for HTTPS connector
 |===
 
-
-Synchronization are blocks defining a source and target folder and both are synchronized. It typically copy
+Synchronization are blocks defining a source and target folder and both are synchronized.
+It typically copy
 `src/main/webapp` resources in `target/apache-tomee/webapps/myapp/`.
-
 
 === Customizers
 
-Customizers are java classes loadable by the plugin and with a main or implementing `Runnable` and taking optionally
-as constructor parameter a `File` representing `tomee.base` or no arguments.
+Customizers are java classes loadable by the plugin and with a main or implementing `Runnable` and taking optionally as constructor parameter a `File` representing `tomee.base` or no arguments.
 
 They are executed when creating the TomEE instance.
 
-There are two scripting flavors of that: js and groovy. Both will have some contextual variables:
+There are two scripting flavors of that: js and groovy.
+Both will have some contextual variables:
 
 - catalinaBase: tomee base path
-- resolver: a maven resolver to get a dependency using maven. For instance: `resolver.resolve('group', 'artfact', 'version', 'type')`
+- resolver: a maven resolver to get a dependency using maven.
+For instance: `resolver.resolve('group', 'artfact', 'version', 'type')`
 
 === Dependencies (libs)
 
@@ -168,7 +169,8 @@ remove:prefix
 
 == Build
 
-Excepted synchronization, build plugin inherit from `run` Mojo its configuration. It just adds the following:
+Excepted synchronization, build plugin inherit from `run` Mojo its configuration.
+It just adds the following:
 
 [.table.table-bordered,options="header"]
 |===

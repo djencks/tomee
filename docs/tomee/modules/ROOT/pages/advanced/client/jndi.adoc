@@ -7,8 +7,8 @@ TomEE has several JNDI client intended for multiple usages.
 
 == Default one
 
-In a standalone instance you generally don't need (or want) to specify anything
-to do a lookup. Doing so you will inherit from the contextual environment:
+In a standalone instance you generally don't need (or want) to specify anything to do a lookup.
+Doing so you will inherit from the contextual environment:
 
 [source,java]
 ----
@@ -18,9 +18,7 @@ ctx.lookup("java:....");
 
 == LocalInitialContextFactory
 
-This is the legacy context factory used by OpenEJB. It is still useful to fallback
-on the "default" one in embedded mode where sometimes classloaders or libraries can mess
-up the automatic conextual context.
+This is the legacy context factory used by OpenEJB. It is still useful to fallback on the "default" one in embedded mode where sometimes classloaders or libraries can mess up the automatic conextual context.
 
 Usage:
 
@@ -57,8 +55,7 @@ ctx.lookup("java:....");
 
 == RemoteInitialContextFactory
 
-Intended to be used to contact a remote server, the `org.apache.openejb.client.RemoteInitialContextFactory` relies on the provider url
-to contact a tomee instance:
+Intended to be used to contact a remote server, the `org.apache.openejb.client.RemoteInitialContextFactory` relies on the provider url to contact a tomee instance:
 
 [source,java]
 ----
@@ -85,8 +82,7 @@ p.put(Context.SECURITY_PRINCIPAL, "alfred");
 p.put(Context.SECURITY_CREDENTIALS, "bat");
 ----
 
-The realm will be used by JAAS to get the right LoginModules and principal/credentials to
-do the actual authentication.
+The realm will be used by JAAS to get the right LoginModules and principal/credentials to do the actual authentication.
 
 ==== HTTP case
 

@@ -4,15 +4,12 @@
 :jbake-type: page
 :jbake-status: published
 
-TomEE uses  `creator` to create the connection pool factory. In other
-terms it means you can use any pool you want for DataSource in TomEE.
+TomEE uses  `creator` to create the connection pool factory.
+In other terms it means you can use any pool you want for DataSource in TomEE.
 
-Default provided pools are DBCP (default in embedded mode) and Tomcat
-JDBC (default in TomEE to be aligned on Tomcat).
+Default provided pools are DBCP (default in embedded mode) and Tomcat JDBC (default in TomEE to be aligned on Tomcat).
 
-Depending which one you use the accept configuration are not 100% the
-same even if we try to align the most common entries to the historical
-configuration (ie DBCP).
+Depending which one you use the accept configuration are not 100% the same even if we try to align the most common entries to the historical configuration (ie DBCP).
 
 Here are a more detailled list of accepted properties by creator.
 
@@ -20,8 +17,7 @@ Here are a more detailled list of accepted properties by creator.
 
 Note: details are at
 http://tomee.apache.org/containers-and-resources.html (note:
-http://commons.apache.org/proper/commons-dbcp/configuration.html uses
-the latest version of DBCP but TomEE 1.7.x is not using this version).
+http://commons.apache.org/proper/commons-dbcp/configuration.html uses the latest version of DBCP but TomEE 1.7.x is not using this version).
 
 * AccessToUnderlyingConnectionAllowed
 * ConnectionInitSqls

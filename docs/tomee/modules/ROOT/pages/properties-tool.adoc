@@ -6,32 +6,24 @@
 
 == Properties Command line Tool
 
-To see all configurable properties in use by OpenEJB, using the
-following tool against a running server:
+To see all configurable properties in use by OpenEJB, using the following tool against a running server:
 
 ________________________
 ./bin/openejb properties
 ________________________
 
-The output of this tool takes all overrideable components OpenEJB sees
-and outputs their properties along with the current value. This allows
-you to easily see what is running in your system, what properties are
-available for overriding, and what exact values are for each component.
-OpenEJB has a number of flags that can be passed to it not associated
-with any particular component, these are output as well.
+The output of this tool takes all overrideable components OpenEJB sees and outputs their properties along with the current value.
+This allows you to easily see what is running in your system, what properties are available for overriding, and what exact values are for each component.
+OpenEJB has a number of flags that can be passed to it not associated with any particular component, these are output as well.
 
-Content from this file can be safely copied as-is into the
-conf/system.properties file or sent to the users list with bug reports.
-These properties may also be applied back into the openejb.xml file by
-pasting the properties without the "." prefix into the respective
-component declarations. The only warning is that any properties of type
-".password" will have their values masked, so make sure you edit them if
-you reapply them back into conf/openejb.xml or conf/system.properties.
+Content from this file can be safely copied as-is into the conf/system.properties file or sent to the users list with bug reports.
+These properties may also be applied back into the openejb.xml file by pasting the properties without the "." prefix into the respective component declarations.
+The only warning is that any properties of type ".password" will have their values masked, so make sure you edit them if you reapply them back into conf/openejb.xml or conf/system.properties.
 
 == Property Overriding
 
-Any component configured in OpenEJB via the openejb.xml (and some that
-aren't) can be overridden using system properties. The format is:
+Any component configured in OpenEJB via the openejb.xml (and some that aren't) can be overridden using system properties.
+The format is:
 
 `<id>.<property-name>=<property-value>`
 
@@ -39,18 +31,12 @@ And this can be done on the command line as follows:
 
 `./bin/openejb -D<id>.<property-name>=<property-value> ...`
 
-Or by adding the property to the conf/system.properties file. Note that
-command line overrides win over overrides in the conf/system.properties
-file.
+Or by adding the property to the conf/system.properties file.
+Note that command line overrides win over overrides in the conf/system.properties file.
 
-In an embedded environment, the properties can be added to the Hashtable
-passed into the javax.naming.InitialContext when using the
-LocalInitialContextFactory or also to the System.getProperties() object
-before OpenEJB is embedded (which will be when the first InitialContext
-is created).
+In an embedded environment, the properties can be added to the Hashtable passed into the javax.naming.InitialContext when using the LocalInitialContextFactory or also to the System.getProperties() object before OpenEJB is embedded (which will be when the first InitialContext is created).
 
-At startup, OpenEJB will find the component with the given id and apply
-the new property value before constructing the individual component.
+At startup, OpenEJB will find the component with the given id and apply the new property value before constructing the individual component.
 
 == Example output
 

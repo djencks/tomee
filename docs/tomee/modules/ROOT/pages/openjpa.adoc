@@ -24,8 +24,7 @@ An example of working `persistence.xml` for OpenJPA:
 </persistence>
 ----
 
-Where the datasources above are configured in your openejb.xml as
-follows:
+Where the datasources above are configured in your openejb.xml as follows:
 
 [source,xml]
 ----
@@ -61,10 +60,8 @@ p.put("movieDatabaseUnmanaged.JtaManaged", "false");
 
 Or as derby will report it "Table 'abc.xyz' doesn't exist"
 
-Someone has to create the database structure for your persistent
-objects. If you add the _openjpa.jdbc.SynchronizeMappings_ property as
-shown below OpenJPA will auto-create all your tables, all your primary
-keys and all foreign keys exactly to match your objects.
+Someone has to create the database structure for your persistent objects.
+If you add the _openjpa.jdbc.SynchronizeMappings_ property as shown below OpenJPA will auto-create all your tables, all your primary keys and all foreign keys exactly to match your objects.
 
 [source,xml]
 ----
@@ -115,8 +112,7 @@ public void addMovie(Movie movie) throws Exception {
 }
 ----
 
-Note the default transaction attribute for any ejb method is REQUIRED
-unless explicitly set otherwise in the bean class or method in question.
+Note the default transaction attribute for any ejb method is REQUIRED unless explicitly set otherwise in the bean class or method in question.
 
 === Solutions
 
@@ -125,8 +121,6 @@ You can either:
 [arabic]
 . Change your bean or it's method to use
 `TransactionAttributeType.NOT_REQUIRED` or
-`TransactionAttributeType.NEVER` which will guarantee it will not be
-invoked in a JTA transaction.
+`TransactionAttributeType.NEVER` which will guarantee it will not be invoked in a JTA transaction.
 . Change your persistence.xml so the persistence-unit uses
-`transaction-type="TRANSACTION"` making it capable of participating in a
-JTA transaction.
+`transaction-type="TRANSACTION"` making it capable of participating in a JTA transaction.

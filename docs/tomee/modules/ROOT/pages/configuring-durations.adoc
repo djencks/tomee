@@ -4,8 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-The time based configuration properties of containers
-and beans support plain english, such as:
+The time based configuration properties of containers and beans support plain english, such as:
 
 * "1 hour"
 * "27 minutes"
@@ -17,8 +16,7 @@ For convenience it is possible to specify a _compound_ form, such as:
 * "1 hour, 45 minutes"
 * "15 minutes, 23 seconds, and 10 milliseconds"
 
-Spaces are also optional between the number and the time unit, which can
-be nice when using the abbreviated forms:
+Spaces are also optional between the number and the time unit, which can be nice when using the abbreviated forms:
 
 * "1hr"
 * "27m"

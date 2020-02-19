@@ -3,7 +3,6 @@
 :jbake-type: page
 :jbake-status: published
 
-
 = Via annotation
 
 [source,java]
@@ -35,8 +34,7 @@ public class MyDataSourceRefBean implements MyBeanInterface {
 
 == Via xml
 
-The above `@Resource` annotation usage is 100% equivalent to the following
-xml.
+The above `@Resource` annotation usage is 100% equivalent to the following xml.
 
 [source,xml]
 ----

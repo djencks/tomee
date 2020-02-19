@@ -48,8 +48,7 @@ public static class MyMdb implements MessageListener {
 }
 ----
 
-- The ConnectionFactory has also an instance pool through geronimo-connector logic, configuration
- can make the behavior changing but this is controlled through pool related variables (the pool and resource properties are merged in the definition):
+- The ConnectionFactory has also an instance pool through geronimo-connector logic, configuration can make the behavior changing but this is controlled through pool related variables (the pool and resource properties are merged in the definition):
 
 [source,xml]
 ----
@@ -63,5 +62,4 @@ public static class MyMdb implements MessageListener {
 
 == Slow Message Consumption
 
-If you find you have a slow consumption of messages there are several options to have a look (activemq website explains it very well)
-but one very impacting option can be the prefetch size.
+If you find you have a slow consumption of messages there are several options to have a look (activemq website explains it very well) but one very impacting option can be the prefetch size.

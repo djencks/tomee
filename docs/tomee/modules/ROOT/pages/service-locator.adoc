@@ -5,20 +5,13 @@
 :jbake-status: published
 
 The functionality of the
-xref:jndi-names.adoc[openejb.jndiname.format] allows for writing some
-really fun service locator code. Creating the exact layout you want
-using the exact data you want means you can create robust libraries for
-pulling things out of JNDI.
+xref:jndi-names.adoc[openejb.jndiname.format] allows for writing some really fun service locator code.
+Creating the exact layout you want using the exact data you want means you can create robust libraries for pulling things out of JNDI.
 
 == Lookup examples
 
-To get the creative juices flowing here are a few examples of lookup
-methods you could create for your service locator, the jndi name formats
-that would work with those lookups, and examples of client code using
-the service locator. For simplicity, we'll assume all the lookup
-examples start with this basic class that has a built-in lookup allowing
-for a common prefix to be optionally applied to the beginning of all
-lookup strings.
+To get the creative juices flowing here are a few examples of lookup methods you could create for your service locator, the jndi name formats that would work with those lookups, and examples of client code using the service locator.
+For simplicity, we'll assume all the lookup examples start with this basic class that has a built-in lookup allowing for a common prefix to be optionally applied to the beginning of all lookup strings.
 
 [source,java]
 ----
@@ -48,6 +41,7 @@ public class MyLocator {
 ----
 
 === Just the interface Usable with JNDI name formats ending in the full
+
 class name of the interface such as: - \{interfaceClass}
 
 [source,java]
@@ -62,9 +56,7 @@ MyLocator locator = new MyLocator();
 Widget widget = locator.lookup(Widget.class);
 ----
 
-Or with a common prefix or with a common prefix supplied in constructor
-such as: - \{moduleId}/\{interfaceClass} -
-ejb/\{moduleId}/\{interfaceClass}
+Or with a common prefix or with a common prefix supplied in constructor such as: - \{moduleId}/\{interfaceClass} - ejb/\{moduleId}/\{interfaceClass}
 
 [source,java]
 ----
@@ -75,8 +67,7 @@ Store store = locator.lookup(Store.class);
 
 === Interface class and a prefix
 
-Usable with JNDI name formats including a varying prefix such as ejbName
-or deploymentID and ending in the full class name of the interface
+Usable with JNDI name formats including a varying prefix such as ejbName or deploymentID and ending in the full class name of the interface
 
 * \{ejbName}/\{interfaceClass}
 * \{deploymentId}/\{interfaceClass}
@@ -84,13 +75,10 @@ or deploymentID and ending in the full class name of the interface
 public T lookup(String prefix, Class type) \{ return (T) lookup(prefix +
 "/" + type.getName()); }
 +
-MyLocator locator = new MyLocator(); Widget redWidget =
-locator.lookup("RedWidgetBean", Widget.class); +
+MyLocator locator = new MyLocator(); Widget redWidget = locator.lookup("RedWidgetBean", Widget.class); +
 Widget blueWidget = locator.lookup("BlueWidgetBean", Widget.class);
 
-Or with a common prefix or with a common prefix supplied in constructor
-such as: - \{moduleId}/\{ejbName}/\{interfaceClass} -
-ejb/\{moduleId}/\{deploymentId}/\{interfaceClass}
+Or with a common prefix or with a common prefix supplied in constructor such as: - \{moduleId}/\{ejbName}/\{interfaceClass} - ejb/\{moduleId}/\{deploymentId}/\{interfaceClass}
 
 [source,java]
 ----
@@ -101,13 +89,10 @@ Store store = locator.lookup("StoreBean", Store.class);
 
 === Interface class and ejb class
 
-Usable with JNDI name formats comprised of the interfaceClass and
-ejbClass
+Usable with JNDI name formats comprised of the interfaceClass and ejbClass
 
-For variation, the interface class is the prefix and the ejb class is
-the suffix. This is neat as the the prefix (the interface class name)
-becomes a jndi context with one binding in it for each implementing ejb
-class.
+For variation, the interface class is the prefix and the ejb class is the suffix.
+This is neat as the the prefix (the interface class name) becomes a jndi context with one binding in it for each implementing ejb class.
 
 Works with: - \{interfaceClass}/\{ejbClass}
 
@@ -123,9 +108,7 @@ MyLocator locator = new MyLocator();
 Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);
 ----
 
-Or with a common prefix or with a common prefix supplied in constructor
-such as: - \{moduleId}/\{interfaceClass}/\{ejbClass} -
-ejb/\{moduleId}/\{interfaceClass}/\{ejbClass}
+Or with a common prefix or with a common prefix supplied in constructor such as: - \{moduleId}/\{interfaceClass}/\{ejbClass} - ejb/\{moduleId}/\{interfaceClass}/\{ejbClass}
 
 [source,java]
 ----
@@ -136,9 +119,8 @@ Store store = locator.lookup(Store.class, StoreBean.class);
 
 === Interface class and ejb class with simple names
 
-Similar to the above example but using the simple name of the classes
-resulting in a JNDI tree that's a bit more human readable. -
-\{ejbClass.simpleName}/\{interfaceClass.simpleName}
+Similar to the above example but using the simple name of the classes resulting in a JNDI tree that's a bit more human readable.
+- \{ejbClass.simpleName}/\{interfaceClass.simpleName}
 
 [source,java]
 ----
@@ -155,10 +137,7 @@ MyLocator locator = new MyLocator();
 Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);
 ----
 
-Or with a common prefix or with a common prefix supplied in constructor
-such as: -
-\{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName} -
-ejb/\{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName}
+Or with a common prefix or with a common prefix supplied in constructor such as: - \{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName} - ejb/\{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName}
 
 [source,java]
 ----

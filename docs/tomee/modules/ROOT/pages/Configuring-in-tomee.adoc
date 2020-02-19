@@ -4,7 +4,6 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == Configuring Resources:
 
 * Drivers are dropped into tomeeDir/lib
@@ -16,19 +15,19 @@ For example,
 
 [source,java]
 ----
-@Resource DataSource moviesDatabase 
+@Resource DataSource moviesDatabase
 ----
 
 is injected with the following resource:
 
 [source,xml]
 ----
-<Resource id="moviesDatabase" type="DataSource">    
-JdbcDriver org.hsqldb.jdbcDriver    
-JdbcUrl jdbc:mysql:localhost:3306/moviesdb    
-UserName sa    
-Password secret    
-JtaManaged true    
+<Resource id="moviesDatabase" type="DataSource">
+JdbcDriver org.hsqldb.jdbcDriver
+JdbcUrl jdbc:mysql:localhost:3306/moviesdb
+UserName sa
+Password secret
+JtaManaged true
 </Resource>
 ----
 

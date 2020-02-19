@@ -4,14 +4,16 @@
 :jbake-status: published
 
 
-You can use TomEE as described on xref:admin/file-layout.adoc[Directory Structure] page but in production it is better to
-split TomEE and application binaries and configuration.
+You can use TomEE as described on xref:admin/file-layout.adoc[Directory Structure] page but in production it is better to split TomEE and application binaries and configuration.
 
 Idea is to have this kind of layout (the root is the one you prefer):
 
 ifndef::backend-pdf[]
 
-[#filetree.col-md-4]
+//TODO find what made this work... document it, use it or something like it...
+//[#filetree.col-md-4]
+[source]
+----
 [{
     label: '/some/path',
     description: 'any location on your file system',
@@ -83,7 +85,7 @@ ifndef::backend-pdf[]
         }
     ]
 }]
-
+----
 
 [#filetreedetail.col-md-8.bs-callout.bs-callout-primary]
 Click on a tree node or open a folder to see the detail there.

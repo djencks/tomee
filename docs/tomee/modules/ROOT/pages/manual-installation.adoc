@@ -4,11 +4,10 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == Overview
 
-The manual installation process is significantly harder then the xref:{common-vc}::tomcat.adoc[automatic installation] which we normally recommend. In
-this installation process you will do the following:
+The manual installation process is significantly harder then the xref:{common-vc}::tomcat.adoc[automatic installation] which we normally recommend.
+In this installation process you will do the following:
 
 [arabic]
 . Install openejb.war
@@ -19,36 +18,27 @@ http://tomee.apache.org/downloads.html[download page]
 . Unpack the openejb.war file in the new directory
 . Add the OpenEJB listener the conf/server.xml file
 . Update the non-compliant Tomcat annotations-api.jar
-. Add the OpenEJB JavaAgent to the bin/catalina.bat or bin/catalina.bat
-script
+. Add the OpenEJB JavaAgent to the bin/catalina.bat or bin/catalina.bat script
 
 == Install openejb.war
 
-Once Tomcat has been xref:{common-vc}::tomcat-installation.adoc[installed] , the
-OpenEJB plugin for Tomcat can be installed. The war can be obtained from
-the xref:{common-vc}::download-ng.adoc[download page]
+Once Tomcat has been xref:{common-vc}::tomcat-installation.adoc[installed] , the OpenEJB plugin for Tomcat can be installed.
+The war can be obtained from the xref:{common-vc}::download-ng.adoc[download page]
 
-The commands in this example are executed from within the Tomcat
-installation directory.
+The commands in this example are executed from within the Tomcat installation directory.
 
 == Unpack OpenEJB Tomcat plugin in Tomcat webapps directory
 
-Be careful, this is the most error prone step. A web application does
-not contain a root directory, so if you unpack it in the wrong
-directory, it is difficult to undo. Please, follow this step closely,
-and most importantly make sure you execute the unpack command from
-within the new webapps/openejb directory
+Be careful, this is the most error prone step.
+A web application does not contain a root directory, so if you unpack it in the wrong directory, it is difficult to undo.
+Please, follow this step closely, and most importantly make sure you execute the unpack command from within the new webapps/openejb directory
 
-Due to the structure of war files, you must create a new directory for
-OpenEJB, change to the new directory and execute the unpack command from
-within the new directory. If you get this wrong, it is difficult to
-undo, so follow the steps closely.
+Due to the structure of war files, you must create a new directory for OpenEJB, change to the new directory and execute the unpack command from within the new directory.
+If you get this wrong, it is difficult to undo, so follow the steps closely.
 
 == Add the OpenEJB listener to Tomcat
 
-All Tomcat listener classes must be available in the Tomcat common class
-loader, so the openejb-loader jar must be copied into the Tomcat lib
-directory.
+All Tomcat listener classes must be available in the Tomcat common class loader, so the openejb-loader jar must be copied into the Tomcat lib directory.
 
 [source,java]
 ----
@@ -59,8 +49,7 @@ directory.
 ----
 
 Add the following
-`<Listener className="org.apache.openejb.loader.OpenEJBListener" />` to
-your conf/server.xml file to load the OpenEJB listener:
+`<Listener className="org.apache.openejb.loader.OpenEJBListener" />` to your conf/server.xml file to load the OpenEJB listener:
 
 The snippet is shown below
 
@@ -84,22 +73,16 @@ className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
 
 == Update the Tomcat annotations-api.jar file
 
-Tomcat contains an old non-compliant version of the javax.annotation
-classes and these invalid classes must be updated so OpenEJB can process
-annotations. Simply, replace the annotations-api.jar in the Tomcat lib
-directory with the updated annotations-api.jar in the OpenEJB war.
+Tomcat contains an old non-compliant version of the javax.annotation classes and these invalid classes must be updated so OpenEJB can process annotations.
+Simply, replace the annotations-api.jar in the Tomcat lib directory with the updated annotations-api.jar in the OpenEJB war.
 
 == Add OpenEJB javaagent to Tomcat startup
 
-OpenJPA, the Java Persistence implementation used by OpenEJB, currently
-must enhanced persistence classes to function properly, and this
-requires the installation of a javaagent into the Tomcat startup
-process.
+OpenJPA, the Java Persistence implementation used by OpenEJB, currently must enhanced persistence classes to function properly, and this requires the installation of a javaagent into the Tomcat startup process.
 
 First, copy the OpenEJB JavaAgent jar into the lib directory.
 
-Simply, add the snippet marked below in bin/catalina.bat (Windows) or
-bin/catalina.sh (Unix) file to enable the OpenEJB javaagent:
+Simply, add the snippet marked below in bin/catalina.bat (Windows) or bin/catalina.sh (Unix) file to enable the OpenEJB javaagent:
 
 [source,properties]
 ----
@@ -143,5 +126,6 @@ fi
 ----
 
 == Note: The example above is an excerpt from the middle of the
-bin/catalina.sh file. Search for the this section and add the snippet
-shown
+
+bin/catalina.sh file.
+Search for the this section and add the snippet shown

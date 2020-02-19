@@ -3,7 +3,6 @@
 :jbake-type: page
 :jbake-status: published
 
-
 = Linux Service
 
 Depending on your flavour of Linux, there are likely a few different ways you can run TomEE as a service.

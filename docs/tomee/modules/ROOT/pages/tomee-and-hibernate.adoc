@@ -5,8 +5,7 @@
 :jbake-status: published
 
 
-Apache TomEE ships with OpenJPA as the default JPA provider, however any
-valid JPA 2.0 provider can be used.
+Apache TomEE ships with OpenJPA as the default JPA provider, however any valid JPA 2.0 provider can be used.
 
 The basic steps are:
 
@@ -14,23 +13,19 @@ The basic steps are:
 . Add the Hibernate jars to `<tomee-home>/lib/`
 . Configure the webapp or the server to use Hibernate
 
-*The atifact versions defined here are just for example, so please feel
-free to use current library versions.*
+*The atifact versions defined here are just for example, so please feel free to use current library versions.*
 
 == Webapp Configuration
 
 Any webapp can specify the JPA provider it would like to use via the
-`persistence.xml` file, which can be at any of the following locations
-in a webapp
+`persistence.xml` file, which can be at any of the following locations in a webapp
 
 * `WEB-INF/persistence.xml` of the `.war` file
 * `META-INF/persistence.xml` in any jar located in `WEB-INF/lib/`
 
-A single webapp may have many `persistence.xml` files and each may use
-whichever JPA provider it needs.
+A single webapp may have many `persistence.xml` files and each may use whichever JPA provider it needs.
 
-The following is an example of a fairly common `persistence.xml` for
-Hibernate
+The following is an example of a fairly common `persistence.xml` for Hibernate
 
 [source,xml]
 ----
@@ -52,8 +47,7 @@ Hibernate
 </persistence>
 ----
 
-Note, TomEE will automatically add the following property unless it is
-explicitly configured:
+Note, TomEE will automatically add the following property unless it is explicitly configured:
 
 [source,xml]
 ----
@@ -63,12 +57,9 @@ explicitly configured:
 
 == Server Configuration
 
-The default JPA provider can be changed at the server level to favor
-Hibernate over OpenJPA.
+The default JPA provider can be changed at the server level to favor Hibernate over OpenJPA.
 
-Using the `<tomee-home>/conf/system.properties` file or any other valid
-means of setting `java.lang.System.getProperties()`, the following
-standard properties can set the detault for any `persistence.xml` file.
+Using the `<tomee-home>/conf/system.properties` file or any other valid means of setting `java.lang.System.getProperties()`, the following standard properties can set the detault for any `persistence.xml` file.
 
 * `javax.persistence.provider`
 * `javax.persistence.transactionType`
@@ -112,24 +103,21 @@ To use Hibernate with Ehcache, add:
 
 == Infinispan (optional)
 
-To use Infinispan cache (default Hibernate 2nd level cache) you need the
-below jars:
+To use Infinispan cache (default Hibernate 2nd level cache) you need the below jars:
 
-There are many guides on how to use 2nd level cache with JPA 2. You can
-remove OpenJPA jar so less jars are in `<tomee-home>/lib` folder. Also,
-be sure to put your Database JDBC driver in `<tomee-home>/lib`.
+There are many guides on how to use 2nd level cache with JPA 2. You can remove OpenJPA jar so less jars are in `<tomee-home>/lib` folder.
+Also, be sure to put your Database JDBC driver in `<tomee-home>/lib`.
 
-The actual Maven dependencies for your project can be added in the usual
-way:
+The actual Maven dependencies for your project can be added in the usual way:
 
 [source,xml]
 ----
-    <!-- Hibernate -->      
+    <!-- Hibernate -->
     <dependency>
         <groupId>antlr</groupId>
         <artifactId>antlr</artifactId>
         <version>2.7.7</version>
-    </dependency>       
+    </dependency>
     <dependency>
         <groupId>dom4j</groupId>
         <artifactId>dom4j</artifactId>

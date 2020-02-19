@@ -4,7 +4,6 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == Local Client (embedded container)
 
 [source,java]

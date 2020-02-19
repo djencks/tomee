@@ -56,8 +56,8 @@ NOTE: see xref:advanced/tomee-embedded/index.adoc[TomEE Embedded] page for more 
 
 IMPORTANT: this shade uses TomEE Embedded but you can do the same with an xref:advanced/applicationcomposer/index.adoc[Application Composer] application.
 
-TIP: if you have `META-INF/web-fragment.xml` in your application you will need to merge them in a single one in the shade. Note that tomcat provides one
-which can be skipped in this operation since it is there only as a marker for jasper detection.
+TIP: if you have `META-INF/web-fragment.xml` in your application you will need to merge them in a single one in the shade.
+Note that tomcat provides one which can be skipped in this operation since it is there only as a marker for jasper detection.
 
 Then just build the jar:
 
@@ -75,8 +75,8 @@ java -jar myapp-1.0-SNAPSHOT.jar
 
 == Fat Jars with Gradle
 
-With gradle you can rely on either jar plugin, fatjar plugin or shadowjar plugin. Last one is likely the closer to maven shade plugin
-so that's the one used for next sample:
+With gradle you can rely on either jar plugin, fatjar plugin or shadowjar plugin.
+Last one is likely the closer to maven shade plugin so that's the one used for next sample:
 
 [source,groovy]
 ----
@@ -208,9 +208,8 @@ java -jar build/libs/demo-gradle-tomee-embedded-shade-1.0-SNAPSHOT-bundle.jar --
 
 == Fat Wars
 
-Fat Wars are executable wars. Note they can be fancy for demos but they have the drawback to put the server in web resources
-at packaging time (to ensure the war is actually an executable jar) so adding a filter preventing these files to be read
-can be needed if you don't already use a web technology doing it (a servlet bound to /*).
+Fat Wars are executable wars.
+Note they can be fancy for demos but they have the drawback to put the server in web resources at packaging time (to ensure the war is actually an executable jar) so adding a filter preventing these files to be read can be needed if you don't already use a web technology doing it (a servlet bound to /*).
 
 Here how to do a fat war:
 

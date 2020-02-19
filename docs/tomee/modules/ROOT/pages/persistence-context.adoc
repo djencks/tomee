@@ -38,8 +38,7 @@ public class MyBean implements MyInterface {
 
 == Via xml
 
-The above `@PersistenceContext` annotation usage is 100% equivalent to the
-following xml.
+The above `@PersistenceContext` annotation usage is 100% equivalent to the following xml.
 
 [source,xml]
 ----

@@ -14,13 +14,15 @@ These instructions have been tested with TomEE 7.x and TomEE 8 SNAPSHOT (master)
 
 == Setup
 
-You'll need to obtain the following jars: log4j-core, log4j-api and log4j-jul. These instructions were tested with the 2.12.0 versions:
+You'll need to obtain the following jars: log4j-core, log4j-api and log4j-jul.
+These instructions were tested with the 2.12.0 versions:
 
 https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.12.0/log4j-core-2.12.0.jar
 https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.12.0/log4j-api-2.12.0.jar
 https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-jul/2.12.0/log4j-jul-2.12.0.jar
 
-Add these to the TomEE bin directory. Add the following to setenv.sh on *nix:
+Add these to the TomEE bin directory.
+Add the following to setenv.sh on *nix:
 
 ```
     JAVA_OPTS="$JAVA_OPTS -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager"
@@ -43,7 +45,8 @@ Take care to match the jar filenames if you have downloaded jars for a slightly 
 
 == Configuration
 
-Add your log4j2.xml config in the `bin` directory.  Here's a simple config you can use to help you get started:
+Add your log4j2.xml config in the `bin` directory.
+Here's a simple config you can use to help you get started:
 
 ```
     <?xml version="1.0" encoding="UTF-8" ?>

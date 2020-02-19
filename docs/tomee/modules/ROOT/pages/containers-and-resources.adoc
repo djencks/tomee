@@ -6,12 +6,12 @@
 === CMP_ENTITY
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Container id="Foo" type="CMP_ENTITY">
  </Container>
 ----
-
 
 Declarable in properties via
 `Foo = new://Container?type=CMP_ENTITY`
@@ -19,6 +19,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -31,21 +32,18 @@ Supports the following properties
 |Default value is `org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory`.
 |===
 
-
-
-
-
 === TransactionManager
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <TransactionManager type="javax.transaction.TransactionManager">
  </TransactionManager>
 ----
 
-
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -58,19 +56,15 @@ Supports the following properties
 |Default value is `10 minutes`.
 |===
 
-
-
-
-
 === BMP_ENTITY
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Container id="Foo" type="BMP_ENTITY">
  </Container>
 ----
-
 
 Declarable in properties via
 `Foo = new://Container?type=BMP_ENTITY`
@@ -78,6 +72,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -92,19 +87,15 @@ Supports the following properties
 Default value is `10`.
 |===
 
-
-
-
-
 === STATELESS
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Container id="Foo" type="STATELESS">
  </Container>
 ----
-
 
 Declarable in properties via
 `Foo = new://Container?type=STATELESS`
@@ -112,6 +103,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -147,19 +139,15 @@ The instances will last for just one method invocation and then are removed.
 Default value is `true`.
 |===
 
-
-
-
-
 === STATEFUL
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Container id="Foo" type="STATEFUL">
  </Container>
 ----
-
 
 Declarable in properties via
 `Foo = new://Container?type=STATEFUL`
@@ -167,6 +155,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -214,19 +203,15 @@ Default value is `20`.
  Default value is `100`.
 |===
 
-
-
-
-
 === MESSAGE
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Container id="Foo" type="MESSAGE">
  </Container>
 ----
-
 
 Declarable in properties via
 `Foo = new://Container?type=MESSAGE`
@@ -234,6 +219,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -269,23 +255,17 @@ Default value is `org.apache.activemq.ra.ActiveMQActivationSpec`.
 Default value is `10`.
 |===
 
-
-
-
-
 == Resources
-
-
 
 === javax.sql.DataSource
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="javax.sql.DataSource">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=javax.sql.DataSource`
@@ -293,6 +273,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -505,19 +486,15 @@ NOTE: Do NOT close the underlying connection, only the original logical connecti
 Default value is `false`.
 |===
 
-
-
-
-
 === ActiveMQResourceAdapter
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="ActiveMQResourceAdapter">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=ActiveMQResourceAdapter`
@@ -525,6 +502,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -551,19 +529,15 @@ Default value is `vm://localhost?async=true`.
 Default value is `Default Unmanaged JDBC Database`.
 |===
 
-
-
-
-
 === javax.jms.ConnectionFactory
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="javax.jms.ConnectionFactory">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=javax.jms.ConnectionFactory`
@@ -571,6 +545,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -617,19 +592,15 @@ Default value is `5000`.
 Default value is `15`.
 |===
 
-
-
-
-
 === javax.jms.Queue
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="javax.jms.Queue">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=javax.jms.Queue`
@@ -637,6 +608,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -649,19 +621,15 @@ Supports the following properties
 |Specifies the name of the queue
 |===
 
-
-
-
-
 === javax.jms.Topic
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="javax.jms.Topic">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=javax.jms.Topic`
@@ -669,6 +637,7 @@ Declarable in properties via
 
 
 Supports the following properties
+
 [{name-description-table-layout}]
 |===
 |Property Name
@@ -681,19 +650,15 @@ Supports the following properties
 |Specifies the name of the topic
 |===
 
-
-
-
-
 === org.omg.CORBA.ORB
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="org.omg.CORBA.ORB">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=org.omg.CORBA.ORB`
@@ -702,17 +667,15 @@ Declarable in properties via
 
 No properties.
 
-
-
 === javax.mail.Session
 
 Declarable in tomee.xml via
+
 [source,xml]
 ----
  <Resource id="Foo" type="javax.mail.Session">
  </Resource>
 ----
-
 
 Declarable in properties via
 `Foo = new://Resource?type=javax.mail.Session`

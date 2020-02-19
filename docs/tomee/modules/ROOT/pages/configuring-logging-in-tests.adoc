@@ -15,16 +15,13 @@ This variable is set by default to the current directory where your vm is execut
 So simply adding a file named embedded.logging.properties to your module may be all that you need to specify a new logging configuration for your tests.
 
 Alternatively, you can set "openejb.logger.external" to "true" as a system property (will not work as an InitialContext property).
-Then OpenEJB will not attempt to configure logging at all and you can configure logging with Log4j directly using any of its APIs;
-xml, properties, or code.
+Then OpenEJB will not attempt to configure logging at all and you can configure logging with Log4j directly using any of its APIs; xml, properties, or code.
 
 There are a couple good reasons for _not_ replacing the embedded.logging.properties file.
 
 . If you want to just change 5% of the logging settings, why take control over the other 95% as well.
 . We do occasionally add new logging categories.
 If you are not replacing the embedded.logging.properties you will pick these up automatically when you upgrade.
-
-
 
 == Overriding (recommended)
 
@@ -69,8 +66,6 @@ The overriding order is as follows: 1 = highest, 4 = lowest.
 . embedded.logging.properties in classpath
 
 By default there are no logging settings in 1-3, so #4 is the only source of logging information.
-
-
 
 == Default embedded.logging.properties contents
 

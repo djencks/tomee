@@ -3,13 +3,12 @@
 :jbake-status: published
 :index-group: Testing
 
-xref:getting-started.adoc[Getting Started] page gives you already a lot
-of inputs but you caneven go further.
+xref:getting-started.adoc[Getting Started] page gives you already a lot of inputs but you caneven go further.
 
 == @Descriptors
 
-You can reuse existing file descriptors using `@Descriptors`. The name
-is the file name and the path either a classpath path or a file path:
+You can reuse existing file descriptors using `@Descriptors`.
+The name is the file name and the path either a classpath path or a file path:
 
 [source,java]
 ----
@@ -24,8 +23,7 @@ Note: this can be put in a `@Module` method as well.
 
 == Services
 
-If you want to test a JAXRS or JAXWS service you need to activate these
-services.
+If you want to test a JAXRS or JAXWS service you need to activate these services.
 
 To do so just add the needed dependency and use `@EnableServices`:
 
@@ -40,13 +38,10 @@ public class MyTest {
 
 == Random port
 
-Services like JAXRS and JAXWS relies on HTTP. Often it is nice to have a
-random port to be able to deploy multiple tests/projects on the same CI
-platform at the same time.
+Services like JAXRS and JAXWS relies on HTTP. Often it is nice to have a random port to be able to deploy multiple tests/projects on the same CI platform at the same time.
 
-To shortcut all the needed logic you can use `@RandomPort`. It is simply
-an injection giving you either the port (`int`) or the root context
-(`URL`):
+To shortcut all the needed logic you can use `@RandomPort`.
+It is simply an injection giving you either the port (`int`) or the root context (`URL`):
 
 [source,java]
 ----
@@ -57,9 +52,8 @@ public class MyTest {
 }
 ----
 
-Note: you can generate this way multiple ports. The value is the name of
-the service it will apply on (being said http is an alias for httpejbd
-which is our embedded http layer).
+Note: you can generate this way multiple ports.
+The value is the name of the service it will apply on (being said http is an alias for httpejbd which is our embedded http layer).
 
 == Nice logs
 
@@ -67,13 +61,11 @@ which is our embedded http layer).
 
 == @JaxrsProvider
 
-`@JaxrsProvider` allows you to specify on a `@Module` method the list of
-JAXRS provider you want to use.
+`@JaxrsProvider` allows you to specify on a `@Module` method the list of JAXRS provider you want to use.
 
 == Dependencies without hacky code
 
-`@Jars` allows you to add dependencies (scanned) to your application
-automatically (like CDI libraries):
+`@Jars` allows you to add dependencies (scanned) to your application automatically (like CDI libraries):
 
 [source,java]
 ----
@@ -87,13 +79,11 @@ public WebApp app() {
 
 == @Default
 
-`@Default` automatically adds in the application `target/classes` as
-binaries and `src/main/webapp` as resources for maven projects.
+`@Default` automatically adds in the application `target/classes` as binaries and `src/main/webapp` as resources for maven projects.
 
 == @CdiExtensions
 
-This annotation allows you to control which extensions are activated
-during the test.
+This annotation allows you to control which extensions are activated during the test.
 
 == @AppResource
 
@@ -106,8 +96,8 @@ This annotation allows injection of few particular test resources like:
 
 == @MockInjector
 
-Allows to mock EJB injections. It decorates a dedicated method returning
-an instance (or Class) implementing `FallbackPropertyInjector`.
+Allows to mock EJB injections.
+It decorates a dedicated method returning an instance (or Class) implementing `FallbackPropertyInjector`.
 
 == @WebResource
 

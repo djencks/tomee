@@ -4,22 +4,19 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == Purpose
 
 You want to use JAAS in TomEE with custom (or OpenEJB) LoginModules.
 
 == Solution
 
-TomEE tries to keep as possible as it is Tomcat so simply configure your
-JAAS LoginModule as in Tomcat.
+TomEE tries to keep as possible as it is Tomcat so simply configure your JAAS LoginModule as in Tomcat.
 
 Note: only the first one will be used.
 
 == Configuration
 
-Add to your `CATALINA_OPTS` the `java.security.auth.login.config` system
-property:
+Add to your `CATALINA_OPTS` the `java.security.auth.login.config` system property:
 
 [source,properties]
 ----
@@ -36,8 +33,8 @@ Configure your realm in server.xml file
   <Listener className="org.apache.catalina.security.SecurityListener" />
 
   <Service name="Catalina">
-    <Connector port="8080" protocol="HTTP/1.1" 
-               connectionTimeout="20000" 
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
                redirectPort="8443" />
     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
     <Engine name="Catalina" defaultHost="localhost">
@@ -66,12 +63,10 @@ PropertiesLogin {
 };
 ----
 
-Configure your login module specifically (`users.properties` for
-snippets of this page for instance).
+Configure your login module specifically (`users.properties` for snippets of this page for instance).
 
 Place `users.properties` and `groups.properties` files in
-`$CATALINA_BASE/conf/` folder. `users.properties` file contains user
-name and associated password entries, ex.:
+`$CATALINA_BASE/conf/` folder. `users.properties` file contains user name and associated password entries, ex.:
 
 [source,properties]
 ----
@@ -88,6 +83,6 @@ manager-gui=tomee,me
 tomee-admin=tomee
 ----
 
-*NOTE*: `users.properties` and `groups.properties` file names and file
-location are fixed. If other names are used, the files must be placed in
+*NOTE*: `users.properties` and `groups.properties` file names and file location are fixed.
+If other names are used, the files must be placed in
 `%CATALINA_BASE/lib/` folder instead.

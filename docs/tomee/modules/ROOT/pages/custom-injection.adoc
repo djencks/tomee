@@ -4,7 +4,9 @@
 :jbake-type: page
 :jbake-status: published
 
-NOTE: TODO! This seems to be related to or another version of the example xref:{examples-vc}::custom-injection.adoc[]
+NOTE: TODO!
+This seems to be related to or another version of the example xref:{examples-vc}::custom-injection.adoc[]
+
 == Overview
 
 As noted in the xref:{examples-vc}::injection-of-env-entry.adoc[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.

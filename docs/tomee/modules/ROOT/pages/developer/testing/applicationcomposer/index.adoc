@@ -46,6 +46,7 @@ If you need JAXWS services you'll add (or replace thanks to transitivity of mave
 == ApplicationComposer Components
 
 === @Module
+
 An ApplicationComposer needs at minimum a module (the application you need to deploy).
 
 To do so you have two cases:
@@ -70,7 +71,8 @@ The expected returned type of these methods are in org.apache.openejb.jee packag
 - Beans: a CDI module,
 - Class[] or Class: a set of classes scanned to discover annotations
 
-Note that for easiness `@Classes` was added to be able to describe a module and some scanned classes. For instance the following snippet will create a web application with classes C1, C2 as CDI beans and E1 as an EJB automatically:
+Note that for easiness `@Classes` was added to be able to describe a module and some scanned classes.
+For instance the following snippet will create a web application with classes C1, C2 as CDI beans and E1 as an EJB automatically:
 
 [source,java]
 ----
@@ -82,7 +84,9 @@ public WebApp app() {
 ----
 
 === @Configuration
-Often you need to customize a bit the container or at least create some resources like test databases. To do so you can create a method returning Properties which will be the container properties.
+
+Often you need to customize a bit the container or at least create some resources like test databases.
+To do so you can create a method returning Properties which will be the container properties.
 
 Note: to simplify writing properties you can use PropertiesBuilder util class which is just a fluent API to write properties.
 
@@ -115,11 +119,14 @@ public class MyAppComposer() {
 ----
 
 === @Component
-Sometimes you need to customize a container component. The most common use case is the security service to mock a little bit authorization if you don't care in your test.
+
+Sometimes you need to customize a container component.
+The most common use case is the security service to mock a little bit authorization if you don't care in your test.
 
 To do so just write a method decorated with `@Component` returning the instance you desire.
 
-Components in TomEE are stored in a container Map and the key needs to be a Class. This one is deduced from the returned type of the `@Component` method:
+Components in TomEE are stored in a container Map and the key needs to be a Class.
+This one is deduced from the returned type of the `@Component` method:
 
 [source,java]
 ----
@@ -130,7 +137,9 @@ public SecurityService mockSecurity() {
 ----
 
 === @Descriptors
-You can reuse existing file descriptors using `@Descriptors`. The name is the file name and the path either a classpath path or a file path:
+
+You can reuse existing file descriptors using `@Descriptors`.
+The name is the file name and the path either a classpath path or a file path:
 
 [source,java]
 ----
@@ -144,6 +153,7 @@ public class MyTest {
 Note: this can be put in a `@Module` method as well.
 
 === Services
+
 If you want to test a JAXRS or JAXWS service you need to activate these services.
 
 To do so just add the needed dependency and use `@EnableServices`:
@@ -158,9 +168,11 @@ public class MyTest {
 ----
 
 === Random port
+
 Services like JAXRS and JAXWS relies on HTTP. Often it is nice to have a random port to be able to deploy multiple tests/projects on the same CI platform at the same time.
 
-To shortcut all the needed logic you can use `@RandomPort`. It is simply an injection giving you either the port (int) or the root context (URL):
+To shortcut all the needed logic you can use `@RandomPort`.
+It is simply an injection giving you either the port (int) or the root context (URL):
 
 [source,java]
 ----
@@ -171,15 +183,19 @@ public class MyTest {
 }
 ----
 
-Note: you can generate this way multiple ports. The value is the name of the service it will apply on (being said http is an alias for httpejbd which is our embedded http layer).
+Note: you can generate this way multiple ports.
+The value is the name of the service it will apply on (being said http is an alias for httpejbd which is our embedded http layer).
 
 === Nice logs
+
 @SimpleLog annotation allows you to have one liner logs
 
 === @JaxrsProvider
+
 @JaxrsProvider allows you to specify on a `@Module` method the list of JAXRS provider you want to use.
 
 === Dependencies without hacky code
+
 @Jars allows you to add dependencies (scanned) to your application automatically (like CDI libraries):
 
 [source,java]
@@ -193,28 +209,32 @@ public WebApp app() {
 ----
 
 === @Default
+
 @Default (openejb one not CDI one) automatically adds in the application target/classes as binaries and src/main/webapp as resources for maven projects.
 
 === @CdiExtensions
+
 This annotation allows you to control which extensions are activated during the test.
 
 === @AppResource
+
 This annotation allows injection of few particular test resources like:
 
-the test AppModule (application meta)
-the test Context (JNDI)
-the test ApplicationComposers (underlying runner)
-ContextProvider: allow to mock JAXRS contexts
+the test AppModule (application meta) the test Context (JNDI) the test ApplicationComposers (underlying runner) ContextProvider: allow to mock JAXRS contexts
 
 === @MockInjector
-Allows to mock EJB injections. It decorates a dedicated method returning an instance (or Class) implementing FallbackPropertyInjector.
+
+Allows to mock EJB injections.
+It decorates a dedicated method returning an instance (or Class) implementing FallbackPropertyInjector.
 
 === @WebResource
+
 Allow for web application to add folders containing web resources.
 
-
 == How to run it?
+
 === JUnit
+
 If you use JUnit you have mainly 2 solutions to run you "model" using the ApplicationComposer:
 
 using ApplicationComposer runner:
@@ -227,16 +247,19 @@ using ApplicationComposer runner:
 using ApplicationComposerRule rule:
 public class MyTest { `@Rule` // or `@ClassRule` if you want the container/application lifecycle be bound to the class and not test methods public final ApplicationComposerRule rule = new ApplicationComposerRule(this); }
 
-Tip: since TomEE 7.x ApplicationComposerRule is decomposed in 2 rules if you need: ContainerRule and DeployApplication. Using JUnit RuleChain you can chain them to get the samebehavior as ApplicationComposerRule or better deploy multiple ApplicationComposer models and controlling their deployment ordering (to mock a remote service for instance).
+Tip: since TomEE 7.x ApplicationComposerRule is decomposed in 2 rules if you need: ContainerRule and DeployApplication.
+Using JUnit RuleChain you can chain them to get the samebehavior as ApplicationComposerRule or better deploy multiple ApplicationComposer models and controlling their deployment ordering (to mock a remote service for instance).
 
 Finally just write `@Test` method using test class injections as if the test class was a managed bean!
 
 === TestNG
+
 TestNG integration is quite simple today and mainly ApplicationComposerListener class you can configure as a listener to get ApplicationComposer features.
 
 Finally just write TestNG `@Test` method using test class injections as if the test class was a managed bean!
 
 === Standalone
+
 Since TomEE 7.x you can also use ApplicationComposers to directly run you ApplicationComposer model as a standalone application:
 
 [source,java]
@@ -279,9 +302,7 @@ When having a huge suite of test it can be long to start/deploy/undeploy/shutdow
 
 That's why `SingleApplicationComposerRunner` allows to just reuse the same instance accross several test.
 
-The first test will start and deploy the application and then other tests will reuse this instance until the JVM is destroyed
-where the server/application will be undeployed/shutdown.
-
+The first test will start and deploy the application and then other tests will reuse this instance until the JVM is destroyed where the server/application will be undeployed/shutdown.
 
 Here a simple usage:
 
@@ -305,8 +326,7 @@ public class MyTest {
 }
 ----
 
-TIP: if you need a real TomEE container then you can have a look to `TomEEEmbeddedSingleRunner` which does deploys the classpath
-using tomee-embedded.
+TIP: if you need a real TomEE container then you can have a look to `TomEEEmbeddedSingleRunner` which does deploys the classpath using tomee-embedded.
 
 === Configure what to deploy
 
@@ -317,9 +337,8 @@ The application lookup uses this strategy (ordered):
 - the fully qualified name is read from the system property `tomee.application-composer.application`
 - a *single* class decorated with `@Application` is looked in the jar/folder containing the test class
 
-If you have several "groups" you can use JUnit `@Category` to differentiate them and write one application class by category. Then
-in `surefire` plugin you declare two `executions` enforcing the system property `tomee.application-composer.application` for each of them
-and the associated `@Category`.
+If you have several "groups" you can use JUnit `@Category` to differentiate them and write one application class by category.
+Then in `surefire` plugin you declare two `executions` enforcing the system property `tomee.application-composer.application` for each of them and the associated `@Category`.
 
 === Available injections
 
@@ -327,9 +346,8 @@ and the associated `@Category`.
 - CDI injections are supported
 - `@Application` on a field allows to get the application model to get injected
 
-Compared to a standalone usage it misses all other EE injections (`@PersistenceContext`, `@Resource` etc... but you can inject them in the application model
-and just expose them or wrap them in your tests thanks to the `@Application` field.
-
+Compared to a standalone usage it misses all other EE injections (`@PersistenceContext`, `@Resource` etc... but you can inject them in the application model and just expose them or wrap them in your tests thanks to the `@Application` field.
 
 == Going further
+
 If you want to learn more about ApplicationComposer see xref:../../../advanced/applicationcomposer/index.adoc[ApplicationComposer Advanced] page.

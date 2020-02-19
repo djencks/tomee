@@ -3,32 +3,23 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == @Resource Overview
 
-This example demonstrates the use of the injection of environment
-entries using *`@Resource`* annotation.
+This example demonstrates the use of the injection of environment entries using *`@Resource`* annotation.
 
-The EJB 3.0 specification (_EJB Core Contracts and Requirements_)
-section 16.2.2 reads:
+The EJB 3.0 specification (_EJB Core Contracts and Requirements_) section 16.2.2 reads:
 
-_A field or method of a bean class may be annotated to request that an
-entry from the bean's environment be injected. Any of the types of
-resources or other environment entries described in this chapter may be
-injected. Injection may also be requested using entries in the
-deployment descriptor corresponding to each of these resource types._
+_A field or method of a bean class may be annotated to request that an entry from the bean's environment be injected.
+Any of the types of resources or other environment entries described in this chapter may be injected.
+Injection may also be requested using entries in the deployment descriptor corresponding to each of these resource types._
 
-_Environment entries may also be injected into the bean through bean
-methods that follow the naming conventions for JavaBeans properties. The
-annotation is applied to the set method for the property, which is the
-method that is called to inject the environment entry. The JavaBeans
-property name (not the method name) is used as the default JNDI name._
+_Environment entries may also be injected into the bean through bean methods that follow the naming conventions for JavaBeans properties.
+The annotation is applied to the set method for the property, which is the method that is called to inject the environment entry.
+The JavaBeans property name (not the method name) is used as the default JNDI name._
 
-The _PurchaseOrderBean_ class shows use of field-level *`@Resource`*
-annotation.
+The _PurchaseOrderBean_ class shows use of field-level *`@Resource`* annotation.
 
-The _InvoiceBean_ class shows the use of method-level *`@Resource`*
-annotation.
+The _InvoiceBean_ class shows the use of method-level *`@Resource`* annotation.
 
 The source for this example can be checked out from svn:
 
@@ -37,8 +28,7 @@ $ svn co
 http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/injection-of-env-entry
 __________________________________________________________________________________________
 
-To run it change your working directory to the directory
-_injection-of-env-entry_ and run the following maven2 commands:
+To run it change your working directory to the directory _injection-of-env-entry_ and run the following maven2 commands:
 
 ___________________________
 $ cd injection-of-env-entry
@@ -52,12 +42,9 @@ ___________________
 
 === Injection through field (field-level injection)
 
-The _maxLineItem_ field in _PurchaseOrderBean_ class is annotated with
-*@Resource* annotation to inform the EJB container the location where in
-the code the injection of a simple environment entry should take place.
-The default value of 10 is assigned. You can modify the value of the
-environment entries at deployment time using deployment descriptor
-(*ejb-jar.xml*).
+The _maxLineItem_ field in _PurchaseOrderBean_ class is annotated with *@Resource* annotation to inform the EJB container the location where in the code the injection of a simple environment entry should take place.
+The default value of 10 is assigned.
+You can modify the value of the environment entries at deployment time using deployment descriptor (*ejb-jar.xml*).
 
 ==== @Resource annotation of a field
 
@@ -69,21 +56,17 @@ int maxLineItems = 10;
 
 === Injection through a setter method (method-level injection)
 
-The _setMaxLineItem_ method in _InvoiceBean_ class is annotated with
-_@Resource_ annotation to inject the simple environment entry. Only
-setters can be used as a way to inject environment entry values.
+The _setMaxLineItem_ method in _InvoiceBean_ class is annotated with _@Resource_ annotation to inject the simple environment entry.
+Only setters can be used as a way to inject environment entry values.
 
-You could look up the env-entry using JNDI lookup() method and the
-following name:
+You could look up the env-entry using JNDI lookup() method and the following name:
 
 [source,properties]
 ----
 java:comp/env/org.apache.openejb.examples.resource.InvoiceBean/maxLineItems
 ----
 
-The pattern is to combine the fully-qualified class name and the name of
-a instance field (or a name of the setter method without _set_ prefix
-and the first letter lowercased).
+The pattern is to combine the fully-qualified class name and the name of a instance field (or a name of the setter method without _set_ prefix and the first letter lowercased).
 
 ==== @Resource annotation of a setter method
 
@@ -127,9 +110,8 @@ public void addLineItem(LineItem item) throws TooManyItemsException {
 
 == JUnit Test
 
-Writing an JUnit test for this example is quite simple. We need just to
-write a setup method to create and initialize the InitialContext, and
-then write our test methods.
+Writing an JUnit test for this example is quite simple.
+We need just to write a setup method to create and initialize the InitialContext, and then write our test methods.
 
 === Test fixture
 
@@ -162,8 +144,8 @@ public void testAddLineItem() throws Exception {
 
 == Running
 
-Running the example is fairly simple. Just execute the following
-commands:
+Running the example is fairly simple.
+Just execute the following commands:
 
 ___________________________
 $ cd injection-of-env-entry

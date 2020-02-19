@@ -12,8 +12,8 @@ org.apache.openejb.maven:tomee-maven-plugin[:Current Version]:list
 
 Description:
 
-Highly inspired from openejb command helper but with some different
-data. List deployed EJB in a running TomEE.
+Highly inspired from openejb command helper but with some different data.
+List deployed EJB in a running TomEE.
 
 Attributes:
 

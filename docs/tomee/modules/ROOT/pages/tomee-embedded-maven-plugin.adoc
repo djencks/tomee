@@ -5,16 +5,11 @@
 :jbake-status: published
 
 
-xref:tomee-maven-plugin.adoc[TomEE Maven Plugin] provides a nice way to
-run "as in production" a server fully configured keeping the
-configuration in the project (easiness of sharing between team members).
-However for modern web development the fact to run the "exploded war"
-prevents to develop web resources in place. TomEE embedded maven plugin
-solves it directly allowing to directly deploy the war project in place
-using "classpath as war" option.
+xref:tomee-maven-plugin.adoc[TomEE Maven Plugin] provides a nice way to run "as in production" a server fully configured keeping the configuration in the project (easiness of sharing between team members).
+However for modern web development the fact to run the "exploded war" prevents to develop web resources in place.
+TomEE embedded maven plugin solves it directly allowing to directly deploy the war project in place using "classpath as war" option.
 
-It also allows to use a flat classpath deployment which is often use
-with microservices.
+It also allows to use a flat classpath deployment which is often use with microservices.
 
 == tomee-embedded:run
 
@@ -399,7 +394,8 @@ User property is: `tomee-plugin.work`.
 
 == Parameter Details
 
-[[ajpPort]]*ajpPort:* +
+[[ajpPort]]
+*ajpPort:* +
 (no description)
 
 - Type: int
@@ -407,7 +403,8 @@ User property is: `tomee-plugin.work`.
 - User Property: `tomee-embedded-plugin.ajp`
 - Default: `8009`
 
-[[applicationCopyFolder]]*applicationCopyFolder:* +
+[[applicationCopyFolder]]
+*applicationCopyFolder:* +
 (no description)
 
 - Type: java.io.File
@@ -415,19 +412,22 @@ User property is: `tomee-plugin.work`.
 - User Property: `tomee-plugin.application-copy`
 - Default: `${project.build.directory}/tomee-embedded/applications`
 
-[[applicationScopes]]*applicationScopes:* +
+[[applicationScopes]]
+*applicationScopes:* +
 (no description)
 
 - Type: java.util.List
 - Required: No
 
-[[applications]]*applications:* +
+[[applications]]
+*applications:* +
 (no description)
 
 - Type: java.util.List
 - Required: No
 
-[[classpathAsWar]]*classpathAsWar:* +
+[[classpathAsWar]]
+*classpathAsWar:* +
 (no description)
 
 - Type: boolean
@@ -435,27 +435,31 @@ User property is: `tomee-plugin.work`.
 - User Property: `tomee-embedded-plugin.classpathAsWar`
 - Default: `false`
 
-[[clientAuth]]*clientAuth:* +
+[[clientAuth]]
+*clientAuth:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.clientAuth`
 
-[[containerProperties]]*containerProperties:* +
+[[containerProperties]]
+*containerProperties:* +
 (no description)
 
 - Type: java.util.Map
 - Required: No
 
-[[context]]*context:* +
+[[context]]
+*context:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.context`
 
-[[dir]]*dir:* +
+[[dir]]
+*dir:* +
 (no description)
 
 - Type: java.lang.String
@@ -463,7 +467,8 @@ User property is: `tomee-plugin.work`.
 - User Property: `tomee-embedded-plugin.lib`
 - Default: `${project.build.directory}/apache-tomee-embedded`
 
-[[docBase]]*docBase:* +
+[[docBase]]
+*docBase:* +
 (no description)
 
 - Type: java.io.File
@@ -471,7 +476,8 @@ User property is: `tomee-plugin.work`.
 - User Property: `tomee-embedded-plugin.docBase`
 - Default: `${project.basedir}/src/main/webapp`
 
-[[forceJspDevelopment]]*forceJspDevelopment:* +
+[[forceJspDevelopment]]
+*forceJspDevelopment:* +
 force webapp to be reloadable
 
 - Type: boolean
@@ -479,7 +485,8 @@ force webapp to be reloadable
 - User Property: `tomee-plugin.jsp-development`
 - Default: `true`
 
-[[host]]*host:* +
+[[host]]
+*host:* +
 (no description)
 
 - Type: java.lang.String
@@ -487,7 +494,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.host`
 - Default: `localhost`
 
-[[httpPort]]*httpPort:* +
+[[httpPort]]
+*httpPort:* +
 (no description)
 
 - Type: int
@@ -495,7 +503,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.http`
 - Default: `8080`
 
-[[httpsPort]]*httpsPort:* +
+[[httpsPort]]
+*httpsPort:* +
 (no description)
 
 - Type: int
@@ -503,19 +512,22 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.httpsPort`
 - Default: `8443`
 
-[[inlinedServerXml]]*inlinedServerXml:* +
+[[inlinedServerXml]]
+*inlinedServerXml:* +
 (no description)
 
 - Type: org.codehaus.plexus.configuration.PlexusConfiguration
 - Required: No
 
-[[inlinedTomEEXml]]*inlinedTomEEXml:* +
+[[inlinedTomEEXml]]
+*inlinedTomEEXml:* +
 (no description)
 
 - Type: org.codehaus.plexus.configuration.PlexusConfiguration
 - Required: No
 
-[[keepServerXmlAsThis]]*keepServerXmlAsThis:* +
+[[keepServerXmlAsThis]]
+*keepServerXmlAsThis:* +
 (no description)
 
 - Type: boolean
@@ -523,28 +535,32 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.keepServerXmlAsThis`
 - Default: `false`
 
-[[keyAlias]]*keyAlias:* +
+[[keyAlias]]
+*keyAlias:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.keyAlias`
 
-[[keystoreFile]]*keystoreFile:* +
+[[keystoreFile]]
+*keystoreFile:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.keystoreFile`
 
-[[keystorePass]]*keystorePass:* +
+[[keystorePass]]
+*keystorePass:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.keystorePass`
 
-[[keystoreType]]*keystoreType:* +
+[[keystoreType]]
+*keystoreType:* +
 (no description)
 
 - Type: java.lang.String
@@ -552,7 +568,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.keystoreType`
 - Default: `JKS`
 
-[[mavenLog]]*mavenLog:* +
+[[mavenLog]]
+*mavenLog:* +
 (no description)
 
 - Type: boolean
@@ -560,7 +577,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.mavenLog`
 - Default: `true`
 
-[[modules]]*modules:* +
+[[modules]]
+*modules:* +
 (no description)
 
 - Type: java.util.List
@@ -568,14 +586,16 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.modules`
 - Default: `${project.build.outputDirectory}`
 
-[[packaging]]*packaging:* +
+[[packaging]]
+*packaging:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - Default: `${project.packaging}`
 
-[[quickSession]]*quickSession:* +
+[[quickSession]]
+*quickSession:* +
 (no description)
 
 - Type: boolean
@@ -583,19 +603,22 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.quickSession`
 - Default: `true`
 
-[[roles]]*roles:* +
+[[roles]]
+*roles:* +
 (no description)
 
 - Type: java.util.Map
 - Required: No
 
-[[serverXml]]*serverXml:* +
+[[serverXml]]
+*serverXml:* +
 (no description)
 
 - Type: java.io.File
 - Required: No
 
-[[skipCurrentProject]]*skipCurrentProject:* +
+[[skipCurrentProject]]
+*skipCurrentProject:* +
 (no description)
 
 - Type: boolean
@@ -603,15 +626,16 @@ force webapp to be reloadable
 - User Property: `tomee-plugin.skip-current-project`
 - Default: `false`
 
-[[skipHttp]]*skipHttp:* +
+[[skipHttp]]
+*skipHttp:* +
 (no description)
 
-- Type: boolean
- -Required: No
+- Type: boolean -Required: No
 - User Property: `tomee-embedded-plugin.skipHttp`
 - Default: `false`
 
-[[ssl]]*ssl:* +
+[[ssl]]
+*ssl:* +
 (no description)
 
 - Type: boolean
@@ -619,14 +643,16 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.ssl`
 - Default: `false`
 
-[[sslProtocol]]*sslProtocol:* +
+[[sslProtocol]]
+*sslProtocol:* +
 (no description)
 
 - Type: java.lang.String
 - Required: No
 - User Property: `tomee-embedded-plugin.sslProtocol`
 
-[[stopPort]]*stopPort:* +
+[[stopPort]]
+*stopPort:* +
 (no description)
 
 - Type: int
@@ -634,7 +660,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.stop`
 - Default: `8005`
 
-[[useProjectClasspath]]*useProjectClasspath:* +
+[[useProjectClasspath]]
+*useProjectClasspath:* +
 (no description)
 
 - Type: boolean
@@ -642,20 +669,23 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.useProjectClasspath`
 - Default: `true`
 
-[[users]]*users:* +
+[[users]]
+*users:* +
 (no description)
 
 - Type: java.util.Map
 - Required: No
 
-[[warFile]]*warFile:* +
+[[warFile]]
+*warFile:* +
 (no description)
 
 - Type: java.io.File
 - Required: No
 - Default: `${project.build.directory}/{project.build.finalName}`
 
-[[webResourceCached]]*webResourceCached:* +
+[[webResourceCached]]
+*webResourceCached:* +
 (no description)
 
 - Type: boolean
@@ -663,7 +693,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.webResourceCached`
 - Default: `true`
 
-[[withEjbRemote]]*withEjbRemote:* +
+[[withEjbRemote]]
+*withEjbRemote:* +
 (no description)
 
 - Type: boolean
@@ -671,7 +702,8 @@ force webapp to be reloadable
 - User Property: `tomee-embedded-plugin.withEjbRemote`
 - Default: `false`
 
-[[workDir]]*workDir:* +
+[[workDir]]
+*workDir:* +
 (no description)
 
 - Type: java.io.File

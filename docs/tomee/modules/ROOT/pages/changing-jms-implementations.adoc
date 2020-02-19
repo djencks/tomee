@@ -96,9 +96,9 @@ Let's say that the following file lives in the jar at `META-INF/org.superbiz/ser
 ----
 
 It is strongly recommended to not leave the values in the service-jar.xml file blank as shown above.
-It is  possible to setup several sets of defaults in a `service-jar.xml` or via several `service-jar.xml` files.
+It is possible to setup several sets of defaults in a `service-jar.xml` or via several `service-jar.xml` files.
 
-Once this file is packed in a jar and added to the `<tomee.home>/lib` or  `<openejb.home>/lib` directory, you can  then declare and configure "instances" of these things in your `tomee.xml` or `openejb.xml` config file as follows:
+Once this file is packed in a jar and added to the `<tomee.home>/lib` or  `<openejb.home>/lib` directory, you can then declare and configure "instances" of these things in your `tomee.xml` or `openejb.xml` config file as follows:
 
 [source,xml]
 ----
@@ -118,7 +118,7 @@ Or in properties like so:
  myGenericAdapter.AdapterProperty2 = PropertyValue2
 ----
 
-This is basically the same as all configuration in TomEE/OpenEJB, but with the addition that you must  specify the `provider` attribute so the server knows where to look for the `service-jar.xml` file that  defines the resource and all its defaults.
+This is basically the same as all configuration in TomEE/OpenEJB, but with the addition that you must specify the `provider` attribute so the server knows where to look for the `service-jar.xml` file that defines the resource and all its defaults.
 
 In this example:
 

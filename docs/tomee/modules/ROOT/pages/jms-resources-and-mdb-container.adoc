@@ -4,7 +4,6 @@
 :jbake-type: page
 :jbake-status: published
 
-
 == External ActiveMQ Broker
 
 [source,xml]
@@ -29,9 +28,8 @@
 </tomee>
 ----
 
-The `ServerUrl` would be changed to point to the host and port of the
-ActiveMQ process. The various URL formats that ActiveMQ supports also
-work, such as 'failover:'.
+The `ServerUrl` would be changed to point to the host and port of the ActiveMQ process.
+The various URL formats that ActiveMQ supports also work, such as 'failover:'.
 
 == Internal ActiveMQ Broker
 
@@ -85,16 +83,11 @@ config will automatically setup JDBC Persistence using the
 
 === Internal ActiveMQ Broker with activemq.xml
 
-The activemq.xml file format requires a number of Spring dependencies,
-and is therefore not included in the distribution by default. This is
-purley due to the fact that this ActiveMQ file format is parsed using
-Spring libraries and this is beyond our control. However, the advantage
-is opening up the door to the huge number of configuration options
-available found here: http://activemq.apache.org/xml-configuration.html.
+The activemq.xml file format requires a number of Spring dependencies, and is therefore not included in the distribution by default.
+This is purley due to the fact that this ActiveMQ file format is parsed using Spring libraries and this is beyond our control.
+However, the advantage is opening up the door to the huge number of configuration options available found here: http://activemq.apache.org/xml-configuration.html.
 
-This support can be enabled by adding the right libraries and creating
-an link:activemq.xml[`[tomee]/conf/activemq.xml`] file (Click the link
-for a basic example).
+This support can be enabled by adding the right libraries and creating an link:activemq.xml[`[tomee]/conf/activemq.xml`] file (Click the link for a basic example).
 
 Add the following jars to the `tomee/lib/` directory:
 
@@ -109,8 +102,7 @@ Later versions should work, but have not been tested.
 Create an link:activemq.xml[activemq.xml file] a in
 `[tomee]/conf/activemq.xml`.
 
-Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown
-belog.
+Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
 
 [source,xml]
 ----
@@ -137,8 +129,7 @@ Finally, restart the server.
 
 == Configuration via System properties
 
-The same can be done via properties in an embedded configuration, via
-the `conf/system.properties` file or on the command line via `-D` flags.
+The same can be done via properties in an embedded configuration, via the `conf/system.properties` file or on the command line via `-D` flags.
 
 [source,java]
 ----
@@ -163,8 +154,7 @@ InitialContext context = new InitialContext(p);
 
 == Global lookup of JMS Resources
 
-From anywhere in the same VM as the EJB Container you could lookup the
-above resources like so:
+From anywhere in the same VM as the EJB Container you could lookup the above resources like so:
 
 [source,properties]
 ----
@@ -177,9 +167,9 @@ javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
 
 == MDB ActivationConfig
 
-Here, the value for `destination` is the physical name of the desired
-destination. The value for `destinationType` is the class name that
-defines the type of destination. It should be `javax.jms.Queue` or
+Here, the value for `destination` is the physical name of the desired destination.
+The value for `destinationType` is the class name that defines the type of destination.
+It should be `javax.jms.Queue` or
 `javax.jms.Topic`.
 
 The Activation Spec properties that can be configured are:

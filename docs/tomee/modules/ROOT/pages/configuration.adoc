@@ -16,19 +16,16 @@ If set, the directory pointed by the property is searched for resources before o
 * _openejb.configuration_ - OpenEJB configuration file path.
 * _openejb.loader_ - OpenEJB loader that's responsible for loading EJBs.
 There are 3 different loader types:
-**  _tomcat-webapp_ - set it when inside of Tomcat scoped at just the webapp, aka. xref:collapsed-ear.adoc[Collapsed EAR]
-**  _tomcat_ - set it when inside of Tomcat scoped for all webapps to share
-**  _system_ (also: bootstrap)
-**  _embedded_ (also: noload)
-* _openejb.configurator_ (default: _org.openejb.alt.config.ConfigurationFactory_ ) - a class that builds org.openejb.alt.assembler.classic.OpenEjbConfiguration object;
-implements the org.openejb.alt.assembler.classic.OpenEjbConfigurationFactory interface
+** _tomcat-webapp_ - set it when inside of Tomcat scoped at just the webapp, aka. xref:collapsed-ear.adoc[Collapsed EAR]
+** _tomcat_ - set it when inside of Tomcat scoped for all webapps to share
+** _system_ (also: bootstrap)
+** _embedded_ (also: noload)
+* _openejb.configurator_ (default: _org.openejb.alt.config.ConfigurationFactory_ ) - a class that builds org.openejb.alt.assembler.classic.OpenEjbConfiguration object; implements the org.openejb.alt.assembler.classic.OpenEjbConfigurationFactory interface
 * _openejb.descriptors.output_
 ** possible values: true | false
 ** When set OpenEJB saves deployment descriptors
 *** ejb-jar.xml
 *** openejb-jar.xml
-
-
 
 === Configuration File
 
@@ -60,12 +57,13 @@ This includes finding where the, possibly many, entries in the openejb.conf poin
 The openejb.home is where the code loading OpenEJB will look for all the OpenEJB libraries.
 Usually openejb.base is not explicitly set and defaults to the value of openejb.home, so many people are used to only dealing with openejb.home.
 
-The point of having and openejb.base and openejb.home was basically to allow several independently configured instances of OpenEJB running on a system (perhaps embedded in Swing apps, in Tomcat, running as a standalone Server, or even in Groovy as Mr. Strachan did!) but without the need to copy all the OpenEJB system libraries everywhere.
+The point of having and openejb.base and openejb.home was basically to allow several independently configured instances of OpenEJB running on a system (perhaps embedded in Swing apps, in Tomcat, running as a standalone Server, or even in Groovy as Mr.
+Strachan did!) but without the need to copy all the OpenEJB system libraries everywhere.
 
 _openejb.home_
 
 * can be set explicitly via a system property.
-* if not set it default's to user.dir, which is the current working   directory.
+* if not set it default's to user.dir, which is the current working directory.
 
 _openejb.base_
 
@@ -74,15 +72,15 @@ _openejb.base_
 
 _openejb.configuration_
 
-* can be set to explicitly point to the file containing your   configuration.
-* If set to a relative path, we first look in user.dir/your-conf-file,   then in openejb.base/your-conf-file     * If not set we check in openejb.base/conf/openejb.conf     * If no conf file is found, we create one in   openejb.base/conf/openejb.conf
+* can be set to explicitly point to the file containing your configuration.
+* If set to a relative path, we first look in user.dir/your-conf-file, then in openejb.base/your-conf-file * If not set we check in openejb.base/conf/openejb.conf * If no conf file is found, we create one in openejb.base/conf/openejb.conf
 
 _relative paths in openejb.conf_
 
 * Deployment entries are resolved relative to openejb.base.
 * Containers use openejb.base to resolve their own config files.
-For   example, Castor JDO to loads the database.xml and all other files from the   openejb.base directory.
-* Resource adapters that are embedded usually have config files of their   own and are also loaded from the openeb.base.
+For example, Castor JDO to loads the database.xml and all other files from the openejb.base directory.
+* Resource adapters that are embedded usually have config files of their own and are also loaded from the openeb.base.
 
 _log files_
 

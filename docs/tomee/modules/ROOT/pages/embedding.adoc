@@ -13,20 +13,15 @@ The basic process for embedding OpenEJB:
 
 == Important docs
 
-* xref:application-discovery-via-the-classpath.adoc[Application
-discovery via the classpath]
+* xref:application-discovery-via-the-classpath.adoc[Application discovery via the classpath]
 * xref:embedded-configuration.adoc[Embedded Configuration]
-* xref:configuring-datasources-in-tests.adoc[Configuring DataSources in
-Tests]
-* xref:configuring-persistenceunits-in-tests.adoc[Configuring
-PersistenceUnits in Tests]
-* xref:configuring-containers-in-tests.adoc[Configuring Containers in
-Tests]
+* xref:configuring-datasources-in-tests.adoc[Configuring DataSources in Tests]
+* xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits in Tests]
+* xref:configuring-containers-in-tests.adoc[Configuring Containers in Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
 * xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean
-inner-class]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
 * [TestCase Injection (@LocalClient)](local-client-injection.html)
 
 == Examples

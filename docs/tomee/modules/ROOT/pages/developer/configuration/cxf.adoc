@@ -4,7 +4,8 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
-TomEE relies on Apache CXF for JAX-RS (RESTful Services) and JAX-WS (Web Services). It does not provide all CXF modules, but the most common ones for both specifications (JAX-RS is part of all distributions but JAX-WS is only part of plus one).
+TomEE relies on Apache CXF for JAX-RS (RESTful Services) and JAX-WS (Web Services).
+It does not provide all CXF modules, but the most common ones for both specifications (JAX-RS is part of all distributions but JAX-WS is only part of plus one).
 
 == Configuration
 
@@ -28,9 +29,7 @@ To configure JAX-RS you need to add in `openejb-jar.xml` a `pojo-deployment`:
 </openejb-jar>
 ----
 
-For JAX-WS you will use a `pojo-deployment` matching the webservice class name for POJO webservices
-or an `ejb-deployment` instead of a `pojo-deployment` for EJB webservices:
-
+For JAX-WS you will use a `pojo-deployment` matching the webservice class name for POJO webservices or an `ejb-deployment` instead of a `pojo-deployment` for EJB webservices:
 
 [source,xml]
 ----
@@ -56,7 +55,8 @@ Then once you selected your prefix and know where to write the config just use t
 - providers (only for JAX-RS endpoint): list of JAX-RS providers
 - skip-provider-scanning (only for JAX-RS): is provider scanning on or not (default true)
 
-For features and interceptors the rule is the same: value is a list comma separated. Each value of the list is either a qualified class name or an id of a service in resources.xml.
+For features and interceptors the rule is the same: value is a list comma separated.
+Each value of the list is either a qualified class name or an id of a service in resources.xml.
 
 Databinding is simply either a qualified name or a service id in resources.xml (located in WEB-INF).
 

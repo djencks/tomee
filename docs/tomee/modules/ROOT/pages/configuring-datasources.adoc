@@ -5,12 +5,11 @@
 :jbake-status: published
 
 
-The __ element is used to configure a _javax.sql.DataSource_. It is also
-used to configure other resources like Timers, Topics, Queues. We will
-see some examples of using to configure a DataSource.
+The __ element is used to configure a _javax.sql.DataSource_.
+It is also used to configure other resources like Timers, Topics, Queues.
+We will see some examples of using to configure a DataSource.
 
-The element is designed after `@Resource` annotation and has similar
-attributes.
+The element is designed after `@Resource` annotation and has similar attributes.
 
 For example, this annotation in your bean:
 
@@ -28,8 +27,7 @@ Would map to a Resource declared in your openejb.xml as follows:
 <Resource>
 ----
 
-Note that in the xml element, the _type_ value of _javax.sql.DataSource_
-can abbreviated to just _DataSource_ as follows:
+Note that in the xml element, the _type_ value of _javax.sql.DataSource_ can abbreviated to just _DataSource_ as follows:
 
 [source,xml]
 ----
@@ -38,8 +36,7 @@ can abbreviated to just _DataSource_ as follows:
 <Resource>
 ----
 
-It is also possible to specify the path to the driver jar file using a
-classpath attribute like so:
+It is also possible to specify the path to the driver jar file using a classpath attribute like so:
 
 [source,xml]
 ----
@@ -54,26 +51,20 @@ classpath attribute like so:
 ----
 <Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1">
  . . . .
-<Resource>  
+<Resource>
 ----
 
-See xref:containers-and-resources.adoc[Containers and Resources] for a
-complete list of supported DataSource properties.
+See xref:containers-and-resources.adoc[Containers and Resources] for a complete list of supported DataSource properties.
 
-See xref:datasource-password-encryption.adoc[DataSource Password
-Encryption] for information on specifying non-plain-text database
-passwords in your openejb.xml file.
+See xref:datasource-password-encryption.adoc[DataSource Password Encryption] for information on specifying non-plain-text database passwords in your openejb.xml file.
 
-See xref:common-datasource-configurations.adoc[Common DataSource
-Configurations] for a list of the commonly used databases and their
-driver configurations.
+See xref:common-datasource-configurations.adoc[Common DataSource Configurations] for a list of the commonly used databases and their driver configurations.
 
-See xref:datasource-configuration-by-creator.adoc[DataSource
-Configuration by Creator] for a list of the different properties
-supported for each data source creator.
+See xref:datasource-configuration-by-creator.adoc[DataSource Configuration by Creator] for a list of the different properties supported for each data source creator.
 
-You may also need data partitioning per customer or depending on any
-other business criteria. That's also an available feature. See
+You may also need data partitioning per customer or depending on any other business criteria.
+That's also an available feature.
+See
 xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 
 == JNDI names for configured DataSources
@@ -87,8 +78,7 @@ xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 </Resource>
 ----
 
-The global jndi name would be _java:openejb/Resource/Default JDBC
-Database_
+The global jndi name would be _java:openejb/Resource/Default JDBC Database_
 
 === Example 2
 
@@ -103,21 +93,16 @@ The global jndi name would be _java:openejb/Resource/Derby Database_
 
 == Obtaining a DataSource
 
-DataSource references in your ejb should get automatically mapped to the
-Resource you declare. The shortest and easiest rule is that _if your
-reference name matches a Resource in your openejb.xml, that's the one
-you get_.  Essentially, the rules for mapping are as follows.
+DataSource references in your ejb should get automatically mapped to the Resource you declare.
+The shortest and easiest rule is that _if your reference name matches a Resource in your openejb.xml, that's the one you get_.  Essentially, the rules for mapping are as follows.
 
 [arabic]
-. Name Attribute Match - `@Resource` with a name attribute matching the
-resource name gets that resource injected
-. Injected Name Match - variable name matching the resource name gets
-that resource injected
-. No Match - nothing matches a resource name, so the first resource
-available gets injected
+. Name Attribute Match - `@Resource` with a name attribute matching the resource name gets that resource injected
+. Injected Name Match - variable name matching the resource name gets that resource injected
+. No Match - nothing matches a resource name, so the first resource available gets injected
 
-There are various ways one could obtain a DataSource now. Lets take an
-example of Derby.
+There are various ways one could obtain a DataSource now.
+Lets take an example of Derby.
 
 With a Resource declaration in your openejb.xml like this:
 
