@@ -4,6 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
+//APPEARS TO BE NOT IN COMMON
 == Introduction
 
 XA datasources are able to participate in global transactions involving more than one resource - for example, scenarios where a transaction needs to encompass connections to two different databases,, or a database and a JMS resource.
@@ -12,8 +13,7 @@ The global transaction manager will provide a two phase commit for all the resou
 
 JTA can still be used with non-XA datasources, however the datasource will use a local transaction as opposed to a global transaction.
 
-JDBC drivers providing XA capabilities provide an implementation of
-`javax.sql.XADataSource`.
+JDBC drivers providing XA capabilities provide an implementation of `javax.sql.XADataSource`.
 This makes them a little more tricky to configure than non-XA datasources.
 The general technique is to configure an instance of the vendor-provided `XADataSource` implementation, and to then point the usual non-XA resource at this instance.
 Sounds complex?
@@ -24,27 +24,34 @@ We'll also provide tested example configs for a number of well known databases a
 
 In this example, we'll look at MySQL. First off, download the MySQL driver from: https://dev.mysql.com/downloads/connector/j/.
 Once you have the .jar file, add it to the TomEE `lib` directory.
-This driver provides the
-`com.mysql.cj.jdbc.MysqlXADataSource` class.
+This driver provides the `com.mysql.cj.jdbc.MysqlXADataSource` class.
 The properties that need to be configured vary between datasources, so we'll need to get a list of the properties and work out the values to set.
 
 From the TomEE bin directory, execute the following command:
-`./tomee.sh setters -c com.mysql.cj.jdbc.MysqlXADataSource` on *nix systems, or
 
-`tomee.bat setters -c com.mysql.cj.jdbc.MysqlXADataSource` on Windows systems.
+`./tomee.sh setters -c com.mysql.cj.jdbc.MysqlXADataSource`
+
+on *nix systems, or
+
+`tomee.bat setters -c com.mysql.cj.jdbc.MysqlXADataSource`
+
+
+on Windows systems.
 
 This will give a complete list of paramaters that are available for the XA datasource.
 We'll simply use the `URL` paramater for the datasource.
 
-```
+[source,xml]
+----
   <Resource id="demo/jdbc/XADataSourceXA" type="XADataSource" class-name="com.mysql.cj.jdbc.MysqlXADataSource">
     Url jdbc:mysql://192.168.37.202:3306/movie
   </Resource>
-```
+----
 
 Next, we create a JtaManaged datasource as we normally would, and point it to the XA datasource using the `XaDataSource` attribute.
 
-```
+[source,xml]
+----
   <Resource id="demo/jdbc/XADataSource" type="DataSource">
     XaDataSource demo/jdbc/XADataSourceXA
     JdbcDriver  com.mysql.cj.jdbc.Driver
@@ -63,11 +70,12 @@ Next, we create a JtaManaged datasource as we normally would, and point it to th
     MaxWaitTime 0 seconds
     ValidationQuery select 1
   </Resource>
-```
+----
 
 And finally, a non-JTA managed datasource as well:
 
-```
+[source,xml]
+----
   <Resource id="demo/jdbc/XADataSourceUnmanaged" type="DataSource">
     JdbcDriver com.mysql.cj.jdbc.Driver
     JdbcUrl jdbc:mysql://192.168.37.202:3306/movie
@@ -85,13 +93,14 @@ And finally, a non-JTA managed datasource as well:
     MaxWaitTime 0 seconds
     ValidationQuery select 1
   </Resource>
-```
+----
 
 == Sample configs
 
 === Oracle
 
-```
+[source,xml]
+----
   <Resource id="demo/jdbc/XADataSource" type="DataSource">
     XaDataSource demo/jdbc/XADataSourceXA
     JdbcDriver  oracle.jdbc.OracleDriver
@@ -136,11 +145,12 @@ And finally, a non-JTA managed datasource as well:
     MaxOpenPreparedStatements 1024
     ValidationQuery select 1 from dual
   </Resource>
-```
+----
 
 === Microsoft SQL Server
 
-```
+[source,xml]
+----
   <Resource id="demo/jdbc/XADataSource" type="DataSource">
     XaDataSource demo/jdbc/XADataSourceXA
     JdbcDriver  com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -185,14 +195,15 @@ And finally, a non-JTA managed datasource as well:
     MaxOpenPreparedStatements 1024
     ValidationQuery select 1
   </Resource>
-```
+----
 
 Please note that using XA with Microsoft SQL Server requires the MS DTC to be configured correctly, and sqljdbc_xa.dll to be installed.
 For instructions, please see this Microsoft article: https://docs.microsoft.com/en-us/sql/connect/jdbc/understanding-xa-transactions?view=sql-server-2017
 
 === MySQL
 
-```
+[source,xml]
+----
   <resources>
     <Resource id="demo/jdbc/XADataSource" type="DataSource">
       XaDataSource demo/jdbc/XADataSourceXA
@@ -234,11 +245,12 @@ For instructions, please see this Microsoft article: https://docs.microsoft.com/
       ValidationQuery select 1
     </Resource>
   </resources>
-```
+----
 
 === PostgreSQL
 
-```
+[source,xml]
+----
   <resources>
     <Resource id="demo/jdbc/XADataSource" type="DataSource">
       XaDataSource demo/jdbc/XADataSourceXA
@@ -285,11 +297,12 @@ For instructions, please see this Microsoft article: https://docs.microsoft.com/
       ValidationQuery select 1
     </Resource>
   </resources>
-```
+----
 
 === Derby
 
-```
+[source,xml]
+----
   <resources>
     <Resource id="movieDatabaseXA" type="javax.sql.XADataSource" class-name="org.apache.derby.jdbc.ClientXADataSource">
       DatabaseName=testdb
@@ -337,4 +350,4 @@ For instructions, please see this Microsoft article: https://docs.microsoft.com/
       JtaManaged=false
     </Resource>
   </resources>
-```
+----

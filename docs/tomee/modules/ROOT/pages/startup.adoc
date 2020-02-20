@@ -4,6 +4,8 @@
 :jbake-type: page
 :jbake-status: published
 
+//NEEDS COMPARISON WITH COMMON
+
 == NAME
 
 openejb start - OpenEJB Remote Server
@@ -156,12 +158,13 @@ The following properties would then be used to get an InitialContext from the HT
 [source,properties]
 ----
    java.naming.factory.initial      =
-----
-
-org.apache.openejb.client.RemoteInitialContextFactory java.naming.provider.url = http://127.0.0.1:8888/openejb
+org.apache.openejb.client.RemoteInitialContextFactory
+java.naming.provider.url = http://127.0.0.1:8888/openejb
 java.naming.security.principal = myuser java.naming.security.credentials
 
 = mypass
+----
+
 
 === Example: -D.only_from=
 

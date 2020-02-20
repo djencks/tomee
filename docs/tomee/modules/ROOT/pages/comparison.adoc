@@ -4,9 +4,11 @@
 :jbake-type: page
 :jbake-status: published
 :icons: font
-:y: icon:check[role="green"
-:n: icon:times[role="red"
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
 :c: icon:file-text-o[role="blue"
+
+//in site-generator
 
 Apache OpenEJB and Apache TomEE are born from the same project and community.
 They differ in two major ways, only one of them technical:

@@ -4,6 +4,8 @@
 :jbake-type: page
 :jbake-status: published
 
+//NOT IN COMMON
+
 For those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use plan old java constructors, your wish has come true.
 This is a feature we intended to add to OpenEJB 3.0 but didn't have time for.
 We're happy to bring it to the OpenEJB 3.1 release and with a bit of luck and support from people like yourself, we'll see this as an EJB 3.1 feature as well.
