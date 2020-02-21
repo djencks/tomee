@@ -4,70 +4,13 @@
 :jbake-type: page
 :jbake-status: published
 
+//not compared with common
+//Is this page obsolete, replaced with a generated page??
 
-See also the
-xref:{common-vc}::download/index.adoc[]
-xref:{common-vc}::maven/index.adoc[]
-xref:{common-vc}::security/security.adoc[]
-xref:{common-vc}::blog/index.adoc[]
-xref:{common-vc}::community/index.adoc[]
-xref:7.0@tomee::docs.adoc[]
-xref:7.0@tomee::admin/cluster/index.adoc[]
-xref:7.0@tomee::admin/configuration/index.adoc[]
-xref:7.0@tomee::advanced/applicationcomposer/index.adoc[]
-xref:7.0@tomee::advanced/setup/index.adoc[]
-xref:7.0@tomee::advanced/shading/index.adoc[]
-xref:7.0@tomee::advanced/tomee-embedded/index.adoc[]
-xref:7.0@tomee::application-composer/index.adoc[]
-xref:7.0@tomee::developer/classloading/index.adoc[]
-xref:7.0@tomee::developer/ide/index.adoc[]
-xref:7.0@tomee::developer/json/index.adoc[]
-xref:7.0@tomee::developer/testing/applicationcomposer/index.adoc[]
-xref:7.0@tomee::developer/testing/arquillian/index.adoc[]
-xref:7.0@tomee::developer/testing/index.adoc[]
-xref:7.0@tomee::developer/testing/other/index.adoc[]
-xref:7.0@tomee::developer/tools/index.adoc[]
-xref:7.0@tomee::maven/index.adoc[]
-xref:7.1@tomee::docs.adoc[]
-xref:7.1@tomee::admin/cluster/index.adoc[]
-xref:7.1@tomee::admin/configuration/index.adoc[]
-xref:7.1@tomee::advanced/applicationcomposer/index.adoc[]
-xref:7.1@tomee::advanced/setup/index.adoc[]
-xref:7.1@tomee::advanced/shading/index.adoc[]
-xref:7.1@tomee::advanced/tomee-embedded/index.adoc[]
-xref:7.1@tomee::application-composer/index.adoc[]
-xref:7.1@tomee::developer/classloading/index.adoc[]
-xref:7.1@tomee::developer/ide/index.adoc[]
-xref:7.1@tomee::developer/json/index.adoc[]
-xref:7.1@tomee::developer/testing/applicationcomposer/index.adoc[]
-xref:7.1@tomee::developer/testing/arquillian/index.adoc[]
-xref:7.1@tomee::developer/testing/index.adoc[]
-xref:7.1@tomee::developer/testing/other/index.adoc[]
-xref:7.1@tomee::developer/tools/index.adoc[]
-xref:7.1@tomee::maven/index.adoc[]
-xref:8.0@examples::index.adoc[]
-xref:8.0_es@examples::index.adoc[]
-xref:8.0_pt@examples::index.adoc[]
-xref:8.0@tomee::docs.adoc[]
-xref:8.0@tomee::admin/cluster/index.adoc[]
-xref:8.0@tomee::admin/configuration/index.adoc[]
-xref:8.0@tomee::advanced/applicationcomposer/index.adoc[]
-xref:8.0@tomee::advanced/setup/index.adoc[]
-xref:8.0@tomee::advanced/shading/index.adoc[]
-xref:8.0@tomee::advanced/tomee-embedded/index.adoc[]
-xref:8.0@tomee::application-composer/index.adoc[]
-xref:8.0@tomee::developer/classloading/index.adoc[]
-xref:8.0@tomee::developer/ide/index.adoc[]
-xref:8.0@tomee::developer/json/index.adoc[]
-xref:8.0@tomee::developer/testing/applicationcomposer/index.adoc[]
-xref:8.0@tomee::developer/testing/arquillian/index.adoc[]
-xref:8.0@tomee::developer/testing/index.adoc[]
-xref:8.0@tomee::developer/testing/other/index.adoc[]
-xref:8.0@tomee::developer/tools/index.adoc[]
-xref:8.0@tomee::maven/index.adoc[examples page] for downloadable, executable and code-focused view of Java EE and TomEE. You can also find us on IRC freenode.org #openejb and #tomee
+See also the xref:examples::index.adoc[examples page] for downloadable, executable and code-focused view of Java EE and TomEE.
+You can also find us on IRC freenode.org #openejb and #tomee.
 
 == IDE
-
 * xref:tomee-and-intellij.adoc[Get started with Intellij]
 * xref:contrib/debug/debug-intellij.adoc[Debugging in Intellij]
 * xref:tomee-and-eclipse.adoc[Get started with Eclipse (WTP)]
@@ -75,7 +18,6 @@ xref:8.0@tomee::maven/index.adoc[examples page] for downloadable, executable and
 * xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
 == General Information
-
 * xref:comparison.adoc[Comparison: OpenEJB, TomEE, TomEE+]
 * xref:tomee-directory-structure.adoc[TomEE Directory structure]
 * xref:deploying-in-tomee.adoc[Deploying in TomEE]
@@ -84,7 +26,6 @@ xref:8.0@tomee::maven/index.adoc[examples page] for downloadable, executable and
 * xref:application-composer/index.adoc[ApplicationComposer]
 
 == Configuration
-
 * xref:system-properties.adoc[System Properties]
 * xref:deployments.adoc[Deployments]
 * xref:Configuring-in-tomee.adoc[Configuring Resources]
@@ -101,20 +42,18 @@ xref:8.0@tomee::maven/index.adoc[examples page] for downloadable, executable and
 * xref:tomee-and-hibernate.adoc[Changing JPA to Hibernate]
 
 == Testing Techniques
-
 * xref:application-discovery-via-the-classpath.adoc[Application discovery via the classpath]
 * xref:embedded-configuration.adoc[Embedded Configuration]
 * xref:configuring-datasources-in-tests.adoc[Configuring DataSources in Tests]
-* xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits in Tests]
-* xref:configuring-containers-in-tests.adoc[Configuring Containers in Tests]
+* xref:configuring-persistenceunits-in-tests.adoc[Configuring  PersistenceUnits in Tests]
+* xref:configuring-containers-in-tests.adoc[Configuring Containers in  Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
-* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
+* xref:unit-testing-transactions.adoc[Unit Testing Transactions MISSING!]
+* xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class MISSING!]
 * xref:local-client-injection.adoc[TestCase Injection (`@LocalClient`)]
 
 == Discovery and Failover
-
 * xref:ejb-failover.adoc[Overview]
 * xref:multicast-discovery.adoc[Multicast Discovery (UDP)]
 * xref:multipulse-discovery.adoc[Multipulse Discovery (UDP)]
@@ -124,32 +63,27 @@ xref:8.0@tomee::maven/index.adoc[examples page] for downloadable, executable and
 * xref:failover-logging.adoc[Logging Events]
 
 == OpenEJB Standalone Server
-
 * xref:understanding-the-directory-layout.adoc[Understanding the Directory Layout]
 * xref:startup.adoc[Startup]
 * xref:deploy-tool.adoc[Deploy Tool]
 * xref:properties-tool.adoc[Properties Tool]
 
 == Spring
-
 * xref:spring-and-openejb-3.0.adoc[Spring and OpenEJB 3.0]
 * xref:spring.adoc[Spring and OpenEJB 3.1 and later]
 * xref:spring-ejb-and-jpa.adoc[Spring, EJB and JPA example]
 
 == Arquillian
-
 * xref:arquillian-getting-started.adoc[Arquillian Primer - What you need to know]
 * xref:arquillian-available-adapters.adoc[Using the TomEE Arquillian adapters]
 
 == TomEE Maven Plugin
-
 * xref:tomee-mp-getting-started.adoc[Getting started]
 * xref:maven/index.adoc[tomee-maven-plugin reference documentation]
 * xref:tomee-embedded-maven-plugin.adoc[tomee-embedded-maven-plugin reference documentation]
 * xref:tomee-mp-getting-started.adoc[TomEE simple webapp archetype documentation]
 
 == Tips and Tricks
-
 * xref:installation-drop-in-war.adoc[Install TomEE using the drop-in WAR]
 * xref:tip-concurrency.adoc[Global Concurrency Management]
 * xref:tip-weblogic.adoc[WebLogic Lookup]
