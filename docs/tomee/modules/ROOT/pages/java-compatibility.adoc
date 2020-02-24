@@ -3,6 +3,8 @@
 :jbake-type: page
 :jbake-status: published
 
+//This text is also present in the 7.0 and 7.1 branches. Why?
+
 TomEE 8.0.0-M3 is Java EE 8 only.
 Any OS that supports Java 8 works
 
