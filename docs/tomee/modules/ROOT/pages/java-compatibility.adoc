@@ -3,6 +3,8 @@
 :jbake-type: page
 :jbake-status: published
 
+//Why does the 7.0 branch describe the 8.0 branch compatibility?
+
 TomEE 8.0.0-M3 is Java EE 8 only. Any OS that supports Java 8 works
 
 
