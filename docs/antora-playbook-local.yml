@@ -61,7 +61,7 @@ ui:
 output:
   clean: true
 
-log:
-  console:
-    level: info
-  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
+#log:
+#  console:
+#    level: info
+#  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
