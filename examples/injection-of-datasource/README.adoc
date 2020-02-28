@@ -1,12 +1,52 @@
+= Injection Of Datasource
 :index-group: DataSources
 :jbake-type: page
 :jbake-status: status=published
-= Injection Of Datasource
 
 _Help us document this example! Click the blue pencil icon in the upper
 right to edit this page._
+NOTE: updated with content from tomee-site, 27-2-2020
 
-== Movie
+== Overview
+
+//reference in the original to http://www.youtube.com/v/g3lIPlegDJk, which seems to be a shockwave flash file that I can't access.
+
+In this example we use the _@Resource_ annotation to inject a _javax.sql.DataSource_ into our bean.
+The trickiest thing about injecting a DataSource is not declaring the annotation, but actually configuring the data source.
+
+In OpenEJB the rules are quite simple.
+A declaration like the following in code:
+
+[source,java
+----
+ @Resource DataSource customerDataSource;
+----
+
+Matches a data source declared as follows in the openejb.xml file:
+
+[source,xml]
+----
+ <Resource type="DataSource" id="customerDataSource">
+  ....
+ </Resource>
+----
+
+As seen in this example, the data source can also be declared via properties as follows:
+
+[source,properties]
+----
+ customerDataSource = new://Resource?type=DataSource
+----
+
+This style of properties creation can be used in the InitialContext properties, set into the System properties, or passed in on the command line as vm properties.
+
+_The source for this example is in the "injection-of-datasource" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._ \{div} {div:style=clear:both;}\{div}
+
+
+
+== The Code
+
+=== Movie
 
 [source,java]
 ----
@@ -56,7 +96,7 @@ public class Movie {
 }
 ----
 
-== Movies
+=== Movies
 
 [source,java]
 ----
@@ -148,7 +188,9 @@ public class Movies {
 }
 ----
 
-== MoviesTest
+== Writing a unit test for the example
+
+=== MoviesTest
 
 [source,java]
 ----
@@ -191,7 +233,40 @@ public class MoviesTest extends TestCase {
 }
 ----
 
+Note in the above test code the following lines:
+
+[source,java]
+----
+ p.put("movieDatabase", "new://Resource?type=DataSource");
+ p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
+ p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
+----
+
+As mentioned these actually create and configure the data source.
+When OpenEJB boots up, these properties will get read and executed allowing you to keep all the configuration required to run your tests right in the test case itself.
+No need to keep dozens of openejb.xml config files in your projects or try and create one big configuration that might end up loading a lot of unneeded containers and resources.
+
+In your production system you can place the properties into the OPENEJB_HOME/conf/system.properties file or add them to your OPENEJB_HOME/conf/openejb.xml with a declaration like so:
+
+[source,xml]
+----
+ <Resource type="DataSource" id="movieDatabase">
+  JdbcDriver = org.hsqldb.jdbcDriver
+  JdbcUrl = jdbc:hsqldb:mem:moviedb
+ </Resource>
+----
+
 == Running
+
+Running the example is fairly simple.
+In the "injection-of-datasource" directory of the xref:openejb:download.adoc[examples zip] , just run:
+
+[source,console]
+----
+$ mvn clean install
+----
+
+Which should create output like the following.
 
 [source,console]
 ----
