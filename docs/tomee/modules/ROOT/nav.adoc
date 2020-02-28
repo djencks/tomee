@@ -1,4 +1,7 @@
-= TomEE 7.0 Documentation
+= TomEE 8.0 Documentation
+
+* JavaDoc
+** xref:tomee:index.adoc[javadoc (tiny sample)]
 
 * IDE
 ** xref::tomee-and-intellij.adoc[Get started with Intellij]
