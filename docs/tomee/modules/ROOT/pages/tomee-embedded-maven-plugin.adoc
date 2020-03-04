@@ -1,3 +1,4 @@
+include::{common-vc}::page$tomee-embedded-maven-plugin.adoc[]
+
 NOTE: This needs more detailed comparison with the versions in 7.0 and 7.1
 
-include::{common-vc}::page$tomee-embedded-maven-plugin.adoc[]
