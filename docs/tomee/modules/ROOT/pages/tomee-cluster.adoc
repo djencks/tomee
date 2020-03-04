@@ -1,0 +1,1 @@
+include::{latest-vc}::page$tomee-cluster.adoc[]
