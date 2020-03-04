@@ -1,2 +1,2 @@
-include::{latest-vc}::page$configuring-datasources-xa.adoc[]
+include::{tomee-latest-vc}::page$configuring-datasources-xa.adoc[]
 //APPEARS TO BE NOT IN COMMON
