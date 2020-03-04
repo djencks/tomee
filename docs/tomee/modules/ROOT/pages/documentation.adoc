@@ -4,6 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
+Is this replaced with a generated page in the current site?
 
 See also the
 xref:{common-vc}::download/index.adoc[]
