@@ -1,1 +1,1 @@
-include::{latest-vc}::page$docs.adoc[]
+include::{tomee-latest-vc}::page$docs.adoc[]
