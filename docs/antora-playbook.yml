@@ -49,7 +49,7 @@ asciidoc:
     examples-vc: 8.0@examples
     tomee-latest-vc: 8.0@tomee
     supported-properties-table-layout: cols="2,1,3,5",options="header"
-    properties-table-layout: cols="3a,2a,5",options="header"
+    properties-table-layout: cols="3a,2a,5a",options="header"
     name-description-table-layout: cols="2,7a",options="header"
 
 # This is the Antora default UI.
