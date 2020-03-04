@@ -1,8 +1,1 @@
-= Build Tools and Plugins
-:jbake-date: 2016-03-16
-:jbake-type: page
-:jbake-status: published
-:jbake-tomeepdf:
-
-- xref:developer/tools/maven-plugins.adoc[Maven Plugins]
-- xref:developer/tools/gradle-plugins.adoc[Gradle Plugin]
+include::{tomee-latest-vc}::page$developer/tools/index.adoc[]

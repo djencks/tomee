@@ -1,13 +1,1 @@
-= TomEE Maven Plugins
-:index-group: TomEE Maven Plugin
-:jbake-date: 2016-03-16
-:jbake-type: page
-:jbake-status: published
-:jbake-tomeepdf:
-
-TomEE provides several maven plugins:
-
-- one for a xref:developer/tools/maven/tomee.adoc[standalone TomEE]
-- one for xref:developer/tools/maven/embedded.adoc[TomEE embedded]
-- one for xref:developer/tools/maven/applicationcomposer.adoc[application composer] based applications
-- Note: there is one for `EJBContainer` but this one is easily replaced by one of the previous in general
+include::{tomee-latest-vc}::page$developer/tools/maven-plugins.adoc[]
