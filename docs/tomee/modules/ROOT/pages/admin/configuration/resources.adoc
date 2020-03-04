@@ -47,7 +47,7 @@ private DataSource dataSource;
 
 Here are the attributes of a resource:
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 | Name | Optional |Description
 | id | false | name of the resource, will match `openejb:Resource/id` in JNDI tree.
@@ -66,7 +66,7 @@ For such case you can set `SkipImplicitAttributes` property to `true` and your r
 
 Implicit properties are:
 
-[.table.table-bordered,options="header"]
+[{name-description-table-layout}]
 |===
 | Name | Description
 | transactionManager | The JTA transaction manager
@@ -95,7 +95,7 @@ By default TomEE uses https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html[to
 https://commons.apache.org/proper/commons-dbcp/configuration.html[commons-dbcp] (2 for TomEE 7.x and 1 for TomEE 1.x).
 The properties are then the related configurations with these particular entries we try to keep in sync for both:
 
-[.table.table-bordered,options="header"]
+[{name-description-table-layout}]
 |===
 | Name|Description
 | JdbcDriver | the jdbc driver of the datasource
@@ -128,7 +128,7 @@ ds.PasswordCipher = Static3DES
 
 TomEE also provides few utilities you can add in DataSource properties:
 
-[.table.table-bordered,options="header"]
+[{name-description-table-layout}]
 |===
 | Name | Description
 | LogSql | Should SQL be logged (using TomEE logger)

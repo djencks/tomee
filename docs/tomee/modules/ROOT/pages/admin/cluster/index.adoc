@@ -60,18 +60,6 @@ As shown below the client also has a group setting which can be used to select a
 IMPORTANT: for multicast to work you need to have ejbd activated as a normal service.
 This can be done setting in `conf/system.properties` the entry: `openejb.service.manager.class = org.apache.openejb.server.SimpleServiceManager`.
 
-NOTE: for multicast to work you need to have ejbd activated as a normal service.
-This can be done setting in `conf/system.properties` the entry: `openejb.service.manager.class = org.apache.openejb.server.SimpleServiceManager`.
-
-TIP: for multicast to work you need to have ejbd activated as a normal service.
-This can be done setting in `conf/system.properties` the entry: `openejb.service.manager.class = org.apache.openejb.server.SimpleServiceManager`.
-
-CAUTION: for multicast to work you need to have ejbd activated as a normal service.
-This can be done setting in `conf/system.properties` the entry: `openejb.service.manager.class = org.apache.openejb.server.SimpleServiceManager`.
-
-WARNING: for multicast to work you need to have ejbd activated as a normal service.
-This can be done setting in `conf/system.properties` the entry: `openejb.service.manager.class = org.apache.openejb.server.SimpleServiceManager`.
-
 ===== Multicast Client
 
 The multicast functionality is not just for servers to find each other in a cluster, it can also be used for EJB clients to discover a server.
@@ -269,7 +257,7 @@ It is possible in this process that two servers learn of each other at the same 
 When this happens both servers will detect the extra connection and one of the connections will be dropped and one will be kept.
 In practice this race condition rarely happens and can be avoided almost entirely by fanning out server startup by as little as 100 milliseconds.
 
-===== Recommandation
+===== Recommendation
 
 As mentioned the initialServers is only used for bootstrapping the multipoint network.
 Once running, all servers will dynamically establish direct connections with each other and there is no single point of failure.

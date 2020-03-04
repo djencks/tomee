@@ -13,7 +13,7 @@ This file is located in `WEB-INF` for a war and `META-INF` for an ear.
 Default pool size for `@Asynchronous` is 5. It can be very small for some applications highly relying on asynchronism or reactive patterns.
 Therefore it is possible to customize it adding these entries in `application.properties`:
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 | Name | Default| Description
 | AsynchronousPool.Size | 5 | Core size of the pool
@@ -43,7 +43,7 @@ All properties understood by OpenWebBeans will also be passthrough to OpenWebBea
 
 === `@WebServiceRef`
 
-[.table.table-bordered,options="header"]
+[{name-description-table-layout}]
 |===
 | Name | Description
 | cxf.jaxws.client.wsFeatures | Allows to set WSFeature on the client injection. Values is a list (comma separated) of resource id in resources.xml or fully qualified names.
@@ -51,7 +51,7 @@ All properties understood by OpenWebBeans will also be passthrough to OpenWebBea
 
 === `@Stateless`
 
-[.table.table-bordered,options="header"]
+[{name-description-table-layout}]
 |===
 | Name | Description
 | AccessTimeout or Timeout | container timeout
@@ -86,7 +86,7 @@ As `tomee.xml` it supports filtering so you can use environment variables and sy
 
 `resources.xml` supports `Resource`, `Service` and `Container`.
 
-=== `resources.xml` mecanism
+=== `resources.xml` mechanism
 
 `resources.xml` resources are still available globally like any `tomee.xml` resource.
 

@@ -3,10 +3,11 @@
 :jbake-type: page
 :jbake-status: published
 :jbake-tomeepdf:
+:properties-table-layout: cols="3a,2a,5a",options="header"
 
 == Server
 
-[.table.table-bordered,options="header",cols="2a,1a,3a"]
+[{properties-table-layout}]
 
 |===
 
@@ -330,8 +331,7 @@ Note that setting it to true will create tomee datasources but can have the side
 
 == Client
 
-[.table.table-bordered,options="header",,cols="2a,1a,3a"]
-
+[{properties-table-layout}]
 |===
 
 |Name
