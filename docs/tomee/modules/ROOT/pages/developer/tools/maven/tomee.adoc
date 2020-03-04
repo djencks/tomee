@@ -5,26 +5,27 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 TomEE Maven Plugin is a set of goals for the development and to prepare to go in production:
 
-- `tomee:build`
-- `tomee:exec`
-- `tomee:configtest`
-- `tomee:debug`
-- `tomee:deploy`
-- `tomee:exec`
-- `tomee:list`
-- `tomee:run`
-- `tomee:start`
-- `tomee:stop`
-- `tomee:undeploy`
+* `tomee:build`
+* `tomee:exec`
+* `tomee:configtest`
+* `tomee:debug`
+* `tomee:deploy`
+* `tomee:exec`
+* `tomee:list`
+* `tomee:run`
+* `tomee:start`
+* `tomee:stop`
+* `tomee:undeploy`
 
 == Run
 
 The most commonly used goal, it allows to start a tomee with applications.
 Here is its configuration:
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 |Name|Default|Description
 
@@ -105,8 +106,9 @@ They are executed when creating the TomEE instance.
 There are two scripting flavors of that: js and groovy.
 Both will have some contextual variables:
 
-- catalinaBase: tomee base path
-- resolver: a maven resolver to get a dependency using maven.
+* catalinaBase: tomee base path
+* resolver: a maven resolver to get a dependency using maven.
+
 For instance: `resolver.resolve('group', 'artfact', 'version', 'type')`
 
 === Dependencies (libs)
@@ -115,21 +117,21 @@ The format can be:
 
 - a maven dependency:
 
-[source,properties]
+[source]
 ----
 groupId:artifactId:version
 ----
 
 - a zip dependency and extracted in lib folder:
 
-[source,properties]
+[source]
 ----
 unzip:groupId:artifactId:version
 ----
 
 - a matching prefix to remove:
 
-[source,properties]
+[source]
 ----
 remove:prefix
 ----
@@ -172,7 +174,7 @@ remove:prefix
 Excepted synchronization, build plugin inherit from `run` Mojo its configuration.
 It just adds the following:
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 |Name|Default|Description
 |formats|-|map of configuration, keys are format (zip, tar.gz) and value the target location

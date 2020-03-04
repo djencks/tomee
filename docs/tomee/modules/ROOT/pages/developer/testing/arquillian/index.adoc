@@ -3,22 +3,23 @@
 :jbake-type: page
 :jbake-status: published
 :jbake-tomeepdf:
+:name-description-table-layout: cols="2,7a",options="header"
 
 TomEE has several arquillian adapter flavors:
 
-- openejb-embedded: a plain embedded OpenEJB supporting most of EE features
-- tomee-embedded: a full TomEE running in the same JVM
-- tomee-remote: a standard TomEE running in its own process as in production
-- tomee-webapp (not recommanded): an adapter starting from a Tomcat and installing tomee-webapp
+* openejb-embedded: a plain embedded OpenEJB supporting most of EE features
+* tomee-embedded: a full TomEE running in the same JVM
+* tomee-remote: a standard TomEE running in its own process as in production
+* tomee-webapp (not recommanded): an adapter starting from a Tomcat and installing tomee-webapp
 
 == Embedded or Remote?
 
 Big advantage of embedded adapters is to be able to debug as usual.
 However it has few drawbacks which can make you rething this choice:
 
-- JVM resources are available where it will likely not be the case in war mode (src/main/resources typically)
-- You can mix server and client side features when writing a test
-- Classloading is a bit different by design and less isolated (test dependencies) so you can get runtime surprises when really deploying
+* JVM resources are available where it will likely not be the case in war mode (src/main/resources typically)
+* You can mix server and client side features when writing a test
+* Classloading is a bit different by design and less isolated (test dependencies) so you can get runtime surprises when really deploying
 
 To summarize: the choice is the trade off you choose between easiness and reality of the simulation.
 
@@ -41,6 +42,7 @@ NOTE: all configurations have defaults
 
 === arquillian.xml
 
+[{name-description-table-layout}]
 |===
 |Name|Description
 |properties|container properties, as in conf/system.properties (not in xml format)
@@ -87,6 +89,7 @@ Sample:
 
 === Configuration
 
+[{name-description-table-layout}]
 |===
 |Name|Description
 | exportConfAsSystemProperty|export system properties with adapter prefix(es) (ex: httpPort will be set as tomee.httpPort)
@@ -227,6 +230,7 @@ For really remote instances (= not on localhost) you need the `deployerPropertie
 
 === Configuration
 
+[{name-description-table-layout}]
 |===
 |Name|Description
 | exportConfAsSystemProperty|export system properties with adapter prefix(es) (ex: httpPort will be set as tomee.httpPort)

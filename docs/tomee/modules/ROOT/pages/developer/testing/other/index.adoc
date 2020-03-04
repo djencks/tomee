@@ -4,6 +4,7 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 == EJBContainer
 
 The `EJBContainer` API is a JavaEE API enriched by some OpenEJB features to make the testing easier.

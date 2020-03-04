@@ -3,23 +3,25 @@
 :jbake-type: page
 :jbake-status: published
 :jbake-tomeepdf:
+:properties-table-layout: cols="3a,2a,5a",options="header"
 
-This plugin has two goal:
+//Not in common
+This plugin has two goals:
 
-- `applicationcomposer:run`: to start the application from mvn command line
-- `applicationcomposer:zip`: to package a zip with dependencies and start scripts
+* `applicationcomposer:run`: to start the application from mvn command line
+* `applicationcomposer:zip`: to package a zip with dependencies and start scripts
 
-IMPORTANT: the dependencies are retrieved with `MavenProject.getArtifacts()` which means you artifacts should be a `war`
+IMPORTANT: The dependencies are retrieved with `MavenProject.getArtifacts()` which means your artifacts should be a `war`
 - maven doesn't populate it with a `jar` - and the compile phase - at least - should be passed to ensure it is populated.
 
 == Run goal configuration
 
-[source,bash]
+[source,console]
 ----
 mvn process-classes applicationcomposer:run -DskipTests
 ----
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 | Name | Default | Description
 | args | - | a list of application arguments
@@ -30,12 +32,12 @@ mvn process-classes applicationcomposer:run -DskipTests
 
 == Zip goal configuration
 
-[source,bash]
+[source,console]
 ----
 mvn process-classes applicationcomposer:zip -DskipTests
 ----
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 | Name | Default | Description
 |workDir|${project.build.directory}/${project.build.finalName}-applicationcomposer| where the container can "work" and create temp files

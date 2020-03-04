@@ -3,12 +3,16 @@
 :jbake-type: page
 :jbake-status: published
 :jbake-tomeepdf:
+:page-jqtree:
 
+//Not in common
 TomEE ClassLoading is directly mapped to Tomcat one.
 
 ifndef::backend-pdf[]
 
-[#filetree.col-md-3]
+//[#filetree.col-md-3]
+[source,json]
+----
 [
     {
         label: 'JVM',
@@ -51,7 +55,7 @@ ifndef::backend-pdf[]
         ]
     }
 ]
-
+----
 [#filetreedetail.col-md-8.bs-callout.bs-callout-primary]
 Click on the tree (JVM) on the left to see the detail there.
 

@@ -4,9 +4,10 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 TomEE provides a gradle plugin for tomee-embedded "à la Jetty".
 
-[source,java]
+[source,groovy]
 ----
 buildscript {
    repositories {
@@ -25,7 +26,7 @@ apply plugin: 'org.apache.tomee.tomee-embedded'
 
 Then just start tomee with:
 
-[source,properties]
+[source,console]
 ----
 gradle tomee-embedded -i
 ----
@@ -34,7 +35,7 @@ gradle tomee-embedded -i
 
 All the configuration is optional.
 
-[source,java]
+[source,groovy]
 ----
 // plugin setup
 def tomeeEmbedded = extensions.getByName('tomee-embedded')
@@ -46,5 +47,5 @@ def tomeeEmbeddedDeps = configurations.getByName('tomee-embedded')
 // add dependencies you need to this configuration
 ----
 
-tomee-embedded task has several more advanced configuration like tomee properties, modules to deploy etc...
+The tomee-embedded task has several more advanced configuration like tomee properties, modules to deploy etc...
 Its configuration is pretty close to xref:developer/tools/maven/embedded.adoc[Embedded Maven Plugin].

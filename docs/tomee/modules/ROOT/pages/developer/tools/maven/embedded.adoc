@@ -4,11 +4,12 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 TomEE Embedded Maven plugin has a single goal: `tomee-embedded:run`.
 
 == Configuration
 
-[.table.table-bordered,options="header"]
+[{properties-table-layout}]
 |===
 | Name | Default | Description
 | warFile | ${project.build.directory}/${project.build.finalName} | where is the binary

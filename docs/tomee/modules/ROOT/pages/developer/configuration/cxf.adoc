@@ -4,6 +4,7 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 TomEE relies on Apache CXF for JAX-RS (RESTful Services) and JAX-WS (Web Services).
 It does not provide all CXF modules, but the most common ones for both specifications (JAX-RS is part of all distributions but JAX-WS is only part of plus one).
 

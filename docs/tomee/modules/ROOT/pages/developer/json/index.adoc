@@ -4,6 +4,7 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 Since TomEE 7.0, TomEE comes with Apache Johnzon.
 It means you can use JSON-P out of the box but also Johnzon Mapper which is the default JAX-RS provider for JSON.
 
@@ -12,7 +13,7 @@ This last one was relying on JAXB model to generate JSON which often led to unex
 
 == Getting started with Johnzon Mapper
 
-http://johnzon.apache.org/ will get more informations than this quick getting started but here are the basics of the mapping with Johnzon.
+link:http://johnzon.apache.org/[] will get more informations than this quick getting started but here are the basics of the mapping with Johnzon.
 
 The mapper uses a direct java to json representation.
 
@@ -73,11 +74,11 @@ Converters are used for advanced mapping between java and json.
 
 There are several converter types:
 
-. Converter: map java to json and the opposite based on the string representation
-. Adapter: a converter not limited to String
-. ObjectConverter.Reader: to converter from json to java at low level
-. ObjectConverter.Writer: to converter from java to json at low level
-. ObjectConverter.Codec: a Reader and Writer
+* Converter: map java to json and the opposite based on the string representation
+* Adapter: a converter not limited to String
+* ObjectConverter.Reader: to converter from json to java at low level
+* ObjectConverter.Writer: to converter from java to json at low level
+* ObjectConverter.Codec: a Reader and Writer
 
 The most common is to customize date format but they all take.
 For that simple case we often use a Converter:

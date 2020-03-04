@@ -4,6 +4,7 @@
 :jbake-status: published
 :jbake-tomeepdf:
 
+//Not in common
 - xref:developer/testing/applicationcomposer/index.adoc[ApplicationComposer]: Lightweight tests
 - xref:developer/testing/arquillian/index.adoc[Arquillian]: The standard for EE tests
 - xref:developer/testing/other/index.adoc[Going futher]: OpenEJB JUnit, TomEE Embedded...
