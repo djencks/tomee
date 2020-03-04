@@ -1,9 +1,1 @@
-= Unit Testing
-:jbake-date: 2016-03-16
-:jbake-type: page
-:jbake-status: published
-:jbake-tomeepdf:
-
-- xref:developer/testing/applicationcomposer/index.adoc[ApplicationComposer]: Lightweight tests
-- xref:developer/testing/arquillian/index.adoc[Arquillian]: The standard for EE tests
-- link:other/index.html[Going futher]: OpenEJB JUnit, TomEE Embedded...
+include::{tomee-latest-vc}::page$developer/testing/index.adoc[]
