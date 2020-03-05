@@ -1,1 +1,1 @@
-include::{common-vc}::page$/deamon/lin-service.adoc[]
+include::{common-vc}::page$daemon/lin-service.adoc[]
