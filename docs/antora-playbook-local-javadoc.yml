@@ -50,6 +50,11 @@ asciidoc:
     supported-properties-table-layout: cols="2,1,3,5a",options="header"
     properties-table-layout: cols="3a,2a,5a",options="header"
     name-description-table-layout: cols="2,7a",options="header"
+    tested-on-layout: cols="7*",options="header"
+    icons: font
+    y: icon:check[role="green"]
+    n: icon:times[role="red"]
+    c: icon:file-text-o[role="blue"]
 
 
 # This is the Antora default UI.
@@ -60,6 +65,7 @@ ui:
     url: ./../../../antora/antora-ui-default/build/javadoc-ui-bundle.zip
     start_path: javadoc
     snapshot: true
+  supplemental_files: ./supplemental-ui
 output:
   clean: true
 plugins:
@@ -68,7 +74,7 @@ plugins:
       extract: body
       layout: javadoc
 
-#log:
-#  console:
-#    level: info
-#  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
+log:
+  console:
+    level: info
+  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
