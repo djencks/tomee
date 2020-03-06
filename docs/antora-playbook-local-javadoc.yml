@@ -74,7 +74,7 @@ plugins:
       extract: body
       layout: javadoc
 
-log:
-  console:
-    level: info
-  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
+#log:
+#  console:
+#    level: info
+#  formatString: 'version: ${version} component: ${component} file: ${file} path ${path} lineno: ${lineno} message: ${message}'
