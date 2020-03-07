@@ -24,7 +24,7 @@ Para generar automáticamente el secuencial, agregue la anotación `@GeneratedVa
 
 [source,java]
 ----
-include::8.0@:example$src/main/groovy/org/superbiz/groovy/Person.groovy[tag=content]
+include::8.0@:example$groovy-jpa/src/main/groovy/org/superbiz/groovy/Person.groovy[tag=content]
 ----
 
 === Persistencia
@@ -33,7 +33,7 @@ En la persistencia se agrega la entidad `Persona` con `<class> org.superbiz.groo
 
 [source,java]
 ----
-include::8.0@:example$src/main/resources/META-INF/persistence.xml[tag=content]
+include::8.0@:example$groovy-jpa/src/main/resources/META-INF/persistence.xml[tag=content]
 ----
 
 == Ejecutando el ejemplo

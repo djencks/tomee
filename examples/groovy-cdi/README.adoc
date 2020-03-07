@@ -1,0 +1,3 @@
+= Groovy CDI example
+
+Help! Document this example!

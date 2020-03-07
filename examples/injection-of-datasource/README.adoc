@@ -17,7 +17,7 @@ The trickiest thing about injecting a DataSource is not declaring the annotation
 In OpenEJB the rules are quite simple.
 A declaration like the following in code:
 
-[source,java
+[source,java]
 ----
  @Resource DataSource customerDataSource;
 ----
