@@ -1,7 +1,13 @@
-name: examples 
+name: examples
 title: TomEE Examples
 version: '8.0_pt'
 display_version: 8.0  (Portugese)
-start_page: ROOT:index.adoc 
-nav: 
+start_page: ROOT:index.adoc
+nav:
 - modules/ROOT/nav.adoc
+source-map:
+  - sourcePath: examples
+    target:
+      path: modules/ROOT/pages
+      include: '*/README_pt.adoc'
+      deindexify: true

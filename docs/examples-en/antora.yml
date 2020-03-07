@@ -1,6 +1,18 @@
-name: examples 
+name: examples
 title: TomEE Examples
-version: '8.0' 
-start_page: ROOT:index.adoc 
-nav: 
+version: '8.0'
+display_version: 8.0  (English)
+start_page: ROOT:index.adoc
+nav:
 - modules/ROOT/nav.adoc
+
+source-map:
+  - sourcePath: examples
+    target:
+      path: modules/ROOT/pages
+      include: '*/README.adoc'
+      deindexify: true
+  - sourcePath: examples
+    target:
+      path: modules/ROOT/examples
+      include: '*/src/**/*.*'
