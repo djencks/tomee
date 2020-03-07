@@ -1,6 +1,6 @@
 site:
   title: Tomee Documentation
-  url: https://tomee.apache.org
+  url: https://tomee-preview.s3-us-west-2.amazonaws.com
   start_page: 8.0@tomee:ROOT:docs.adoc
 content:
   sources:
@@ -69,10 +69,11 @@ ui:
 output:
   clean: true
 plugins:
-  - path: ./../../../antora/antora-javadoc-plugin
-    config:
-      extract: body
-      layout: javadoc
+#  - path: ./../../../antora/antora-javadoc-plugin
+#    config:
+#      extract: body
+#      layout: javadoc
+  - path: ./../../../antora/plugins/antora-aggregate-collector-plugin
 
 #log:
 #  console:

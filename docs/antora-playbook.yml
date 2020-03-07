@@ -1,20 +1,20 @@
 site:
   title: Tomee Documentation
-  url: https://tomee.apache.org
+  url: https://tomee-preview.s3-us-west-2.amazonaws.com
   start_page: 8.0@tomee:ROOT:docs.adoc
 content:
   sources:
 # I have been working against a branch off of master branch. Would branching off develop be more appropriate?
-  - url: ./../
-    start_path: docs/tomee
-    branches: HEAD
+#  - url: ./../
+#    start_path: docs/tomee
+#    branches: HEAD
 
 # This uses the local copy. I think you need to explicity set up local branches for these, tracking the remotes.
 #- url: ./../
 # This uses the remote git.
   - url:  https://github.com/djencks/tomee.git
     start_path: docs/tomee
-    branches: [antora-tomee-7.1.x, antora-tomee-7.0.x]
+    branches: [antora, antora-tomee-7.1.x, antora-tomee-7.0.x]
 
 # currently producing master@common
 #  - url: ./../../tomee-site-generator
@@ -22,11 +22,11 @@ content:
     start_path: tomee
     branches: antora
 
-# currently producing version 0.0
-#  - url: ./../../tomee-site
-#  - url: https://github.com/djencks/tomee-site.git
-#    start_path: tomee
-#    branches: antora
+# currently producing master@common
+  - url: ./../../tomee-site
+  - url: https://github.com/djencks/tomee-site.git
+    start_path: tomee
+    branches: antora
 
 # The .adoc files for the examples are not checked in; they are copied and renamed from ../examples.
 # Checking the copies in would make building the site much more self contained.
