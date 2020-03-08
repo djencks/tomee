@@ -7,12 +7,12 @@ nav:
 - modules/ROOT/nav.adoc
 
 source-map:
-  - sourcePath: examples
+  - sourcePaths: examples
     target:
       path: modules/ROOT/pages
       include: '*/README.adoc'
       deindexify: true
-  - sourcePath: examples
+  - sourcePaths: examples
     target:
       path: modules/ROOT/examples
       include: '*/src/**/*.*'
