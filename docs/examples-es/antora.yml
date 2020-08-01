@@ -6,7 +6,7 @@ start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
 source-map:
-  - sourcePaths: examples
+  - source-paths: examples
     target:
       path: modules/ROOT/pages
       include: '*/README_es.adoc'

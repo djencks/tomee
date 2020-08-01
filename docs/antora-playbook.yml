@@ -1,7 +1,7 @@
 site:
   title: Tomee Documentation
   url: https://tomee-preview.s3-us-west-2.amazonaws.com
-  start_page: 8.0@tomee:ROOT:docs.adoc
+  start_page: tomee:ROOT:docs.adoc
 content:
   sources:
 # I have been working against a branch off of master branch. Would branching off develop be more appropriate?
@@ -31,17 +31,17 @@ content:
 # The .adoc files for the examples are not checked in; they are copied and renamed from ../examples.
 # Checking the copies in would make building the site much more self contained.
 # You need to run update-examples.sh to generate the copy scripts and nav files and show you if there are new or removed pages.
-  - url: ./../
+  - url: https://github.com/djencks/tomee.git
     start_path: docs/examples-en
-    branches: HEAD
+    branches: antora
 
-  - url: ./../
+  - url: https://github.com/djencks/tomee.git
     start_path: docs/examples-es
-    branches: HEAD
+    branches: antora
 
-  - url: ./../
+  - url: https://github.com/djencks/tomee.git
     start_path: docs/examples-pt
-    branches: HEAD
+    branches: antora
 
 asciidoc:
   attributes:
@@ -66,3 +66,9 @@ ui:
   supplemental_files: ./supplemental-ui
 output:
   clean: true
+plugins:
+  #  - path: ./../../../antora/antora-javadoc-plugin
+  #    config:
+  #      extract: body
+  #      layout: javadoc
+  - path: ./../../../antora/plugins/antora-aggregate-collector-plugin

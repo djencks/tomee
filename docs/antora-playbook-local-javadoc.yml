@@ -69,10 +69,10 @@ ui:
 output:
   clean: true
 plugins:
-#  - path: ./../../../antora/antora-javadoc-plugin
-#    config:
-#      extract: body
-#      layout: javadoc
+  - path: ./../../../antora/antora-javadoc-plugin
+    config:
+      extract: body
+      layout: javadoc
   - path: ./../../../antora/plugins/antora-aggregate-collector-plugin
 
 #log:
