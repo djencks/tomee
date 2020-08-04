@@ -4,8 +4,93 @@
 :jbake-status: published
 :jbake-tomeepdf:
 :page-aliases: admin/index.adoc,advanced/index.adoc,developer/index.adoc
+//uncomment to generate nav contents into console log.
+//:antora-indexer-log-lists:
 
 //8.0@tomee, not in common
+
+There are indexUniqueCount:[module=*,unique=index-group] index groups.
+
+* Testing Techniques
+
+indexList::[level=2,module=*,attributes='index-group=Testing Techniques']
+
+* Discovery and Failover
+
+indexList::[level=2,module=*,attributes='index-group=Discovery and Failover']
+
+* Datasource
+
+indexList::[level=2,module=*,attributes='index-group=Datasource']
+
+* JPA
+
+indexList::[level=2,module=*,attributes='index-group=JPA']
+
+* TomEE Maven Plugin
+
+indexList::[level=2,module=*,attributes='index-group=TomEE Maven Plugin']
+
+* General Information
+
+indexList::[level=2,module=*,attributes='index-group=General Information']
+
+* IDE
+
+indexList::[level=2,module=*,attributes='index-group=IDE']
+
+* Tips and Tricks
+
+indexList::[level=2,module=*,attributes='index-group=Tips and Tricks']
+
+* Testing
+
+indexList::[level=2,module=*,attributes='index-group=Testing']
+
+* Installation
+
+indexList::[level=2,module=*,attributes='index-group=Installation']
+
+* Spring
+
+indexList::[level=2,module=*,attributes='index-group=Spring']
+
+* Arquillian
+
+indexList::[level=2,module=*,attributes='index-group=Arquillian']
+
+* Jakarta EE 9 Work
+
+indexList::[level=2,module=*,attributes='index-group=Jakarta EE 9 Work']
+
+* ActiveMQ
+
+indexList::[level=2,module=*,attributes='index-group=ActiveMQ']
+
+* TCK
+
+indexList::[level=2,module=*,attributes='index-group=TCK']
+
+* Configuration
+
+indexList::[level=2,module=*,attributes='index-group=Configuration']
+
+* EJB
+
+indexList::[level=2,module=*,attributes='index-group=EJB']
+
+* OpenEJB Standalone Server
+
+indexList::[level=2,module=*,attributes='index-group=OpenEJB Standalone Server']
+
+* Unknown
+
+indexList::[level=2,module=*,attributes='!index-group']
+
+
+* Unrevised
+
+indexList::[level=2,module=*,attributes='index-group=Unrevised']
 
 == Administration
 
