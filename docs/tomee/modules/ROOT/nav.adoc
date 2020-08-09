@@ -63,6 +63,10 @@
 ** xref:8.0@tomee:ROOT:tip-weblogic.adoc[]
 
 * Testing
+** xref:8.0@tomee:ROOT:application-composer/index.adoc[]
+** xref:8.0@tomee:ROOT:application-composer/advanced.adoc[]
+** xref:8.0@tomee:ROOT:application-composer/getting-started.adoc[]
+** xref:8.0@tomee:ROOT:application-composer/history.adoc[]
 
 * Installation
 ** xref:8.0@tomee:ROOT:installing-tomee.adoc[]
@@ -143,10 +147,6 @@
 ** xref:8.0@tomee:ROOT:validation-tool.adoc[]
 
 * Unknown
-** xref:8.0@tomee:ROOT:application-composer/index.adoc[]
-** xref:8.0@tomee:ROOT:application-composer/advanced.adoc[]
-** xref:8.0@tomee:ROOT:application-composer/getting-started.adoc[]
-** xref:8.0@tomee:ROOT:application-composer/history.adoc[]
 ** xref:8.0@tomee:ROOT:developer/tools/maven/applicationcomposer.adoc[]
 ** xref:8.0@tomee:ROOT:admin/configuration/application.adoc[]
 ** xref:8.0@tomee:ROOT:advanced/applicationcomposer/index.adoc[]
