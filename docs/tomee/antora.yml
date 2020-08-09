@@ -1,9 +1,15 @@
 name: tomee
 title: TomEE Documentation
-version: '8.0'
+version: '9.0'
 start_page: ROOT:docs.adoc
+
 nav:
 - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    ee-prefix: jakarta
+
 javadoc:
   sources:
     - url: ~/projects/tomee/tomee-site-generator/javadoc/target/site-javadoc-1.0-SNAPSHOT-javadoc.jar
